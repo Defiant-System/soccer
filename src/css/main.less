@@ -10,43 +10,121 @@ content {
 	image-rendering: pixelated;
 
 	.arena {
-		// background: #77f054;
-		background-image: repeating-linear-gradient(90deg, #03a314 0px, #03a314 118px, #08991b 118px, #08991b 236px);
+		--c1: #549d0b;
+		--c2: #35931e;
+		background-image: repeating-linear-gradient(90deg, var(--c1) 0px, var(--c1) 118px, var(--c2) 118px, var(--c2) 236px);
 		background-position: -27px 0;
 		position: absolute;
-		top: -1896px;
-		left: 0;
-		left: -460px;
-		left: -930px;
 		width: 1840px;
 		height: 2578px;
-		top: -1796px;
-		left: -460px;
-		top: -1890px;
-
-		// top: -980px;
-		top: 0;
+		
+		// top: -1896px;
 		// left: 0;
+		// left: -460px;
 		// left: -930px;
+		// top: -1890px;
+		top: -1888px;
+		left: -460px;
+		// top: -980px;
+		// top: 0;
+		// left: 0;
+		//left: -930px;
 		// transform: scale(.25) translateY(3770px);
 
 		.bleachers {
 			position: absolute;
 			left: 0;
 			right: 0;
-			background: 272px 0 repeat-x;
+			background: 484px 0 repeat-x;
 			background-size: auto 100%;
 			
 			&.top {
 				background-image: url(~/gfx/bleachers-top.png);
 				top: 0;
 				height: 166px;
+
+				.police {
+					top: 151px;
+				}
 			}
 			
 			&.bottom {
 				background-image: url(~/gfx/bleachers-bottom.png);
 				top: 2446px;
 				height: 134px;
+
+				.police {
+					top: -47px;
+				
+					&:before,
+					&:after {
+						content: "";
+						background-image: url(~/gfx/police-bottom.png);
+					}
+
+					&:nth-child(1) { left: 479px; }
+					&:nth-child(2) { left: 1247px; }
+				}
+			}
+
+			.police {
+				position: absolute;
+				
+				&:before,
+				&:after {
+					content: "";
+					background: url(~/gfx/police-top.png) no-repeat;
+					background-size: auto 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 36px;
+					height: 46px;
+				}
+				&:after { left: 25px; }
+
+				&:nth-child(1) { left: 559px; }
+				&:nth-child(2) { left: 1145px; }
+			}
+		}
+
+		.stands {
+			position: absolute;
+
+			&.top {
+				background: url(~/gfx/stands-top.png) 0px 0px repeat-x;
+				background-size: auto 100%;
+				top: 224px;
+				left: 50px;
+				right: 46px;
+				height: 24px;
+			}
+
+			&.bottom {
+				background: url(~/gfx/stands-top.png) 0px 0px repeat-x;
+				background-size: auto 100%;
+				top: 2394px;
+				left: 50px;
+				right: 46px;
+				height: 24px;
+			}
+
+			&.left {
+				background: url(~/gfx/stands-left.png) 0px 0px repeat-y;
+				background-size: 100% auto;
+				top: 246px;
+				left: 36px;
+				height: 2150px;
+				width: 8px;
+			}
+
+			&.right {
+				background: url(~/gfx/stands-left.png) 0px 0px repeat-y;
+				background-size: 100% auto;
+				top: 264px;
+				right: 36px;
+				height: 2130px;
+				width: 8px;
 			}
 		}
 
@@ -288,9 +366,9 @@ content {
 			width: 1840px;
 			height: 2768px;
 			z-index: 1;
-			filter: invert(1) grayscale(1) brightness(0.75);
+			// filter: invert(1) grayscale(1) brightness(0.75);
 			opacity: .25;
-			display: none;
+			// display: none;
 		}
 	}
 }
