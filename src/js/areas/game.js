@@ -6,14 +6,10 @@
 		// fast references
 		this.els = {
 			arena: window.find(".arena"),
+			canvas: window.find(".arena .canvas"),
 		};
-
-		this.data = {
-			height: +this.els.arena.prop("offsetHeight"),
-			width: +this.els.arena.prop("offsetWidth"),
-			top: +this.els.arena.prop("offsetTop"),
-			left: +this.els.arena.prop("offsetLeft"),
-		};
+		// instantiate arena
+		this.arena = new Arena({ canvas: this.els.canvas });
 	},
 	async dispatch(event) {
 		let APP = football,
@@ -37,13 +33,6 @@
 				break;
 			// custom events
 			case "pan-arena":
-				this.data.top += event.step.y * 12;
-				this.data.left += event.step.x * 12;
-				// constraints
-				this.data.top = Math.max(Math.min(this.data.top, 0), window.innerHeight - this.data.height);
-				this.data.left = Math.max(Math.min(this.data.left, 0), window.innerWidth - this.data.width);
-				// update arena position
-				Self.els.arena.css(this.data);
 				break;
 		}
 	}
