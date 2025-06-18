@@ -31,6 +31,67 @@ content {
 		//left: -930px;
 		// transform: scale(.25) translateY(3770px);
 
+		.ball {
+			background: url(~/icons/sprite-ball.png) 0px 0px no-repeat;
+			background-size: auto 100%;
+			position: absolute;
+			top: 120px;
+			left: 762px;
+			width: 32px;
+			height: 32px;
+			animation: ballRotate 600ms steps(14) infinite;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 7px;
+				left: 7px;
+				width: 28px;
+				height: 28px;
+				border-radius: 50%;
+				z-index: -1;
+				background: #0005;
+				filter: blur(2px);
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 2px;
+				left: 2px;
+				right: 2px;
+				bottom: 2px;
+				border-radius: 50%;
+				box-shadow: inset 5px 5px 13px #fff7,
+							inset -2px -2px 3px #0009,
+							inset -5px -5px 13px #0007;
+			}
+		}
+		
+		@keyframes ballRotate {
+			0%   { background-position: 0 0; }
+			100% { background-position: -448px 0px; }
+		}
+
+		/*
+		.ball {
+			background: url(~/gfx/19830.png) no-repeat;
+			background-size: 506px 286px;
+			background-position: -5px -105px;
+			position: absolute;
+			top: 120px;
+			left: 762px;
+			width: 40px;
+			height: 40px;
+			animation: ballRotate 1600ms steps(9) infinite;
+		}
+
+		@keyframes ballRotate {
+			0%   { background-position: -5px -105px; }
+			100% { background-position: -455px -105px; }
+		}
+		*/
+
 		.bleachers {
 			position: absolute;
 			left: 0;
@@ -194,6 +255,16 @@ content {
 					}
 				}
 
+				.goal {
+					background: url(~/gfx/goal-top.png) 0px 0px repeat-x;
+					background-size: auto 100%;
+					position: absolute;
+					top: -73px;
+					left: 666px;
+					width: 279px;
+					height: 94px;
+				}
+
 				.goal-box {
 					position: absolute;
 					top: -3px;
@@ -291,6 +362,16 @@ content {
 					}
 				}
 
+				.goal {
+					background: url(~/gfx/goal-bottom.png) 0px 0px repeat-x;
+					background-size: auto 100%;
+					position: absolute;
+					top: 918px;
+					left: 666px;
+					width: 273px;
+					height: 103px;
+				}
+
 				.goal-box {
 					position: absolute;
 					top: 885px;
@@ -377,3 +458,7 @@ content {
 		}
 	}
 }
+
+
+
+
