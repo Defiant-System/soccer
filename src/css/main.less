@@ -12,11 +12,22 @@ content {
 	.arena {
 		--c1: #549d0b;
 		--c2: #35931e;
-		background-image: repeating-linear-gradient(90deg, var(--c1) 0px, var(--c1) 118px, var(--c2) 118px, var(--c2) 236px);
-		background-position: -27px 0;
+		background-image: repeating-linear-gradient(90deg, var(--c1) 0px, var(--c1) 128px, var(--c2) 128px, var(--c2) 256px);
+		background-position: -53px 0;
 		position: absolute;
 		width: 1840px;
 		height: 2578px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: url(~/gfx/noise.jpg);
+			mix-blend-mode: luminosity;
+		}
 
 		// top: -1896px;
 		// left: 0;
