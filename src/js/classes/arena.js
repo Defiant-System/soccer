@@ -9,22 +9,53 @@ class Arena {
 		this.height = window.innerHeight;
 		// set dimenstions
 		this.cvs.attr({ width: this.width, height: this.height });
-
-		this.setField();
+		// dev / debug purpose
+		this.debug = {
+			mode: 1,
+		};
 
 		// create FPS controller
 		let Self = this;
 		this.fpsControl = karaqu.FpsControl({
-			fps: 60,
+			fps: 50,
 			callback(time, delta) {
 				Self.update(delta, time);
 				Self.render();
 			}
 		});
+
+		// assets list
+		let assets = [
+				{ id: "ball", width: 480, height: 32, src: "~/icons/sprite-ball.png" },
+			],
+			loadAssets = () => {
+				let item = assets.pop(),
+					img = new Image();
+				img.src = item.src;
+				img.onload = () => {
+					// save reference to asset
+					this.assets[item.id] = { item, img };
+					// are we done yet?
+					assets.length ? loadAssets() : this.ready();
+				};
+			};
+		// asset lib
+		this.assets = {};
+		
+		// load assets
+		loadAssets();
+	}
+
+	ready() {
+		// stadium field
+		this.setField();
+		// play FPS control
+		this.fpsControl.start();
 	}
 
 	setField() {
 		this.field = new Field({ parent: this, width: 68, height: 105 });
+		this.viewport = new Viewport({ parent: this });
 	}
 
 	update(delta, time) {
@@ -33,7 +64,10 @@ class Arena {
 	}
 
 	render(ctx) {
-		this.field.render(ctx);
+		// clear canvas
+		this.cvs.attr({ width: this.width });
+		// render field
+		this.field.render(this.ctx);
 		
 		if (this.debug.mode >= 1) {
 			this.drawFps(this.ctx);

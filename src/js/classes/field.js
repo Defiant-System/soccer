@@ -7,7 +7,7 @@ class Field {
 		this.width = width;
 
 		this.entries = [];
-		this.ball = new Ball({ parent: this });
+		this.ball = new Ball({ parent: this, asset: parent.assets.ball });
 
 		// add ball
 		this.entries.push(this.ball);
