@@ -5,25 +5,40 @@ class Stadium {
 
 		this.parent = parent;
 		this.assets = assets;
+
+		let scale = 6;
+		this.config = {
+				scale,
+				height: 105 * scale,
+				width: 68 * scale,
+			};
+		this.full = Utils.createCanvas(this.config.width, this.config.height);
+
 		this.entries = [];
-
-		this.field = new Field({ parent: this });
-		this.ball = new Ball({ parent: this, asset: parent.assets.ball });
-
 		this.patterns = {};
+		this.field = new Field({ ...this.config, parent: this });
+		this.ball = new Ball({ parent: this, asset: parent.assets.ball });
+		// paint full hi-res stadium
+		this.paint();
 
 		// add ball
-		// this.entries.push(this.field);
+		this.entries.push(this.field);
 		// this.entries.push(this.ball);
 	}
 
-	update(delta, time) {
-		// update entries
-		this.entries.map(item => item.update(delta, time));
+	paint() {
+		let ctx = this.full.ctx,
+			{ width, height } = this.config;
+		// reset canvas
+		this.full.cvs.attr({ width });
+		
+		ctx.fillStyle = "#35931e";
+		ctx.fillRect(0, 0, width, height);
 	}
 
-	render(ctx) {
-		let gX = 0,
+	paint2() {
+		let ctx = this.full.ctx,
+			gX = 0,
 			gY = 0,
 			gW = 200,
 			gH = 500,
@@ -32,9 +47,10 @@ class Stadium {
 			vW = 0,
 			vH = 0;
 		// create reusable patterns
-		if (!this.patterns.topBleachers) this.patterns.topBleachers = ctx.createPattern(this.assets.bTop.img, "repeat-x");
-		if (!this.patterns.bottomBleachers) this.patterns.bottomBleachers = ctx.createPattern(this.assets.bBottom.img, "repeat-x");
-		
+		// if (!this.patterns.topBleachers) this.patterns.topBleachers = ctx.createPattern(this.assets.bTop.img, "repeat-x");
+		// if (!this.patterns.bottomBleachers) this.patterns.bottomBleachers = ctx.createPattern(this.assets.bBottom.img, "repeat-x");
+
+		/*
 		// top bleachers
 		ctx.save();
 		ctx.translate(0, 0);
@@ -48,8 +64,18 @@ class Stadium {
 		ctx.fillStyle = this.patterns.bottomBleachers;
 		ctx.fillRect(0, 0, 910, 88);
 		ctx.restore();
+		*/
+	}
+
+	update(delta, time) {
+		// update entries
+		this.entries.map(item => item.update(delta, time));
+	}
+
+	render(ctx) {
+		ctx.drawImage(this.full.cvs[0], 0, 0);
 
 		// draw entries
-		this.entries.map(entry => entry.render(ctx));
+		// this.entries.map(entry => entry.render(ctx));
 	}
 }

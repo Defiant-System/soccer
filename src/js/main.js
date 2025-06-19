@@ -5,6 +5,7 @@
 @import "./classes/field.js"
 @import "./classes/ball.js"
 
+@import "./modules/utils.js"
 @import "./modules/test.js"
 
 
