@@ -47,27 +47,27 @@ class Arena {
 	}
 
 	ready() {
-		// stadium field
-		this.setField();
+		// stadium & field
+		this.setStadium();
 		// play FPS control
 		this.fpsControl.start();
 	}
 
-	setField() {
-		this.field = new Field({ parent: this });
+	setStadium() {
+		this.stadium = new Stadium({ parent: this, assets: this.assets });
 		this.viewport = new Viewport({ parent: this });
 	}
 
 	update(delta, time) {
-		this.field.update(delta, time);
+		this.stadium.update(delta, time);
 		this.viewport.update(delta, time);
 	}
 
 	render(ctx) {
 		// clear canvas
 		this.cvs.attr({ width: this.width });
-		// render field
-		this.field.render(this.ctx);
+		// render stadium
+		this.stadium.render(this.ctx);
 		
 		if (this.debug.mode >= 1) {
 			this.drawFps(this.ctx);
