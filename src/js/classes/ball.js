@@ -25,21 +25,29 @@ class Ball {
 	}
 
 	render(ctx) {
-		let w = 32,
-			f = this.frame.index * w,
+		let w1 = 32,
+			w2 = 32,
+			f = this.frame.index * w1,
 			x = 100,
 			y = 100,
-			r = 15,
+			r = (w2-2) >> 1,
 			gx = x+r,
 			gy = y+r,
 			gradient = ctx.createRadialGradient(gx-3, gy-3, 0, gx, gy, r);
 		// 3d roundness
 		gradient.addColorStop(0.0, "#fff7");
-		gradient.addColorStop(0.7, "#1115");
-		gradient.addColorStop(1.0, "#1119");
+		gradient.addColorStop(0.65, "#1115");
+		gradient.addColorStop(1.0, "#000b");
 
 		ctx.save();
-		ctx.drawImage(this.asset.img, f, 0, w, w, x, y, w, w);
+		// shadow
+		ctx.fillStyle = "#0003";
+		ctx.beginPath();
+		ctx.arc(gx+7, gy+7, r-3, 0, Math.TAU);
+		ctx.fill();
+		// ball
+		ctx.drawImage(this.asset.img, f, 0, w1, w1, x, y, w2, w2);
+		// gradient
 		ctx.fillStyle = gradient;
 		ctx.beginPath();
 		ctx.arc(gx+1, gy+1, r-1, 0, Math.TAU);

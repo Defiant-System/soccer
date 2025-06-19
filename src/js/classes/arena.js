@@ -54,7 +54,7 @@ class Arena {
 	}
 
 	setField() {
-		this.field = new Field({ parent: this, width: 68, height: 105 });
+		this.field = new Field({ parent: this });
 		this.viewport = new Viewport({ parent: this });
 	}
 
