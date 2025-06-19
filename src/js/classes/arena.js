@@ -27,6 +27,7 @@ class Arena {
 		// assets list
 		let assets = [
 				{ id: "ball", width: 480, height: 32, src: "~/icons/sprite-ball.png" },
+				{ id: "grass", width: 600, height: 300, src: "~/gfx/grass.jpg" },
 				{ id: "bTop", width: 540, height: 110, src: "~/gfx/bleachers-top.png" },
 				{ id: "bBottom", width: 544, height: 88, src: "~/gfx/bleachers-bottom.png" },
 			],

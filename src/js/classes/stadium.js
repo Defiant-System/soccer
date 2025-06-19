@@ -8,11 +8,19 @@ class Stadium {
 
 		let scale = 6;
 		this.config = {
-				scale,
-				height: 105 * scale,
-				width: 68 * scale,
-			};
-		this.full = Utils.createCanvas(this.config.width, this.config.height);
+			scale,
+			height: 105,
+			width: 68,
+			margin: {
+				t: 130,
+				l: 30,
+				b: 130,
+				r: 30 
+			},
+		};
+		this.config.sW = (this.config.width * scale) + this.config.margin.l + this.config.margin.r;
+		this.config.sH = (this.config.height * scale) + this.config.margin.t + this.config.margin.b;
+		this.full = Utils.createCanvas(this.config.sW, this.config.sH);
 
 		this.entries = [];
 		this.patterns = {};
@@ -28,12 +36,32 @@ class Stadium {
 
 	paint() {
 		let ctx = this.full.ctx,
-			{ width, height } = this.config;
+			{ scale, width, height } = this.config,
+			sW = this.config.sW,
+			sH = this.config.sH,
+			pattern = ctx.createPattern(this.assets.grass.img, "repeat");
 		// reset canvas
-		this.full.cvs.attr({ width });
-		
+		this.full.cvs.attr({ width: sW });
+
 		ctx.fillStyle = "#35931e";
-		ctx.fillRect(0, 0, width, height);
+		ctx.fillRect(0, 0, sW, sH);
+
+		ctx.save();
+		ctx.globalCompositeOperation = "soft-light"; // overlay
+		ctx.fillStyle = pattern;
+		ctx.fillRect(0, 0, sW, sH);
+		ctx.restore();
+
+		// top bleachers
+		pattern = ctx.createPattern(this.assets.bTop.img, "repeat-x");
+		ctx.save();
+		ctx.translate(0, 0);
+		ctx.fillStyle = pattern;
+		ctx.fillRect(0, 0, sW, this.assets.bTop.item.height);
+		ctx.restore();
+
+		// bottom bleachers
+		// pattern = ctx.createPattern(this.assets.bBottom.img, "repeat-x");
 	}
 
 	paint2() {
@@ -76,6 +104,6 @@ class Stadium {
 		ctx.drawImage(this.full.cvs[0], 0, 0);
 
 		// draw entries
-		// this.entries.map(entry => entry.render(ctx));
+		this.entries.map(entry => entry.render(ctx));
 	}
 }

@@ -1,8 +1,10 @@
 
 class Field {
 	constructor(cfg) {
-		let { parent, scale, width, height } = cfg;
+		let { parent, scale, margin, width, height } = cfg;
 
+		this.top = margin.t;
+		this.left = margin.l;
 		this.height = height;
 		this.width = width;
 		this.corner = 2;
@@ -16,8 +18,8 @@ class Field {
 	}
 
 	update(delta, time) {
-		this.oX = 180;
-		this.oY = 50;
+		this.oX = this.left;
+		this.oY = this.top;
 		this.sW = this.width * this.scale;
 		this.sH = this.height * this.scale * this.skew;
 		
