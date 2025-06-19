@@ -27,6 +27,8 @@ class Arena {
 		// assets list
 		let assets = [
 				{ id: "ball", width: 480, height: 32, src: "~/icons/sprite-ball.png" },
+				{ id: "bTop", width: 540, height: 110, src: "~/gfx/bleachers-top.png" },
+				{ id: "bBottom", width: 544, height: 88, src: "~/gfx/bleachers-bottom.png" },
 			],
 			loadAssets = () => {
 				let item = assets.pop(),
@@ -79,7 +81,7 @@ class Arena {
 		ctx.save();
 		ctx.translate(this.width - 109, 0);
 		// draw box
-		ctx.fillStyle = "#0005";
+		ctx.fillStyle = "#000a";
 		ctx.fillRect(5, 5, 100, 40);
 		ctx.fillStyle = "#fff4";
 		ctx.fillRect(7, 7, 96, 11);

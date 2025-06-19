@@ -13,12 +13,6 @@ class Field {
 		this.goal = { width: 8, height: 1.5 };
 		this.scale = 5;
 		this.skew = .85;
-
-		this.entries = [];
-		this.ball = new Ball({ parent: this, asset: parent.assets.ball });
-
-		// add ball
-		this.entries.push(this.ball);
 	}
 
 	update(delta, time) {
@@ -61,8 +55,6 @@ class Field {
 		// bottom goal box
 		this.bgbX = (this.sW - this.gbW) * .5;
 		this.bgbY = this.sH - this.gbH;
-
-		this.entries.map(item => item.update(delta, time));
 	}
 
 	render(ctx) {
@@ -158,8 +150,5 @@ class Field {
 		
 		// restore context
 		ctx.restore();
-
-		// draw entries - exclude droids
-		this.entries.map(entry => entry.render(ctx));
 	}
 }
