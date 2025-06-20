@@ -43,13 +43,19 @@ class Stadium {
 		// reset canvas
 		this.full.cvs.attr({ width: sW });
 
+		ctx.save();
 		ctx.fillStyle = "#35931e";
 		ctx.fillRect(0, 0, sW, sH);
 
-		[...Array(6)].map((e, i) => {
-			ctx.fillStyle = "#45a32e";
-			ctx.fillRect(0, (i * 214) - 84, sW, 107);
-		});
+		ctx.fillStyle = "#45a32e";
+		ctx.translate(0, 130);
+		ctx.fillRect(0, 0, sW, 107);
+		ctx.fillRect(0, (107 * 2), sW, 107);
+		ctx.fillRect(0, (107 * 4), sW, 107);
+		ctx.fillRect(0, (107 * 6), sW, 107);
+		ctx.fillRect(0, (107 * 8), sW, 107);
+		ctx.fillRect(0, (107 * 10), sW, 200);
+		ctx.restore();
 
 		ctx.save();
 		ctx.globalCompositeOperation = "soft-light"; // overlay
@@ -80,9 +86,14 @@ class Stadium {
 	}
 
 	render(ctx) {
+		ctx.save();
+		ctx.translate(0, 0); // -750
+
 		ctx.drawImage(this.full.cvs[0], 0, 0);
 
 		// draw entries
 		this.entries.map(entry => entry.render(ctx));
+
+		ctx.restore();
 	}
 }
