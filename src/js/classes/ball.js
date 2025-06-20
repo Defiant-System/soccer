@@ -6,6 +6,10 @@ class Ball {
 		this.parent = parent;
 		this.asset = asset;
 
+		this.top = parent.config.margin.t + (parent.config.height / 2);
+		this.left = parent.config.margin.l + (parent.config.width / 2);
+		console.log( this.top, this.left );
+
 		// ball animation / rotation
 		this.frame = {
 			index: 0,
@@ -28,18 +32,22 @@ class Ball {
 		let w1 = 32,
 			w2 = 32,
 			f = this.frame.index * w1,
-			x = 100,
-			y = 100,
+			x = 454, // this.left,
+			y = 664, // this.top,
 			r = (w2-2) >> 1,
 			gx = x+r,
 			gy = y+r,
-			gradient = ctx.createRadialGradient(gx-3, gy-3, 0, gx, gy, r);
-		// 3d roundness
-		gradient.addColorStop(0.0, "#fff7");
-		gradient.addColorStop(0.65, "#1115");
-		gradient.addColorStop(1.0, "#000b");
+			gradient;
 
 		ctx.save();
+		// ctx.globalAlpha = .5;
+		ctx.translate(-r, -r);
+		// 3d roundness
+		gradient = ctx.createRadialGradient(gx-3, gy-3, 0, gx, gy, r);
+		gradient.addColorStop(0.0, "#fff7");
+		gradient.addColorStop(0.65, "#1113");
+		gradient.addColorStop(1.0, "#0009");
+
 		// shadow
 		ctx.fillStyle = "#0003";
 		ctx.beginPath();

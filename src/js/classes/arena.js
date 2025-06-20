@@ -51,8 +51,8 @@ class Arena {
 	ready() {
 		// apply team colors on sprite
 		this.setTeamColors({
-			home: [[0,0,255],[0,0,109]],
-			away: [[218,0,0],[109,0,0]],
+			home: [[252,0,0],[252,252,252]],
+			away: [[0,0,255],[0,0,109]],
 		});
 		// stadium & field
 		this.setStadium();
@@ -88,6 +88,14 @@ class Arena {
 			// save reference
 			this.assets[team] = { cvs: cvs[0], ctx };
 		});
+		// slice up sprite
+		let s = 3,
+			w = 272,
+			h = 56;
+		this.assets.bTop = Utils.createCanvas(w*s, h*s);
+		this.assets.bTop.cvs = this.assets.bTop.cvs[0];
+		this.assets.bTop.ctx.imageSmoothingEnabled = false;
+		this.assets.bTop.ctx.drawImage(this.assets.home.cvs, 0, 0, w, h, 0, 0, w*s, h*s);
 	}
 
 	setStadium() {

@@ -7,9 +7,9 @@ class Field {
 		this.left = margin.l;
 		this.height = height;
 		this.width = width;
-		this.corner = 2;
-		this.center = { radius: 10, dot: .5 };
-		this.penalty = { radius: .3, y: 11, arc: 10 };
+		this.corner = .8;
+		this.center = { radius: 10, dot: .25 };
+		this.penalty = { radius: .2, y: 11, arc: 10 };
 		this.pBox = { width: 40, height: 16.5 };
 		this.gBox = { width: 18, height: 5.5 };
 		this.goal = { width: 8, height: 1.5 };
@@ -66,7 +66,7 @@ class Field {
 		ctx.translate(this.oX, this.oY);
 		ctx.fillStyle =
 		ctx.strokeStyle = "#fff";
-		ctx.lineWidth = 2;
+		ctx.lineWidth = 3;
 		// whole box
 		ctx.beginPath();
 		ctx.rect(0, 0, w, h);

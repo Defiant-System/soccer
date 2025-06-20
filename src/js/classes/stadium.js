@@ -6,16 +6,16 @@ class Stadium {
 		this.parent = parent;
 		this.assets = assets;
 
-		let scale = 12;
+		let scale = 22;
 		this.config = {
 			scale,
 			height: 105,
 			width: 68,
 			margin: {
-				t: 130,
-				l: 47,
-				b: 130,
-				r: 47 
+				t: 320,
+				l: 120,
+				b: 300,
+				r: 120 
 			},
 		};
 		this.config.sW = (this.config.width * scale) + this.config.margin.l + this.config.margin.r;
@@ -31,12 +31,12 @@ class Stadium {
 
 		// add ball
 		this.entries.push(this.field);
-		// this.entries.push(this.ball);
+		this.entries.push(this.ball);
 	}
 
 	paint() {
 		let ctx = this.full.ctx,
-			{ scale, width, height } = this.config,
+			{ scale, margin, width, height } = this.config,
 			sW = this.config.sW,
 			sH = this.config.sH,
 			pattern = ctx.createPattern(this.assets.grass.img, "repeat");
@@ -47,14 +47,14 @@ class Stadium {
 		ctx.fillStyle = "#35931e";
 		ctx.fillRect(0, 0, sW, sH);
 
-		ctx.fillStyle = "#45a32e";
-		ctx.translate(0, 130);
+		ctx.fillStyle = "#42a12c";
+		ctx.translate(0, margin.t);
 		ctx.fillRect(0, 0, sW, 107);
 		ctx.fillRect(0, (107 * 2), sW, 107);
 		ctx.fillRect(0, (107 * 4), sW, 107);
 		ctx.fillRect(0, (107 * 6), sW, 107);
 		ctx.fillRect(0, (107 * 8), sW, 107);
-		ctx.fillRect(0, (107 * 10), sW, 200);
+		ctx.fillRect(0, (107 * 10), sW, margin.b);
 		ctx.restore();
 
 		ctx.save();
@@ -64,12 +64,12 @@ class Stadium {
 		ctx.restore();
 
 		// top bleachers
-		// pattern = ctx.createPattern(this.assets.bTop.img, "repeat-x");
-		// ctx.save();
-		// ctx.translate(0, 0);
-		// ctx.fillStyle = pattern;
-		// ctx.fillRect(0, 0, sW, this.assets.bTop.item.height);
-		// ctx.restore();
+		pattern = ctx.createPattern(this.assets.bTop.cvs, "repeat-x");
+		ctx.save();
+		ctx.translate(0, 0);
+		ctx.fillStyle = pattern;
+		ctx.fillRect(0, 0, sW, this.assets.bTop.cvs.height);
+		ctx.restore();
 
 		// // bottom bleachers
 		// pattern = ctx.createPattern(this.assets.bBottom.img, "repeat-x");
@@ -87,7 +87,7 @@ class Stadium {
 
 	render(ctx) {
 		ctx.save();
-		ctx.translate(0, 0); // -750
+		ctx.translate(0, -0); // -650
 
 		ctx.drawImage(this.full.cvs[0], 0, 0);
 
