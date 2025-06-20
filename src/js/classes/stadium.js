@@ -6,16 +6,16 @@ class Stadium {
 		this.parent = parent;
 		this.assets = assets;
 
-		let scale = 5;
+		let scale = 12;
 		this.config = {
 			scale,
 			height: 105,
 			width: 68,
 			margin: {
 				t: 130,
-				l: 30,
+				l: 47,
 				b: 130,
-				r: 30 
+				r: 47 
 			},
 		};
 		this.config.sW = (this.config.width * scale) + this.config.margin.l + this.config.margin.r;
@@ -30,7 +30,7 @@ class Stadium {
 		this.paint();
 
 		// add ball
-		// this.entries.push(this.field);
+		this.entries.push(this.field);
 		// this.entries.push(this.ball);
 	}
 
