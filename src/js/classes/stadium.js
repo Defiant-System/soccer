@@ -46,6 +46,11 @@ class Stadium {
 		ctx.fillStyle = "#35931e";
 		ctx.fillRect(0, 0, sW, sH);
 
+		[...Array(6)].map((e, i) => {
+			ctx.fillStyle = "#45a32e";
+			ctx.fillRect(0, (i * 214) - 84, sW, 107);
+		});
+
 		ctx.save();
 		ctx.globalCompositeOperation = "soft-light"; // overlay
 		ctx.fillStyle = pattern;
