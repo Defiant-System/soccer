@@ -6,7 +6,7 @@ class Stadium {
 		this.parent = parent;
 		this.assets = assets;
 
-		let scale = 6;
+		let scale = 5;
 		this.config = {
 			scale,
 			height: 105,
@@ -61,7 +61,12 @@ class Stadium {
 		ctx.restore();
 
 		// bottom bleachers
-		// pattern = ctx.createPattern(this.assets.bBottom.img, "repeat-x");
+		pattern = ctx.createPattern(this.assets.bBottom.img, "repeat-x");
+		ctx.save();
+		ctx.translate(0, sH-180);
+		ctx.fillStyle = pattern;
+		ctx.fillRect(0, 0, sW, this.assets.bBottom.item.height);
+		ctx.restore();
 	}
 
 	paint2() {
