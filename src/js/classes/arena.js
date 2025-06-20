@@ -43,6 +43,7 @@ class Arena {
 			};
 		// asset lib
 		this.assets = {};
+		this.pixScale = 3;
 		
 		// load assets
 		loadAssets();
@@ -89,7 +90,7 @@ class Arena {
 			this.assets[team] = { cvs: cvs[0], ctx };
 		});
 		// slice up sprite
-		let s = 3,
+		let s = this.pixScale,
 			w = 272,
 			h = 56;
 		// top bleachers

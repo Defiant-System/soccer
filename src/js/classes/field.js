@@ -87,9 +87,9 @@ class Field {
 		ctx.fill();
 
 		// top goal
-		ctx.beginPath();
-		ctx.rect(this.gX, this.tgY, this.gW, this.gH);
-		ctx.stroke();
+		// ctx.beginPath();
+		// ctx.rect(this.gX, this.tgY, this.gW, this.gH);
+		// ctx.stroke();
 		// top penalty box
 		ctx.beginPath();
 		ctx.rect(this.tpbX, this.tpbY, this.pbW, this.pbH);

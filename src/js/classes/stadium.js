@@ -43,6 +43,7 @@ class Stadium {
 			sH = this.config.sH,
 			pattern = ctx.createPattern(this.assets.grass.img, "repeat"),
 			stripe = (this.field.sH / 10),
+			pS = this.parent.pixScale,
 			pW, pH;
 		// reset canvas
 		this.full.cvs.attr({ width: sW });
@@ -76,6 +77,12 @@ class Stadium {
 		ctx.fillRect(0, 0, sW, pH);
 		ctx.restore();
 
+		pW = 92; pH = 31;
+		ctx.save();
+		ctx.imageSmoothingEnabled = false;
+		ctx.drawImage(this.assets.home.cvs, 22, 101, pW, pH, 759, 246, pW*pS, pH*pS);
+		ctx.restore();
+
 		// bottom bleachers
 		pattern = ctx.createPattern(this.assets.bBottom.cvs, "repeat-x");
 		pH = this.assets.bBottom.cvs.height;
@@ -97,7 +104,7 @@ class Stadium {
 			center = window.innerHeight - (this.config.sH >> 1) - this.config.margin.t;
 
 		ctx.save();
-		ctx.translate(0, home);
+		ctx.translate(-300, home);
 		ctx.drawImage(this.full.cvs[0], 0, 0);
 
 		// draw entries
