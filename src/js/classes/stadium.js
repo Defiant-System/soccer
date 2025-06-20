@@ -30,7 +30,7 @@ class Stadium {
 		this.paint();
 
 		// add ball
-		this.entries.push(this.field);
+		// this.entries.push(this.field);
 		// this.entries.push(this.ball);
 	}
 
@@ -53,51 +53,20 @@ class Stadium {
 		ctx.restore();
 
 		// top bleachers
-		pattern = ctx.createPattern(this.assets.bTop.img, "repeat-x");
-		ctx.save();
-		ctx.translate(0, 0);
-		ctx.fillStyle = pattern;
-		ctx.fillRect(0, 0, sW, this.assets.bTop.item.height);
-		ctx.restore();
+		// pattern = ctx.createPattern(this.assets.bTop.img, "repeat-x");
+		// ctx.save();
+		// ctx.translate(0, 0);
+		// ctx.fillStyle = pattern;
+		// ctx.fillRect(0, 0, sW, this.assets.bTop.item.height);
+		// ctx.restore();
 
-		// bottom bleachers
-		pattern = ctx.createPattern(this.assets.bBottom.img, "repeat-x");
-		ctx.save();
-		ctx.translate(0, sH-180);
-		ctx.fillStyle = pattern;
-		ctx.fillRect(0, 0, sW, this.assets.bBottom.item.height);
-		ctx.restore();
-	}
-
-	paint2() {
-		let ctx = this.full.ctx,
-			gX = 0,
-			gY = 0,
-			gW = 200,
-			gH = 500,
-			vX = 0,
-			vY = 0,
-			vW = 0,
-			vH = 0;
-		// create reusable patterns
-		// if (!this.patterns.topBleachers) this.patterns.topBleachers = ctx.createPattern(this.assets.bTop.img, "repeat-x");
-		// if (!this.patterns.bottomBleachers) this.patterns.bottomBleachers = ctx.createPattern(this.assets.bBottom.img, "repeat-x");
-
-		/*
-		// top bleachers
-		ctx.save();
-		ctx.translate(0, 0);
-		ctx.fillStyle = this.patterns.topBleachers;
-		ctx.fillRect(0, 0, 910, 110);
-		ctx.restore();
-
-		// bottom bleachers
-		ctx.save();
-		ctx.translate(0, 602);
-		ctx.fillStyle = this.patterns.bottomBleachers;
-		ctx.fillRect(0, 0, 910, 88);
-		ctx.restore();
-		*/
+		// // bottom bleachers
+		// pattern = ctx.createPattern(this.assets.bBottom.img, "repeat-x");
+		// ctx.save();
+		// ctx.translate(0, sH-180);
+		// ctx.fillStyle = pattern;
+		// ctx.fillRect(0, 0, sW, this.assets.bBottom.item.height);
+		// ctx.restore();
 	}
 
 	update(delta, time) {
