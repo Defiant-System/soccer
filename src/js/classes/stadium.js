@@ -6,7 +6,7 @@ class Stadium {
 		this.parent = parent;
 		this.assets = assets;
 
-		let scale = 9.84;  // 22
+		let scale = 22;  // 22  9.84
 		this.config = {
 			scale,
 			height: 105,
