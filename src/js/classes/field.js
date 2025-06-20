@@ -15,13 +15,14 @@ class Field {
 		this.goal = { width: 8, height: 1.5 };
 		this.scale = scale;
 		this.skew = .85;
+		
+		this.sW = this.width * this.scale;
+		this.sH = this.height * this.scale * this.skew;
 	}
 
 	update(delta, time) {
 		this.oX = this.left;
 		this.oY = this.top;
-		this.sW = this.width * this.scale;
-		this.sH = this.height * this.scale * this.skew;
 		
 		this.coR = this.corner * this.scale;
 		this.cR = this.center.radius * this.scale;

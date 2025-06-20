@@ -6,7 +6,7 @@ class Stadium {
 		this.parent = parent;
 		this.assets = assets;
 
-		let scale = 22;
+		let scale = 9.84;  // 22
 		this.config = {
 			scale,
 			height: 105,
@@ -18,14 +18,16 @@ class Stadium {
 				r: 120 
 			},
 		};
-		this.config.sW = (this.config.width * scale) + this.config.margin.l + this.config.margin.r;
-		this.config.sH = (this.config.height * scale) + this.config.margin.t + this.config.margin.b;
-		this.full = Utils.createCanvas(this.config.sW, this.config.sH);
 
 		this.entries = [];
 		this.patterns = {};
 		this.field = new Field({ ...this.config, parent: this });
 		this.ball = new Ball({ parent: this, asset: parent.assets.ball });
+
+		this.config.sW = this.field.sW + this.config.margin.l + this.config.margin.r;
+		this.config.sH = this.field.sH + this.config.margin.t + this.config.margin.b;
+		this.full = Utils.createCanvas(this.config.sW, this.config.sH);
+
 		// paint full hi-res stadium
 		this.paint();
 
@@ -39,7 +41,9 @@ class Stadium {
 			{ scale, margin, width, height } = this.config,
 			sW = this.config.sW,
 			sH = this.config.sH,
-			pattern = ctx.createPattern(this.assets.grass.img, "repeat");
+			pattern = ctx.createPattern(this.assets.grass.img, "repeat"),
+			stripe = (this.field.sH / 10),
+			pW, pH;
 		// reset canvas
 		this.full.cvs.attr({ width: sW });
 
@@ -49,12 +53,12 @@ class Stadium {
 
 		ctx.fillStyle = "#42a12c";
 		ctx.translate(0, margin.t);
-		ctx.fillRect(0, 0, sW, 107);
-		ctx.fillRect(0, (107 * 2), sW, 107);
-		ctx.fillRect(0, (107 * 4), sW, 107);
-		ctx.fillRect(0, (107 * 6), sW, 107);
-		ctx.fillRect(0, (107 * 8), sW, 107);
-		ctx.fillRect(0, (107 * 10), sW, margin.b);
+		ctx.fillRect(0, 0, sW, stripe);
+		ctx.fillRect(0, (stripe * 2), sW, stripe);
+		ctx.fillRect(0, (stripe * 4), sW, stripe);
+		ctx.fillRect(0, (stripe * 6), sW, stripe);
+		ctx.fillRect(0, (stripe * 8), sW, stripe);
+		ctx.fillRect(0, (stripe * 10), sW, margin.b);
 		ctx.restore();
 
 		ctx.save();
@@ -65,19 +69,21 @@ class Stadium {
 
 		// top bleachers
 		pattern = ctx.createPattern(this.assets.bTop.cvs, "repeat-x");
+		pH = this.assets.bTop.cvs.height;
 		ctx.save();
 		ctx.translate(0, 0);
 		ctx.fillStyle = pattern;
-		ctx.fillRect(0, 0, sW, this.assets.bTop.cvs.height);
+		ctx.fillRect(0, 0, sW, pH);
 		ctx.restore();
 
-		// // bottom bleachers
-		// pattern = ctx.createPattern(this.assets.bBottom.img, "repeat-x");
-		// ctx.save();
-		// ctx.translate(0, sH-180);
-		// ctx.fillStyle = pattern;
-		// ctx.fillRect(0, 0, sW, this.assets.bBottom.item.height);
-		// ctx.restore();
+		// bottom bleachers
+		pattern = ctx.createPattern(this.assets.bBottom.cvs, "repeat-x");
+		pH = this.assets.bBottom.cvs.height;
+		ctx.save();
+		ctx.translate(0, sH-pH);
+		ctx.fillStyle = pattern;
+		ctx.fillRect(0, 0, sW, pH);
+		ctx.restore();
 	}
 
 	update(delta, time) {
@@ -86,9 +92,12 @@ class Stadium {
 	}
 
 	render(ctx) {
-		ctx.save();
-		ctx.translate(0, -0); // -650
+		let home = 0,
+			away = window.innerHeight - this.config.sH,
+			center = window.innerHeight - (this.config.sH >> 1) - this.config.margin.t;
 
+		ctx.save();
+		ctx.translate(0, home);
 		ctx.drawImage(this.full.cvs[0], 0, 0);
 
 		// draw entries

@@ -92,10 +92,18 @@ class Arena {
 		let s = 3,
 			w = 272,
 			h = 56;
+		// top bleachers
 		this.assets.bTop = Utils.createCanvas(w*s, h*s);
 		this.assets.bTop.cvs = this.assets.bTop.cvs[0];
 		this.assets.bTop.ctx.imageSmoothingEnabled = false;
 		this.assets.bTop.ctx.drawImage(this.assets.home.cvs, 0, 0, w, h, 0, 0, w*s, h*s);
+		// bottom bleachers
+		w = 272;
+		h = 45;
+		this.assets.bBottom = Utils.createCanvas(w*s, h*s);
+		this.assets.bBottom.cvs = this.assets.bBottom.cvs[0];
+		this.assets.bBottom.ctx.imageSmoothingEnabled = false;
+		this.assets.bBottom.ctx.drawImage(this.assets.home.cvs, 0, 56, w, h, 0, 0, w*s, h*s);
 	}
 
 	setStadium() {
