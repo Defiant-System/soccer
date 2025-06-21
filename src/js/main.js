@@ -3,6 +3,7 @@
 @import "./classes/viewport.js"
 @import "./classes/stadium.js"
 @import "./classes/field.js"
+@import "./classes/player.js"
 @import "./classes/ball.js"
 
 @import "./modules/utils.js"

@@ -11,7 +11,7 @@ class Stadium {
 		this.patterns = {};
 		this.field = new Field({ ...config, scale, parent });
 		this.ball = new Ball({ parent: this, asset: parent.assets.ball });
-
+		
 		this.config.sW = this.field.sW + this.config.margin.l + this.config.margin.r;
 		this.config.sH = this.field.sH + this.config.margin.t + this.config.margin.b;
 		this.full = Utils.createCanvas(this.config.sW, this.config.sH);
@@ -22,6 +22,10 @@ class Stadium {
 		// add ball
 		// this.entries.push(this.field);
 		this.entries.push(this.ball);
+
+		let asset = this.parent.fixtures.find(e => e.name == "home player");
+		let player = new Player({ parent: this, asset });
+		this.entries.push(player);
 	}
 
 	paint() {
