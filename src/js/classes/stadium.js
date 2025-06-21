@@ -1,12 +1,11 @@
 
 class Stadium {
 	constructor(cfg) {
-		let { parent, assets } = cfg;
+		let { parent, assets, scale } = cfg;
 
 		this.parent = parent;
 		this.assets = assets;
 
-		let scale = 22;  // 22  9.84
 		this.config = {
 			scale,
 			height: 105,
@@ -44,7 +43,14 @@ class Stadium {
 			pattern = ctx.createPattern(this.assets.grass.img, "repeat"),
 			stripe = (this.field.sH / 10),
 			pS = this.parent.pixScale,
-			pW, pH;
+			fixture;
+
+		// 
+		this.zoom = {
+			in: 1,
+			out: window.innerWidth / sW,
+		};
+
 		// reset canvas
 		this.full.cvs.attr({ width: sW });
 		// no smoothing
@@ -72,56 +78,29 @@ class Stadium {
 		ctx.restore();
 
 		// top bleachers
-		pattern = ctx.createPattern(this.assets.bTop.cvs, "repeat-x");
-		pH = this.assets.bTop.cvs.height;
+		fixture = this.parent.fixtures.find(e => e.name == "home bleachers");
+		pattern = ctx.createPattern(fixture.cvs, "repeat-x");
 		ctx.save();
 		ctx.translate(0, 0);
 		ctx.fillStyle = pattern;
-		ctx.fillRect(0, 0, sW, pH);
+		ctx.fillRect(0, 0, sW, fixture.cvs.height);
 		ctx.restore();
 
 		// bottom bleachers
-		pattern = ctx.createPattern(this.assets.bBottom.cvs, "repeat-x");
-		pH = this.assets.bBottom.cvs.height;
+		fixture = this.parent.fixtures.find(e => e.name == "away bleachers");
+		pattern = ctx.createPattern(fixture.cvs, "repeat-x");
 		ctx.save();
-		ctx.translate(0, sH-pH);
+		ctx.translate(0, sH-fixture.cvs.height);
 		ctx.fillStyle = pattern;
-		ctx.fillRect(0, 0, sW, pH);
+		ctx.fillRect(0, 0, sW, fixture.cvs.height);
 		ctx.restore();
 
 		// field lines
 		this.field.render(ctx);
 
-		// statium fixtures
-		this.fixtures = [
-			{ name: "home goal",  cvs: this.assets.home.cvs, mapW: 92, mapH: 31, mapX: 22, mapY: 101, sX: 759, sY: 249 },
-			{ name: "home pitch", cvs: this.assets.home.cvs, mapW: 21, mapH: 68, mapX: 251, mapY: 101, sX: 0, sY: 1030 },
-			{ name: "home pitch p1", cvs: this.assets.home.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1060 },
-			{ name: "home pitch p2", cvs: this.assets.home.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1084 },
-			{ name: "home pitch p3", cvs: this.assets.home.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1108 },
-			{ name: "home pitch p4", cvs: this.assets.home.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1132 },
-			{ name: "home trainer", cvs: this.assets.home.cvs, mapW: 9, mapH: 15, mapX: 0, mapY: 116, sX: 72, sY: 1171 },
-			{ name: "home police 1", cvs: this.assets.home.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 101, sX: 321, sY: 147 },
-			{ name: "home police 2", cvs: this.assets.home.cvs, mapW: 11, mapH: 15, mapX: 11, mapY: 101, sX: 348, sY: 147 },
-			{ name: "home police 3", cvs: this.assets.home.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 101, sX: 1391, sY: 147 },
-			{ name: "home police 4", cvs: this.assets.home.cvs, mapW: 11, mapH: 15, mapX: 11, mapY: 101, sX: 1418, sY: 147 },
-			// away side
-			{ name: "away goal",  cvs: this.assets.away.cvs, mapW: 90, mapH: 34, mapX: 114, mapY: 101, sX: 759, sY: 2230 },
-			{ name: "away pitch", cvs: this.assets.away.cvs, mapW: 21, mapH: 68, mapX: 251, mapY: 101, sX: 0, sY: 1385 },
-			{ name: "away trainer", cvs: this.assets.away.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 116, sX: 51, sY: 1403 },
-			{ name: "away pitch p1", cvs: this.assets.away.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1445 },
-			{ name: "away pitch p2", cvs: this.assets.away.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1469 },
-			{ name: "away pitch p3", cvs: this.assets.away.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1493 },
-			{ name: "away pitch p4", cvs: this.assets.away.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1517 },
-			{ name: "home police 1", cvs: this.assets.home.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 101, sX: 321, sY: 2397 },
-			{ name: "home police 2", cvs: this.assets.home.cvs, mapW: 11, mapH: 15, mapX: 11, mapY: 101, sX: 348, sY: 2397 },
-			{ name: "home police 3", cvs: this.assets.home.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 101, sX: 1391, sY: 2397 },
-			{ name: "home police 4", cvs: this.assets.home.cvs, mapW: 11, mapH: 15, mapX: 11, mapY: 101, sX: 1418, sY: 2397 },
-		];
 		// draw stadium fixtures
-		this.fixtures.map(item => {
-			ctx.drawImage(item.cvs, item.mapX, item.mapY, item.mapW, item.mapH, item.sX, item.sY, item.mapW*pS, item.mapH*pS);
-		});
+		this.parent.fixtures.map(f =>
+			ctx.drawImage(f.cvs, f.mapX, f.mapY, f.mapW, f.mapH, f.sX, f.sY, f.mapW*pS, f.mapH*pS));
 	}
 
 	update(delta, time) {
@@ -135,7 +114,7 @@ class Stadium {
 			center = window.innerHeight - (this.config.sH >> 1) - this.config.margin.t;
 
 		ctx.save();
-		ctx.scale(.525, .525);
+		ctx.scale(this.zoom.out, this.zoom.out);
 		ctx.translate(-0, home);
 		ctx.drawImage(this.full.cvs[0], 0, 0);
 

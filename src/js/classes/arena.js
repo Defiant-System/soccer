@@ -43,8 +43,9 @@ class Arena {
 			};
 		// asset lib
 		this.assets = {};
+		this.scale = 22;
 		this.pixScale = 3;
-		
+
 		// load assets
 		loadAssets();
 	}
@@ -89,27 +90,60 @@ class Arena {
 			// save reference
 			this.assets[team] = { cvs: cvs[0], ctx };
 		});
+		// statium fixtures
+		this.fixtures = [
+			{ name: "home bleachers", mapW: 272, mapH: 56, mapX: 0, mapY: 0 }, // repeatable pattern
+			{ name: "home goal", cvs: this.assets.home.cvs, mapW: 92, mapH: 31, mapX: 22, mapY: 101, sX: 759, sY: 249 },
+			{ name: "home pitch", cvs: this.assets.home.cvs, mapW: 21, mapH: 68, mapX: 251, mapY: 101, sX: 0, sY: 1030 },
+			{ name: "home pitch p1", cvs: this.assets.home.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1060 },
+			{ name: "home pitch p2", cvs: this.assets.home.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1084 },
+			{ name: "home pitch p3", cvs: this.assets.home.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1108 },
+			{ name: "home pitch p4", cvs: this.assets.home.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1132 },
+			{ name: "home trainer", cvs: this.assets.home.cvs, mapW: 9, mapH: 15, mapX: 0, mapY: 116, sX: 72, sY: 1171 },
+			{ name: "home police 1", cvs: this.assets.home.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 101, sX: 321, sY: 147 },
+			{ name: "home police 2", cvs: this.assets.home.cvs, mapW: 11, mapH: 15, mapX: 11, mapY: 101, sX: 348, sY: 147 },
+			{ name: "home police 3", cvs: this.assets.home.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 101, sX: 1391, sY: 147 },
+			{ name: "home police 4", cvs: this.assets.home.cvs, mapW: 11, mapH: 15, mapX: 11, mapY: 101, sX: 1418, sY: 147 },
+			// away side
+			{ name: "away bleachers", mapW: 272, mapH: 56, mapX: 0, mapY: 56 }, // repeatable pattern
+			{ name: "away goal", cvs: this.assets.away.cvs, mapW: 90, mapH: 34, mapX: 114, mapY: 101, sX: 759, sY: 2230 },
+			{ name: "away pitch", cvs: this.assets.away.cvs, mapW: 21, mapH: 68, mapX: 251, mapY: 101, sX: 0, sY: 1385 },
+			{ name: "away trainer", cvs: this.assets.away.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 116, sX: 51, sY: 1403 },
+			{ name: "away pitch p1", cvs: this.assets.away.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1445 },
+			{ name: "away pitch p2", cvs: this.assets.away.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1469 },
+			{ name: "away pitch p3", cvs: this.assets.away.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1493 },
+			{ name: "away pitch p4", cvs: this.assets.away.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1517 },
+			{ name: "away police 1", cvs: this.assets.away.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 101, sX: 321, sY: 2397 },
+			{ name: "away police 2", cvs: this.assets.away.cvs, mapW: 11, mapH: 15, mapX: 11, mapY: 101, sX: 348, sY: 2397 },
+			{ name: "away police 3", cvs: this.assets.away.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 101, sX: 1391, sY: 2397 },
+			{ name: "away police 4", cvs: this.assets.away.cvs, mapW: 11, mapH: 15, mapX: 11, mapY: 101, sX: 1418, sY: 2397 },
+		];
 		// slice up sprite
-		let s = this.pixScale,
-			w = 272,
-			h = 56;
+		let pS = this.pixScale,
+			item,
+			fixture;
 		// top bleachers
-		this.assets.bTop = Utils.createCanvas(w*s, h*s);
-		this.assets.bTop.cvs = this.assets.bTop.cvs[0];
-		this.assets.bTop.ctx.imageSmoothingEnabled = false;
-		this.assets.bTop.ctx.drawImage(this.assets.home.cvs, 0, 0, w, h, 0, 0, w*s, h*s);
+		fixture = this.fixtures.find(e => e.name == "home bleachers");
+		item = Utils.createCanvas(fixture.mapW*pS, fixture.mapH*pS);
+		fixture.cvs = item.cvs[0];
+		fixture.ctx = item.ctx;
+		fixture.ctx.imageSmoothingEnabled = false;
+		fixture.ctx.drawImage(this.assets.home.cvs, 0, 0, fixture.mapW, fixture.mapH, 0, fixture.mapY, fixture.mapW*pS, fixture.mapH*pS);
 		// bottom bleachers
-		w = 272;
-		h = 45;
-		this.assets.bBottom = Utils.createCanvas(w*s, h*s);
-		this.assets.bBottom.cvs = this.assets.bBottom.cvs[0];
-		this.assets.bBottom.ctx.imageSmoothingEnabled = false;
-		this.assets.bBottom.ctx.drawImage(this.assets.home.cvs, 0, 56, w, h, 0, 0, w*s, h*s);
+		fixture = this.fixtures.find(e => e.name == "away bleachers");
+		item = Utils.createCanvas(fixture.mapW*pS, fixture.mapH*pS);
+		fixture.cvs = item.cvs[0];
+		fixture.ctx = item.ctx;
+		fixture.ctx.imageSmoothingEnabled = false;
+		fixture.ctx.drawImage(this.assets.home.cvs, 0, 0, fixture.mapW, fixture.mapH, 0, fixture.mapY, fixture.mapW*pS, fixture.mapH*pS);
 	}
 
 	setStadium() {
-		this.stadium = new Stadium({ parent: this, assets: this.assets });
-		this.viewport = new Viewport({ parent: this });
+		let parent = this,
+			scale = this.scale,
+			assets = this.assets;
+		this.stadium = new Stadium({ parent, scale, assets });
+		this.viewport = new Viewport({ parent });
 	}
 
 	update(delta, time) {
