@@ -8,7 +8,6 @@ class Ball {
 
 		this.top = parent.config.margin.t + (parent.config.height / 2);
 		this.left = parent.config.margin.l + (parent.config.width / 2);
-		console.log( this.top, this.left );
 
 		// ball animation / rotation
 		this.frame = {

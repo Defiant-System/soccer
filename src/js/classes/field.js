@@ -15,9 +15,11 @@ class Field {
 		this.goal = { width: 8, height: 1.5 };
 		this.scale = scale;
 		this.skew = .85;
-		
+
 		this.sW = this.width * this.scale;
 		this.sH = this.height * this.scale * this.skew;
+
+		this.update();
 	}
 
 	update(delta, time) {
@@ -114,9 +116,9 @@ class Field {
 		ctx.restore();
 
 		// bottom goal
-		ctx.beginPath();
-		ctx.rect(this.gX, this.bgY, this.gW, this.gH);
-		ctx.stroke();
+		// ctx.beginPath();
+		// ctx.rect(this.gX, this.bgY, this.gW, this.gH);
+		// ctx.stroke();
 		// bottom penalty box
 		ctx.beginPath();
 		ctx.rect(this.bpbX, this.bpbY, this.pbW, this.pbH);
