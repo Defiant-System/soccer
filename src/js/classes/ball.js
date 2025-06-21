@@ -6,9 +6,6 @@ class Ball {
 		this.parent = parent;
 		this.asset = asset;
 
-		this.top = parent.config.margin.t + (parent.config.height / 2);
-		this.left = parent.config.margin.l + (parent.config.width / 2);
-
 		// ball animation / rotation
 		this.frame = {
 			index: 0,
@@ -25,14 +22,17 @@ class Ball {
 			this.frame.index++;
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
+
+		this.top = (this.parent.config.sH / 2) + 10; // TODO: calculate "10"
+		this.left = (this.parent.config.sW / 2);
 	}
 
 	render(ctx) {
 		let w1 = 32,
 			w2 = 32,
 			f = this.frame.index * w1,
-			x = 454, // this.left,
-			y = 664, // this.top,
+			x = this.left,
+			y = this.top,
 			r = (w2-2) >> 1,
 			gx = x+r,
 			gy = y+r,
@@ -60,5 +60,12 @@ class Ball {
 		ctx.arc(gx+1, gy+1, r-1, 0, Math.TAU);
 		ctx.fill();
 		ctx.restore();
+
+		/* indicated ball pos
+		ctx.fillStyle = "#f00";
+		ctx.beginPath();
+		ctx.arc(x, y, 4, 0, Math.TAU);
+		ctx.fill();
+		*/
 	}
 }
