@@ -45,6 +45,16 @@ class Arena {
 		this.assets = {};
 		this.scale = 22;
 		this.pixScale = 3;
+		this.config = {
+			height: 105,
+			width: 68,
+			margin: {
+				t: 320,
+				l: 120,
+				b: 300,
+				r: 120 
+			},
+		};
 
 		// load assets
 		loadAssets();
@@ -141,8 +151,9 @@ class Arena {
 	setStadium() {
 		let parent = this,
 			scale = this.scale,
+			config = this.config,
 			assets = this.assets;
-		this.stadium = new Stadium({ parent, scale, assets });
+		this.stadium = new Stadium({ parent, scale, config, assets });
 		this.viewport = new Viewport({ parent });
 	}
 

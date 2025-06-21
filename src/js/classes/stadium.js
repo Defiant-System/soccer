@@ -1,26 +1,15 @@
 
 class Stadium {
 	constructor(cfg) {
-		let { parent, assets, scale } = cfg;
+		let { parent, assets, scale, config } = cfg;
 
 		this.parent = parent;
 		this.assets = assets;
-
-		this.config = {
-			scale,
-			height: 105,
-			width: 68,
-			margin: {
-				t: 320,
-				l: 120,
-				b: 300,
-				r: 120 
-			},
-		};
+		this.config = config;
 
 		this.entries = [];
 		this.patterns = {};
-		this.field = new Field({ ...this.config, parent: this });
+		this.field = new Field({ ...config, scale, parent });
 		this.ball = new Ball({ parent: this, asset: parent.assets.ball });
 
 		this.config.sW = this.field.sW + this.config.margin.l + this.config.margin.r;
