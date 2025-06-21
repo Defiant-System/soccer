@@ -1,8 +1,9 @@
 
 class Field {
 	constructor(cfg) {
-		let { parent, scale, margin, width, height } = cfg;
+		let { parent, scale, margin, width, height, line, skew } = cfg;
 
+		this.parent = parent;
 		this.top = margin.t;
 		this.left = margin.l;
 		this.height = height;
@@ -13,8 +14,9 @@ class Field {
 		this.pBox = { width: 40, height: 16.5 };
 		this.gBox = { width: 18, height: 5.5 };
 		this.goal = { width: 8, height: 1.5 };
+		this.skew = skew || .85;
+		this.line = line || 3;
 		this.scale = scale;
-		this.skew = .85;
 
 		this.sW = this.width * this.scale;
 		this.sH = this.height * this.scale * this.skew;
@@ -69,7 +71,7 @@ class Field {
 		ctx.translate(this.oX, this.oY);
 		ctx.fillStyle =
 		ctx.strokeStyle = "#fff";
-		ctx.lineWidth = 3;
+		ctx.lineWidth = this.line;
 		// whole box
 		ctx.beginPath();
 		ctx.rect(0, 0, w, h);

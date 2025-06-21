@@ -5,8 +5,8 @@
 	init() {
 		// fast references
 		this.els = {
-			el: window.find(`div[data-area="arena"]`),
-			canvas: window.find(`div[data-area="arena"] .canvas`),
+			el: window.find(`div[data-area="stadium"]`),
+			canvas: window.find(`div[data-area="stadium"] .canvas`),
 		};
 		// instantiate arena
 		this.arena = new Arena({ canvas: this.els.canvas });

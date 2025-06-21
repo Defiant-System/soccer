@@ -46,6 +46,9 @@ const football = {
 				}
 				break;
 			// custom events
+			case "show-view":
+				Self.content.data({ show: event.arg });
+				break;
 			case "open-help":
 				karaqu.shell("fs -u '~/help/index.md'");
 				break;
