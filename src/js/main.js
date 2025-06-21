@@ -62,7 +62,8 @@ const football = {
 				}
 		}
 	},
-	game: @import "./areas/game.js",
+	stadium: @import "./areas/stadium.js",
+	manager: @import "./areas/manager.js",
 };
 
 window.exports = football;

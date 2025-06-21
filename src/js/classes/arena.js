@@ -69,7 +69,7 @@ class Arena {
 		// stadium & field
 		this.setStadium();
 		// play FPS control
-		this.fpsControl.start();
+		// this.fpsControl.start();
 	}
 
 	setTeamColors(colors) {

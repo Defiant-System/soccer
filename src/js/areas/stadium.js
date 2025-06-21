@@ -1,19 +1,19 @@
 
-// football.game
+// football.stadium
 
 {
 	init() {
 		// fast references
 		this.els = {
-			arena: window.find(".arena"),
-			canvas: window.find(".arena .canvas"),
+			el: window.find(`div[data-area="arena"]`),
+			canvas: window.find(`div[data-area="arena"] .canvas`),
 		};
 		// instantiate arena
 		this.arena = new Arena({ canvas: this.els.canvas });
 	},
 	async dispatch(event) {
 		let APP = football,
-			Self = APP.game,
+			Self = APP.stadium,
 			top, left,
 			el;
 		// console.log(event);
@@ -33,7 +33,6 @@
 				break;
 			// custom events
 			case "pan-arena":
-				
 				break;
 		}
 	}
