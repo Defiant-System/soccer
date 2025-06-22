@@ -7,6 +7,7 @@
 		this.els = {
 			el: window.find(`div[data-area="manager"]`),
 			list: window.find(`div[data-area="manager"] .list`),
+			form: window.find(`div[data-area="manager"] .field .players`),
 			cvs: window.find(`div[data-area="manager"] .field canvas.overview`),
 		};
 
@@ -26,6 +27,12 @@
 					template: "team-list",
 					match: "//data/team",
 					target: Self.els.list,
+				});
+
+				window.render({
+					template: "team-formation",
+					match: "//data/team/form",
+					target: Self.els.form,
 				});
 				break;
 			case "draw-field":

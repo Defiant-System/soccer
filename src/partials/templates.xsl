@@ -35,4 +35,32 @@
 		</div>
 	</xsl:template>
 
+	<xsl:template name="team-formation">
+		<xsl:for-each select="./i">
+			<xsl:variable name="player" select="ancestor::team/i[@num = current()/@num]"/>
+			<div>
+				<xsl:attribute name="style">--y: <xsl:value-of select="@y" />px; --x: <xsl:value-of select="@x" />px;</xsl:attribute>
+				<span><xsl:value-of select="substring-after($player/@name, ' ')" /></span>
+				<span><xsl:call-template name="abr-title">
+					<xsl:with-param name="pos" select="$player/@pos" />
+				</xsl:call-template></span>
+			</div>
+		</xsl:for-each>
+	</xsl:template>
+
+	<xsl:template name="abr-title">
+		<xsl:param name="pos"/>
+		<xsl:choose>
+			<xsl:when test="$pos = 'G'">Goalkeeper</xsl:when>
+			<xsl:when test="$pos = 'D'">Defender</xsl:when>
+			<xsl:when test="$pos = 'LB'">Left Back</xsl:when>
+			<xsl:when test="$pos = 'RB'">Right Back</xsl:when>
+			<xsl:when test="$pos = 'LW'">Left Wing</xsl:when>
+			<xsl:when test="$pos = 'RW'">Right Wing</xsl:when>
+			<xsl:when test="$pos = 'M'">Midfielder</xsl:when>
+			<xsl:when test="$pos = 'A'">Attacker</xsl:when>
+			<xsl:otherwise>Player</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
 </xsl:stylesheet>
