@@ -32,7 +32,18 @@
 				}
 				break;
 			// custom events
-			case "pan-arena":
+			case "add-team":
+				let team = window.bluePrint.selectSingleNode(`//team/form`),
+					data = team.selectNodes("./i").map(xPos => {
+						let num = xPos.getAttribute("num"),
+							y = xPos.getAttribute("y"),
+							x = xPos.getAttribute("x"),
+							xPlayer = xPos.selectSingleNode(`../../i[@num = "${num}"]`),
+							name = xPlayer.getAttribute("name");
+						return { name, num, x, y };
+					});
+				// render team on arena
+				this.arena.stadium.setTeam(data);
 				break;
 		}
 	}

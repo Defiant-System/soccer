@@ -22,10 +22,14 @@ class Stadium {
 		// add ball
 		// this.entries.push(this.field);
 		this.entries.push(this.ball);
+	}
 
-		let asset = this.parent.fixtures.find(e => e.name == "home player");
-		let player = new Player({ parent: this, asset });
-		this.entries.push(player);
+	setTeam(data) {
+		console.log(data);
+		
+		// let asset = this.parent.fixtures.find(e => e.name == "home player");
+		// let player = new Player({ parent: this, asset });
+		// this.entries.push(player);
 	}
 
 	paint() {
