@@ -1,14 +1,14 @@
 
 class Field {
 	constructor(cfg) {
-		let { parent, scale, margin, width, height, line, skew } = cfg;
+		let { parent, scale, margin, width, height, line, skew, corner } = cfg;
 
 		this.parent = parent;
 		this.top = margin.t;
 		this.left = margin.l;
 		this.height = height;
 		this.width = width;
-		this.corner = .8;
+		this.corner = corner || .8;
 		this.center = { radius: 10, dot: .25 };
 		this.penalty = { radius: .2, y: 11, arc: 10 };
 		this.pBox = { width: 40, height: 16.5 };

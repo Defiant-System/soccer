@@ -97,7 +97,7 @@ content {
 					position: relative;
 					flex: 1;
 					background: #5a564d;
-					color: #ded;
+					color: #cdc;
 					padding: 13px;
 					border-radius: 5px;
 					box-shadow: 0px 5px 0px 0px darken(#5a564d, 3%);
@@ -110,6 +110,40 @@ content {
 						right: 0;
 						height: 1px;
 						background: linear-gradient(90deg, #fff0, #fff3, #fff0);
+					}
+
+					.team-total,
+					.team-list {
+						.summary-row,
+						.player-row {
+							display: flex;
+
+							&:nth-child(odd) {
+								background: #0001;
+							}
+
+							span {
+								padding: 7px 5px;
+
+								&:nth-child(1) { flex: 1; }
+								&:nth-child(2) { width: 50px; }
+								&:nth-child(3) { width: 70px; }
+								&:nth-child(4) { width: 60px; }
+								&:nth-child(5) { width: 40px; text-align: right; }
+							}
+						}
+
+						.summary-row,
+						.summary-row:nth-child(odd) {
+							background: transparent;
+							color: #efe;
+						}
+					}
+
+					.team-total {
+						margin-top: 5px;
+						padding-top: 5px;
+						border-top: 1px solid #fff3;
 					}
 				}
 			}

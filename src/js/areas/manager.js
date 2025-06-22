@@ -6,21 +6,12 @@
 		// fast references
 		this.els = {
 			el: window.find(`div[data-area="manager"]`),
+			list: window.find(`div[data-area="manager"] .list`),
 			cvs: window.find(`div[data-area="manager"] .field canvas.overview`),
 		};
 
-		let margin = { t: 60, l: 50, b: 60, r: 50 },
-			width = +this.els.cvs.prop("offsetWidth"),
-			height = +this.els.cvs.prop("offsetHeight"),
-			scale = 1;
-		// canvas dim
-		this.els.cvs.attr({ width, height });
-		this.els.ctx = this.els.cvs[0].getContext("2d");
-		// init field
-		width -= (margin.l + margin.r);
-		height -= (margin.t + margin.b);
-		this.ovField = new Field({ width, height, margin, scale, line: 1, skew: 1 });
-		this.ovField.render(this.els.ctx);
+		this.dispatch({ type: "draw-field" });
+		this.dispatch({ type: "render-team-list" });
 	},
 	async dispatch(event) {
 		let APP = football,
@@ -30,7 +21,26 @@
 		// console.log(event);
 		switch (event.type) {
 			// custom events
-			case "pan-arena":
+			case "render-team-list":
+				window.render({
+					template: "team-list",
+					match: "//data/team",
+					target: Self.els.list,
+				});
+				break;
+			case "draw-field":
+				let margin = { t: 25, l: 50, b: 25, r: 50 },
+					width = +Self.els.cvs.prop("offsetWidth"),
+					height = +Self.els.cvs.prop("offsetHeight"),
+					scale = 5;
+				// canvas dim
+				Self.els.cvs.attr({ width, height });
+				Self.els.ctx = Self.els.cvs[0].getContext("2d");
+				// init field
+				height = 105;
+				width = 68;
+				Self.ovField = new Field({ width, height, margin, scale, corner: 1.75, line: 1.5, skew: 1 });
+				Self.ovField.render(Self.els.ctx);
 				break;
 		}
 	}
