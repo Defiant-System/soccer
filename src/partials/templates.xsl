@@ -4,8 +4,8 @@
 		<div class="team-list">
 		<xsl:for-each select="./i">
 			<div class="player-row">
-				<span><xsl:value-of select="@name" /></span>
 				<span><xsl:value-of select="@pos" /></span>
+				<span><xsl:value-of select="@name" /></span>
 				<span><xsl:value-of select="@nat" /></span>
 				<span><xsl:value-of select="@price" /></span>
 				<span>

@@ -91,6 +91,67 @@ content {
 						opacity: .65;
 						mix-blend-mode: overlay;
 					}
+
+					.players {
+						position: absolute;
+						top: 0;
+						left: 0;
+						font-size: 12px;
+						text-align: center;
+						color: #fee9;
+						text-shadow: 0 1px 0 #0005;
+
+						> div {
+							position: absolute;
+							top: var( --y );
+							left: var( --x );
+							width: 71px;
+							background: #896969;
+							border-radius: 5px;
+							box-shadow: 0px 3px 0px 0px darken(#896969, 9%);
+
+							&:after {
+								content: "";
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								height: 1px;
+								background: linear-gradient(90deg, #fff0, #fff3, #fff0);
+							}
+
+							span {
+								position: relative;
+								display: block;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+								padding: 4px 0 3px;
+
+								&:nth-child(1) {
+									color: #fee;
+									border-radius: 5px;
+									background: lighten(#896969, 5%);
+									box-shadow: 0px 4px 0px 0px darken(#896969, 7%);
+
+									&:after {
+										content: "";
+										position: absolute;
+										bottom: 0;
+										left: 0;
+										right: 0;
+										height: 1px;
+										background: linear-gradient(90deg, #fff0, #fff3, #fff0);
+									}
+								}
+
+								&:nth-child(2) {
+									padding-top: 5px;
+									font-size: 11px;
+								}
+							}
+						}
+					}
 				}
 				
 				.list {
@@ -125,8 +186,8 @@ content {
 							span {
 								padding: 7px 5px;
 
-								&:nth-child(1) { flex: 1; }
-								&:nth-child(2) { width: 50px; }
+								&:nth-child(1) { width: 30px; }
+								&:nth-child(2) { flex: 1; }
 								&:nth-child(3) { width: 70px; }
 								&:nth-child(4) { width: 60px; }
 								&:nth-child(5) { width: 40px; text-align: right; }

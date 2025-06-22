@@ -29,7 +29,7 @@
 				});
 				break;
 			case "draw-field":
-				let margin = { t: 25, l: 50, b: 25, r: 50 },
+				let margin = { t: 30, l: 50, b: 0, r: 50 },
 					width = +Self.els.cvs.prop("offsetWidth"),
 					height = +Self.els.cvs.prop("offsetHeight"),
 					scale = 5;
@@ -39,7 +39,7 @@
 				// init field
 				height = 105;
 				width = 68;
-				Self.ovField = new Field({ width, height, margin, scale, corner: 1.75, line: 1.5, skew: 1 });
+				Self.ovField = new Field({ width, height, margin, scale, corner: 1.75, line: 1.5, skew: .85 });
 				Self.ovField.render(Self.els.ctx);
 				break;
 		}
