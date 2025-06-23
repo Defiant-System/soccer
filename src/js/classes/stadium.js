@@ -27,10 +27,16 @@ class Stadium {
 	setTeam(teams) {
 		let asset = this.parent.fixtures.find(e => e.name == "home player");
 		Object.keys(teams).map(side => {
-			teams[side].map(opt => {
-				console.log(side, opt);
-				// let player = new Player({ ...opt, parent: this, asset });
-				// this.entries.push(player);
+			// if away team - mirror players positions
+			if (side === "away") {
+				teams[side].players.map(pos => {
+					pos.y = 500 + Math.abs(pos.y - 500);
+					pos.x = Math.abs(pos.x - 390);
+				});
+			}
+			teams[side].players.map(opt => {
+				let player = new Player({ ...opt, parent: this, asset });
+				this.entries.push(player);
 			});
 		});
 	}

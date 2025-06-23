@@ -67,6 +67,10 @@ class Arena {
 		// this.fpsControl.start();
 	}
 
+	setTeam(teams) {
+		this.stadium.setTeam(teams);
+	}
+
 	// apply team colors on sprite
 	setTeamColors(teams) {
 		let palette = [[252,0,0],[252,252,252]];
@@ -113,7 +117,7 @@ class Arena {
 			{ name: "home police 3", cvs: this.assets.home.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 101, sX: 1391, sY: 147 },
 			{ name: "home police 4", cvs: this.assets.home.cvs, mapW: 11, mapH: 15, mapX: 11, mapY: 101, sX: 1418, sY: 147 },
 			// away side
-			{ name: "away bleachers", mapW: 272, mapH: 56, mapX: 0, mapY: 56 }, // repeatable pattern
+			{ name: "away bleachers", mapW: 272, mapH: 45, mapX: 0, mapY: 56 }, // repeatable pattern
 			{ name: "away goal", cvs: this.assets.away.cvs, mapW: 90, mapH: 34, mapX: 114, mapY: 101, sX: 759, sY: 2230 },
 			{ name: "away trainer", cvs: this.assets.away.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 116, sX: 51, sY: 1403 },
 			{ name: "away player", cvs: this.assets.away.cvs, mapW: 228, mapH: 152, mapX: 0, mapY: 135 },
@@ -137,14 +141,14 @@ class Arena {
 		fixture.cvs = item.cvs[0];
 		fixture.ctx = item.ctx;
 		fixture.ctx.imageSmoothingEnabled = false;
-		fixture.ctx.drawImage(this.assets.home.cvs, 0, 0, fixture.mapW, fixture.mapH, fixture.mapX, fixture.mapY, fixture.mapW*pS, fixture.mapH*pS);
+		fixture.ctx.drawImage(this.assets.home.cvs, fixture.mapX, fixture.mapY, fixture.mapW, fixture.mapH, 0, 0, fixture.mapW*pS, fixture.mapH*pS);
 		// bottom bleachers
 		fixture = this.fixtures.find(e => e.name == "away bleachers");
 		item = Utils.createCanvas(fixture.mapW*pS, fixture.mapH*pS);
 		fixture.cvs = item.cvs[0];
 		fixture.ctx = item.ctx;
 		fixture.ctx.imageSmoothingEnabled = false;
-		fixture.ctx.drawImage(this.assets.away.cvs, 0, 0, fixture.mapW, fixture.mapH, fixture.mapX, fixture.mapY, fixture.mapW*pS, fixture.mapH*pS);
+		fixture.ctx.drawImage(this.assets.away.cvs, fixture.mapX, fixture.mapY, fixture.mapW, fixture.mapH, 0, 0, fixture.mapW*pS, fixture.mapH*pS);
 
 		// home player
 		fixture = this.fixtures.find(e => e.name == "home player");
@@ -153,6 +157,13 @@ class Arena {
 		fixture.ctx = item.ctx;
 		fixture.ctx.imageSmoothingEnabled = false;
 		fixture.ctx.drawImage(this.assets.home.cvs, fixture.mapX, fixture.mapY, fixture.mapW, fixture.mapH, 0, 0, fixture.mapW*pS, fixture.mapH*pS);
+		// away player
+		fixture = this.fixtures.find(e => e.name == "away player");
+		item = Utils.createCanvas(fixture.mapW*pS, fixture.mapH*pS);
+		fixture.cvs = item.cvs[0];
+		fixture.ctx = item.ctx;
+		fixture.ctx.imageSmoothingEnabled = false;
+		fixture.ctx.drawImage(this.assets.away.cvs, fixture.mapX, fixture.mapY, fixture.mapW, fixture.mapH, 0, 0, fixture.mapW*pS, fixture.mapH*pS);
 	}
 
 	setStadium() {

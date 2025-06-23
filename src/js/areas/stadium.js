@@ -54,7 +54,7 @@
 				});
 				this.arena.setTeamColors(teams);
 				this.arena.setStadium();
-				// this.arena.stadium.setTeam(teams);
+				this.arena.setTeam(teams);
 				break;
 		}
 	}
