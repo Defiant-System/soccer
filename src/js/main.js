@@ -1,6 +1,7 @@
 
 @import "./classes/simplexnoise.js"
 @import "./classes/point.js"
+@import "./classes/user.js"
 @import "./classes/arena.js"
 @import "./classes/viewport.js"
 @import "./classes/stadium.js"
@@ -24,6 +25,9 @@ const soccer = {
 			.filter(i => typeof this[i].init === "function")
 			.map(i => this[i].init(this));
 
+		// temp active area
+		this.active = "stadium";
+
 		// DEV-ONLY-START
 		Test.init(this);
 		// DEV-ONLY-END
@@ -35,21 +39,6 @@ const soccer = {
 		switch (event.type) {
 			// system events
 			case "window.init":
-				break;
-			case "window.keystroke":
-				switch (event.char) {
-					case "w":
-					case "s":
-					case "a":
-					case "d":
-					case "up":
-					case "down":
-					case "left":
-					case "right":
-					case "p":
-						Self.stadium.dispatch(event);
-						break;
-				}
 				break;
 			// custom events
 			case "show-view":
@@ -68,6 +57,8 @@ const soccer = {
 						let name = pEl.data("area");
 						return Self[name].dispatch(event);
 					}
+				} else if (Self.active) {
+					Self[Self.active].dispatch(event);
 				}
 		}
 	},

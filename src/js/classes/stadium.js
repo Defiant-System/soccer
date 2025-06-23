@@ -15,12 +15,14 @@ class Stadium {
 		this.config.sH = this.field.sH + this.config.margin.t + this.config.margin.b;
 		this.full = Utils.createCanvas(this.config.sW, this.config.sH);
 		// add ball to stadium
+		this.user = new User({ parent: this });
 		this.ball = new Ball({ parent: this, asset: parent.assets.ball });
 
 		// paint full hi-res stadium
 		this.paint();
 
-		// add ball
+		// add user & ball
+		this.entries.push(this.user);
 		this.entries.push(this.ball);
 	}
 

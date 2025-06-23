@@ -16,36 +16,78 @@
 	async dispatch(event) {
 		let APP = soccer,
 			Self = APP.stadium,
-			force,
+			User = Self.arena.stadium ? Self.arena.stadium.user : null,
 			el;
 		// console.log(event);
 		switch (event.type) {
 			// system events
-			case "window.keystroke":
+			case "window.keydown":
 				switch (event.char) {
 					case "w":
-					case "up":
-						force = new Point(0, -1);
-						Self.arena.stadium.player.move(force);
-						break;
+					case "up": User.input.up.pressed = true; break;
 					case "s":
-					case "down":
-						force = new Point(0, 1);
-						Self.arena.stadium.player.move(force);
-						break;
+					case "down": User.input.down.pressed = true; break;
 					case "a":
-					case "left":
-						force = new Point(-1, 0);
-						Self.arena.stadium.player.move(force);
-						break;
+					case "left": User.input.left.pressed = true; break;
 					case "d":
-					case "right":
-						force = new Point(1, 0);
-						Self.arena.stadium.player.move(force);
-						break;
+					case "right": User.input.right.pressed = true; break;
+					case "space": User.input.shoot.pressed = true; break;
 					case "p":
 						if (Self.arena.fpsControl._stopped) Self.arena.fpsControl.start();
 						else Self.arena.fpsControl.stop();
+						break;
+				}
+				break;
+			case "window.keyup":
+				switch (event.char) {
+					case "w":
+					case "up": User.input.up.pressed = false; break;
+					case "s":
+					case "down": User.input.down.pressed = false; break;
+					case "a":
+					case "left": User.input.left.pressed = false; break;
+					case "d":
+					case "right": User.input.right.pressed = false; break;
+					case "space":
+						User.input.shoot.pressed = false;
+						break;
+				}
+				break;
+			// gamepad events
+			case "gamepad.connected":
+			case "gamepad.disconnected":
+				// anything todo?
+				break;
+			case "gamepad.stick":
+				let x = event.value[0],
+					y = event.value[1];
+				if (event.stick === "left") {
+					User.input.left.pressed = x < 0;
+					User.input.right.pressed = x > 0;
+					User.input.up.pressed = y < 0;
+					User.input.down.pressed = y > 0;
+				} else {
+					// set ship angle
+					let angle = Math.atan2(x, -y),
+						halfPI = Math.PI / 2,
+						dir = (x === 1 && y === 0) ? 0 : angle - halfPI,
+						firing = x !== 0 || y !== 0;
+
+					Self.arena.player.fire.shooting = firing;
+					Self.arena.player.dir = dir;
+				}
+				break;
+			case "gamepad.down":
+				switch (event.button) {
+					case "b0": // x - shoot
+						User.input.shoot.pressed = true;
+						break;
+				}
+				break;
+			case "gamepad.up":
+				switch (event.button) {
+					case "b0": // x - shoot
+						User.input.shoot.pressed = false;
 						break;
 				}
 				break;
@@ -65,8 +107,8 @@
 						let num = xPos.getAttribute("num"),
 							y = xPos.getAttribute("y"),
 							x = xPos.getAttribute("x"),
-							xPlayer = xPos.selectSingleNode(`../../i[@num = "${num}"]`),
-							name = xPlayer.getAttribute("name");
+							xUser = xPos.selectSingleNode(`../../i[@num = "${num}"]`),
+							name = xUser.getAttribute("name");
 						return { name, num, x, y };
 					});
 				});

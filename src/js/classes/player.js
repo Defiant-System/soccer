@@ -9,9 +9,25 @@ class Player {
 		this.name = name;
 		this.num = num;
 		this.position = new Point(+x, +y);
+
+		this.sheet = {
+			n: [[0, 0], [19, 0], [38, 0]],
+			s: [[57, 0], [76, 0], [95, 0]],
+			w: [[114, 0], [133, 0], [152, 0]],
+			e: [[171, 0], [190, 0], [209, 0]],
+
+			se: [[0, 19], [19, 19], [38, 19]],
+			sw: [[57, 19], [76, 19], [95, 19]],
+			ne: [[114, 19], [133, 19], [152, 19]],
+			nw: [[171, 19], [190, 19], [209, 19]],
+		};
 	}
 
 	move(force) {
+		let target = this.position.add(force),
+			dir = this.position.direction(target),
+			angle = (dir * 180 / Math.PI) + 90;
+		console.log(angle);
 		this.position.x += force.x;
 		this.position.y += force.y;
 	}
