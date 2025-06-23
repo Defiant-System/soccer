@@ -1,8 +1,8 @@
 <MenuBar>
-	<Menu name="Football">
-		<Menu name="About Football" shell="win -a"/>
+	<Menu name="Soccer">
+		<Menu name="About Soccer" shell="win -a"/>
 		<Menu type="divider"/>
-		<Menu name="Quit Football" shell="win -c"/>
+		<Menu name="Quit Soccer" shell="win -c"/>
 	</Menu>
 	<Menu name="Game" for="game-content">
 		<Menu name="Show&#8230;">

@@ -1,5 +1,5 @@
 
-// football.manager
+// soccer.manager
 
 {
 	init() {
@@ -15,7 +15,7 @@
 		this.dispatch({ type: "render-team-list", home: "Sweden", away: "Turkiye" });
 	},
 	async dispatch(event) {
-		let APP = football,
+		let APP = soccer,
 			Self = APP.manager,
 			top, left,
 			el;

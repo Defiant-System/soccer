@@ -10,7 +10,7 @@
 @import "./modules/test.js"
 
 
-const football = {
+const soccer = {
 	init() {
 		// fast references
 		this.content = window.find("content");
@@ -25,7 +25,7 @@ const football = {
 		// DEV-ONLY-END
 	},
 	dispatch(event) {
-		let Self = football,
+		let Self = soccer,
 			el;
 		switch (event.type) {
 			// system events
@@ -69,4 +69,4 @@ const football = {
 	manager: @import "./areas/manager.js",
 };
 
-window.exports = football;
+window.exports = soccer;

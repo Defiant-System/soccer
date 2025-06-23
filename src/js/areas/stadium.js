@@ -1,5 +1,5 @@
 
-// football.stadium
+// soccer.stadium
 
 {
 	init() {
@@ -14,7 +14,7 @@
 		this.els.el.on("mousedown", this.doPan);
 	},
 	async dispatch(event) {
-		let APP = football,
+		let APP = soccer,
 			Self = APP.stadium,
 			top, left,
 			el;
