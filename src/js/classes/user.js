@@ -29,7 +29,9 @@ class User {
 			this.player = this.parent.player;
 		}
 
-		this.player.move(force);
+		if (force.x !== 0 || force.y !== 0) {
+			this.player.move(force);
+		}
 	}
 
 	render(ctx) {
