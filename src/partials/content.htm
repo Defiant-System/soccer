@@ -1,38 +1,19 @@
-<content>
-	<div class="arena">
-		<div class="bleachers top">
-			<div class="police"></div>
-			<div class="police"></div>
-		</div>
-		<div class="stands top"></div>
-		<div class="stands left"></div>
-		<div class="stands right"></div>
-		<div class="stands bottom"></div>
-		<div class="bleachers bottom">
-			<div class="police"></div>
-			<div class="police"></div>
-		</div>
-
-		<!-- <div class="blueprint"></div> -->
-		
-		<div class="field">
-			<div class="top">
-				<div class="left-corner"></div>
-				<div class="goal"></div>
-				<div class="goal-box"></div>
-				<div class="penalty-box"></div>
-				<div class="penalty-arc"></div>
-				<div class="right-corner"></div>
+<content data-show="stadium" data-context="game-content">
+	<div data-area="manager">
+		<div class="head"></div>
+		<div class="body">
+			<div class="field">
+				<canvas class="overview"></canvas>
+				<div class="players">
+					<!-- team formation goes here -->
+				</div>
 			</div>
-			<div class="bottom">
-				<div class="left-corner"></div>
-				<div class="goal"></div>
-				<div class="goal-box"></div>
-				<div class="penalty-box"></div>
-				<div class="penalty-arc"></div>
-				<div class="right-corner"></div>
+			<div class="list">
+				<!-- team list goes here -->
 			</div>
-			<div class="ball"></div>
 		</div>
+	</div>
+	<div data-area="stadium">
+		<canvas class="canvas"></canvas>
 	</div>
 </content>

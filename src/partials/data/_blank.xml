@@ -1,0 +1,35 @@
+
+<team type="national" name="Blank">
+	<i num="1" name="" price="" pos="" nat="" />
+	<i num="2" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="3" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="4" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="5" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="6" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="7" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="8" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="9" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="10" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="11" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="12" name="" price="" pos="" nat="" />
+	<i num="13" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="14" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="15" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<i num="16" name="" price="" pos="" nat="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<tot price="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+	<avg price="" pass="" vel="" head="" tackling="" ball="" speed="" finish="" total="" />
+
+	<form id="4-4-2">
+		<i num="1" y="425" x="220" />
+		<i num="2" y="325" x="350" />
+		<i num="3" y="350" x="174" />
+		<i num="4" y="350" x="264" />
+		<i num="5" y="325" x="89" />
+		<i num="6" y="230" x="89" />
+		<i num="7" y="230" x="350" />
+		<i num="8" y="240" x="264" />
+		<i num="9" y="240" x="174" />
+		<i num="10" y="118" x="298" />
+		<i num="11" y="118" x="144" />
+	</form>
+</team>

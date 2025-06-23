@@ -1,8 +1,17 @@
 
+@import "./classes/point.js"
+@import "./classes/arena.js"
+@import "./classes/viewport.js"
+@import "./classes/stadium.js"
+@import "./classes/field.js"
+@import "./classes/player.js"
+@import "./classes/ball.js"
+
+@import "./modules/utils.js"
 @import "./modules/test.js"
 
 
-const football = {
+const soccer = {
 	init() {
 		// fast references
 		this.content = window.find("content");
@@ -17,7 +26,7 @@ const football = {
 		// DEV-ONLY-END
 	},
 	dispatch(event) {
-		let Self = football,
+		let Self = soccer,
 			el;
 		switch (event.type) {
 			// system events
@@ -33,11 +42,15 @@ const football = {
 					case "down":
 					case "left":
 					case "right":
-						Self.game.dispatch(event);
+					case "p":
+						Self.stadium.dispatch(event);
 						break;
 				}
 				break;
 			// custom events
+			case "show-view":
+				Self.content.data({ show: event.arg });
+				break;
 			case "open-help":
 				karaqu.shell("fs -u '~/help/index.md'");
 				break;
@@ -54,7 +67,8 @@ const football = {
 				}
 		}
 	},
-	game: @import "./areas/game.js",
+	stadium: @import "./areas/stadium.js",
+	manager: @import "./areas/manager.js",
 };
 
-window.exports = football;
+window.exports = soccer;

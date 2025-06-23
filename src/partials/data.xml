@@ -1,0 +1,4 @@
+<data>
+	@import "data/sweden.xml"
+	@import "data/turkiye.xml"
+</data>

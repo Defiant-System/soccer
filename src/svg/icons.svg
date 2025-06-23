@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
 
-	<svg id="sprite-ball" viewBox="0 0 480 32">
+	<svg id="sprite-ball" viewBox="0 0 480 32" size="keep">
 		<style type="text/css">
 			.st0{fill:#E8E8E8;}
 			.st1{fill:#020202;}

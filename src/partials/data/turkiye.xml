@@ -1,0 +1,35 @@
+
+<team type="national" name="Turkiye" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Rustu Recber" price="950K" pos="G" nat="Tur" />
+	<i num="2" name="Recep Cetin" price="700K" pos="RB" nat="Tur" pass="2" vel="2" head="1" tackling="7" ball="2" speed="6" finish="3" total="23" />
+	<i num="3" name="Ogun Temizkanoglu" price="650K" pos="D" nat="Tur" pass="2" vel="2" head="7" tackling="5" ball="2" speed="2" finish="2" total="22" />
+	<i num="4" name="Bulent Korkmaz" price="600K" pos="LB" nat="Tur" pass="1" vel="2" head="6" tackling="7" ball="1" speed="2" finish="2" total="21" />
+	<i num="5" name="Tugay Kerimoglu" price="1M" pos="RW" nat="Tur" pass="6" vel="2" head="2" tackling="3" ball="6" speed="6" finish="3" total="28" />
+	<i num="6" name="Alpay Ozalan" price="700K" pos="D" nat="Tur" pass="5" vel="1" head="6" tackling="7" ball="1" speed="1" finish="2" total="23" />
+	<i num="7" name="Abdullah Ercan" price="1.3M" pos="LW" nat="Tur" pass="6" vel="3" head="2" tackling="3" ball="6" speed="7" finish="3" total="30" />
+	<i num="8" name="Tolunay Kafkas" price="800K" pos="M" nat="Tur" pass="4" vel="5" head="2" tackling="6" ball="2" speed="1" finish="5" total="25" />
+	<i num="9" name="Hakan Sukur" price="1.9M" pos="A" nat="Tur" pass="2" vel="7" head="7" tackling="4" ball="3" speed="4" finish="7" total="34" />
+	<i num="10" name="Oguz Cetin" price="800K" pos="M" nat="Tur" pass="7" vel="2" head="3" tackling="7" ball="3" speed="1" finish="2" total="25" />
+	<i num="11" name="Saffet Sancakli" price="700K" pos="A" nat="Tur" pass="2" vel="5" head="5" tackling="1" ball="2" speed="4" finish="4" total="23" />
+	<i num="12" name="Engin Ipekoglu" price="350K" pos="G" nat="Tur" />
+	<i num="13" name="Vedat Inceefe" price="600K" pos="D" nat="Tur" pass="1" vel="2" head="6" tackling="6" ball="1" speed="3" finish="2" total="21" />
+	<i num="14" name="Sergen Yalcin" price="600K" pos="M" nat="Tur" pass="7" vel="2" head="1" tackling="6" ball="2" speed="2" finish="1" total="21" />
+	<i num="15" name="Tayfun Korkut" price="600K" pos="M" nat="Tur" pass="3" vel="0" head="2" tackling="5" ball="5" speed="1" finish="5" total="21" />
+	<i num="16" name="Arif Erdem" price="700K" pos="A" nat="Tur" pass="1" vel="5" head="2" tackling="2" ball="1" speed="5" finish="7" total="23" />
+	<tot price="12.95M" pass="49" vel="40" head="52" tackling="69" ball="37" speed="45" finish="48" total="340" />
+	<avg price="809K" pass="3.5" vel="2.9" head="3.7" tackling="4.9" ball="2.6" speed="3.2" finish="3.4" total="24.3" />
+
+	<form id="4-4-2">
+		<i num="1" y="425" x="220" />
+		<i num="2" y="325" x="350" />
+		<i num="3" y="350" x="174" />
+		<i num="4" y="350" x="264" />
+		<i num="5" y="325" x="89" />
+		<i num="6" y="230" x="89" />
+		<i num="7" y="230" x="350" />
+		<i num="8" y="240" x="264" />
+		<i num="9" y="240" x="174" />
+		<i num="10" y="118" x="298" />
+		<i num="11" y="118" x="144" />
+	</form>
+</team>
