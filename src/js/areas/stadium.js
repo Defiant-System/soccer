@@ -11,7 +11,7 @@
 		// instantiate arena
 		this.arena = new Arena({ canvas: this.els.canvas });
 		// temp: bind event handlers
-		this.els.el.on("mousedown", this.doPan);
+		this.els.el.on("mousedown wheel", this.doPanZoom);
 	},
 	async dispatch(event) {
 		let APP = soccer,
@@ -68,11 +68,17 @@
 				break;
 		}
 	},
-	doPan(event) {
+	doPanZoom(event) {
 		let APP = soccer,
 			Self = APP.stadium,
 			Drag = Self.drag;
 		switch (event.type) {
+			// zoom in/out
+			case "wheel":
+				console.log(event);
+				break;
+
+			// pan stadium
 			case "mousedown":
 				// prevent default behaviour
 				event.preventDefault();

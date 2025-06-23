@@ -28,6 +28,7 @@ const soccer = {
 	dispatch(event) {
 		let Self = soccer,
 			el;
+		// console.log(event);
 		switch (event.type) {
 			// system events
 			case "window.init":
