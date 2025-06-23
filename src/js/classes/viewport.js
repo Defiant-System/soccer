@@ -15,11 +15,22 @@ class Viewport {
 			offsetY: 0,
 		};
 
-		this.scale = 1;
-		// this.scale = w / this.arena.stadium.config.sW;
+		this._zoom = 100;
+		this._scaleMax = 1;
+		this._scaleMin = w / this.arena.stadium.config.sW;
+		this.scale = this._scaleMax;
 
 		// mid point of viewport
 		this.half = { w: w >> 1, h: h >> 1 };
+	}
+
+	set zoom(v) {
+		this._zoom = v;
+		this.scale = Math.lerp(this._scaleMin, this._scaleMax, this._zoom/100)
+	}
+
+	get zoom() {
+		return this._zoom;
 	}
 
 	addShake(trauma) {

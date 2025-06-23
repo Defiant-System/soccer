@@ -16,7 +16,7 @@
 	async dispatch(event) {
 		let APP = soccer,
 			Self = APP.stadium,
-			top, left,
+			force,
 			el;
 		// console.log(event);
 		switch (event.type) {
@@ -25,15 +25,23 @@
 				switch (event.char) {
 					case "w":
 					case "up":
+						force = new Point(0, -1);
+						Self.arena.stadium.player.move(force);
 						break;
 					case "s":
 					case "down":
+						force = new Point(0, 1);
+						Self.arena.stadium.player.move(force);
 						break;
 					case "a":
 					case "left":
+						force = new Point(-1, 0);
+						Self.arena.stadium.player.move(force);
 						break;
 					case "d":
 					case "right":
+						force = new Point(1, 0);
+						Self.arena.stadium.player.move(force);
 						break;
 					case "p":
 						if (Self.arena.fpsControl._stopped) Self.arena.fpsControl.start();
@@ -75,7 +83,8 @@
 		switch (event.type) {
 			// zoom in/out
 			case "wheel":
-				console.log(event);
+				let delta = event.deltaY === 0 ? event.deltaX : event.deltaY;
+				Self.arena.viewport.zoom = Math.max(Math.min(Self.arena.viewport.zoom - (delta * .25), 100), 0);
 				break;
 
 			// pan stadium

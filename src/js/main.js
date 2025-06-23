@@ -1,4 +1,5 @@
 
+@import "./classes/simplexnoise.js"
 @import "./classes/point.js"
 @import "./classes/arena.js"
 @import "./classes/viewport.js"
@@ -6,6 +7,8 @@
 @import "./classes/field.js"
 @import "./classes/player.js"
 @import "./classes/ball.js"
+
+@import "./ext/matter.min.js"
 
 @import "./modules/utils.js"
 @import "./modules/test.js"

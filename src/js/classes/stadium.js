@@ -34,9 +34,11 @@ class Stadium {
 				});
 			}
 			let asset = this.parent.fixtures.find(e => e.name == `${side} player`);
-			teams[side].players.map(opt => {
+			teams[side].players.map((opt, i) => {
 				let player = new Player({ ...opt, parent: this, asset });
 				this.entries.push(player);
+
+				if (side === "away" && i == 8) this.player = player;
 			});
 		});
 	}
