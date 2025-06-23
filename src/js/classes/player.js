@@ -15,14 +15,14 @@ class Player {
 		this.h = 19 * pixScale;
 
 		this.sheet = {
-			"0":   { dir: "n",  sheet: [[0, 0], [19, 0], [38, 0]] },
-			"45":  { dir: "nw", sheet: [[171, 19], [190, 19], [209, 19]] },
-			"90":  { dir: "w",  sheet: [[114, 0], [133, 0], [152, 0]] },
-			"135": { dir: "sw", sheet: [[57, 19], [76, 19], [95, 19]] },
-			"180": { dir: "s",  sheet: [[57, 0], [76, 0], [95, 0]] },
-			"225": { dir: "se", sheet: [[0, 19], [19, 19], [38, 19]] },
-			"270": { dir: "e",  sheet: [[171, 0], [190, 0], [209, 0]] },
-			"315": { dir: "ne", sheet: [[114, 19], [133, 19], [152, 19]] },
+			"0":   { dir: "n",  sheet: [[0,0],[19,0],[38,0]] },
+			"45":  { dir: "nw", sheet: [[171,19],[190,19],[209,19]] },
+			"90":  { dir: "w",  sheet: [[114,0],[133,0],[152,0]] },
+			"135": { dir: "sw", sheet: [[57,19],[76,19],[95,19]] },
+			"180": { dir: "s",  sheet: [[57,0],[76,0],[95,0]] },
+			"225": { dir: "se", sheet: [[0,19],[19,19],[38,19]] },
+			"270": { dir: "e",  sheet: [[171,0],[190,0],[209,0]] },
+			"315": { dir: "ne", sheet: [[114,19],[133,19],[152,19]] },
 		};
 		// auto scale up with "pixel scale"
 		Object.keys(this.sheet).map(key =>
@@ -36,6 +36,7 @@ class Player {
 		let target = this.position.add(force),
 			dir = this.position.direction(target),
 			angle = (dir * 180 / Math.PI) + 90;
+		if (angle < 0) angle += 360;
 		this.strip = this.sheet[angle];
 		this.position.x += force.x;
 		this.position.y += force.y;

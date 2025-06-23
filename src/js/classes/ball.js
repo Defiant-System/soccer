@@ -6,10 +6,17 @@ class Ball {
 		this.parent = parent;
 		this.asset = asset;
 
+		this.oR = 32;
+		this.gR = 28;
+		this.radius = this.gR >> 1;
+
 		// ball position
 		let x = (this.parent.config.sW / 2),
 			y = (this.parent.config.sH / 2) + 10; // TODO: calculate "10"
 		this.position = new Point(x, y);
+
+		// physics body
+		this.body = Matter.Bodies.circle(x, y, this.radius);
 
 		// ball animation / rotation
 		this.frame = {
@@ -30,12 +37,12 @@ class Ball {
 	}
 
 	render(ctx) {
-		let w1 = 32,
-			w2 = 28,
+		let w1 = this.oR,
+			w2 = this.gR,
 			f = this.frame.index * w1,
 			x = this.position.x,
 			y = this.position.y,
-			r = (w2-2) >> 1,
+			r = this.radius,
 			gx = x+r,
 			gy = y+r,
 			gradient;
@@ -50,20 +57,20 @@ class Ball {
 		gradient.addColorStop(1.0, "#0009");
 
 		// shadow
-		ctx.fillStyle = "#0004";
+		ctx.fillStyle = "#0005";
 		ctx.beginPath();
-		ctx.arc(gx+5, gy+5, r-3, 0, Math.TAU);
+		ctx.arc(gx+3.5, gy+3.5, r-2, 0, Math.TAU);
 		ctx.fill();
 		// ball
 		ctx.drawImage(this.asset.img, f, 0, w1, w1, x, y, w2, w2);
 		// gradient
 		ctx.fillStyle = gradient;
 		ctx.beginPath();
-		ctx.arc(gx+1, gy+1, r-.75, 0, Math.TAU);
+		ctx.arc(gx, gy, r-1.5, 0, Math.TAU);
 		ctx.fill();
 		ctx.restore();
 
-		/* indicated ball pos
+		/* indicates ball pos
 		ctx.fillStyle = "#f00";
 		ctx.beginPath();
 		ctx.arc(x, y, 4, 0, Math.TAU);

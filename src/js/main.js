@@ -15,6 +15,9 @@
 @import "./modules/test.js"
 
 
+const Matter = window.Matter;
+
+
 const soccer = {
 	init() {
 		// fast references
@@ -47,6 +50,9 @@ const soccer = {
 			case "open-help":
 				karaqu.shell("fs -u '~/help/index.md'");
 				break;
+			// proxy event
+			case "set-debug-mode":
+				return Self.stadium.dispatch(event);
 			// proxy events
 			default:
 				el = event.el;

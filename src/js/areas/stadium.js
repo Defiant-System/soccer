@@ -116,6 +116,9 @@
 				this.arena.setStadium();
 				this.arena.setTeam(teams);
 				break;
+			case "set-debug-mode":
+				Self.arena.setDebug(+event.arg);
+				break;
 		}
 	},
 	doPanZoom(event) {

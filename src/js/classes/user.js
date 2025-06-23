@@ -4,6 +4,7 @@ class User {
 		let { parent } = cfg;
 
 		this.parent = parent;
+		this.speed = .5;
 
 		this.input = {
 			up:    { pressed: false, force: { x: 0, y: -1 } },
@@ -15,7 +16,7 @@ class User {
 
 	update(delta, time) {
 		// USER input
-		let force = { x: 0, y: 0 };
+		let force = new Point(0, 0);
 		for (let key in this.input) {
 			if (this.input[key].pressed) {
 				let f = this.input[key].force;
@@ -30,7 +31,7 @@ class User {
 		}
 
 		if (force.x !== 0 || force.y !== 0) {
-			this.player.move(force);
+			this.player.move(force.scale(this.speed));
 		}
 	}
 

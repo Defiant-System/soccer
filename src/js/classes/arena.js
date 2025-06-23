@@ -9,6 +9,12 @@ class Arena {
 		this.height = window.innerHeight;
 		// set dimenstions
 		this.cvs.attr({ width: this.width, height: this.height });
+
+		// physics engine
+		this.engine = Matter.Engine.create({ gravity: { x: 0, y: 0, scale: 1 } });
+		// create runner
+		this.runner = Matter.Runner.create();
+
 		// dev / debug purpose
 		this.debug = {
 			mode: 1,
@@ -19,6 +25,7 @@ class Arena {
 		this.fpsControl = karaqu.FpsControl({
 			fps: 50,
 			callback(time, delta) {
+				Matter.Runner.tick(Self.runner, Self.engine);
 				Self.update(delta, time);
 				Self.render();
 			}
@@ -65,6 +72,10 @@ class Arena {
 		// this.setStadium();
 		// play FPS control
 		// this.fpsControl.start();
+	}
+
+	setDebug(mode) {
+		this.debug.mode = mode;
 	}
 
 	setTeam(teams) {
@@ -173,6 +184,11 @@ class Arena {
 			assets = this.assets;
 		this.stadium = new Stadium({ parent, scale, config, assets });
 		this.viewport = new Viewport({ arena: this, x: 0, y: 0, w: this.width, h: this.height });
+
+		let bodies = [];
+		bodies.push(this.stadium.ball.body);
+		// physics setup
+		Matter.Composite.add(this.engine.world, bodies);
 	}
 
 	update(delta, time) {
@@ -194,6 +210,23 @@ class Arena {
 		this.ctx.restore();
 		
 		if (this.debug.mode >= 1) {
+			let bodies = Matter.Composite.allBodies(this.engine.world);
+
+			this.ctx.save();
+			this.ctx.translate(this.viewport.x, this.viewport.y);
+			this.ctx.lineWidth = 1;
+			this.ctx.fillStyle = "#33669977";
+			this.ctx.strokeStyle = "#113355cc";
+			this.ctx.beginPath();
+			bodies.map(body => {
+				this.ctx.moveTo(body.vertices[0].x, body.vertices[0].y);
+				body.vertices.slice(1).map(v => this.ctx.lineTo(v.x, v.y));
+				this.ctx.lineTo(body.vertices[0].x, body.vertices[0].y);
+			});
+			this.ctx.fill();
+			this.ctx.stroke();
+			this.ctx.restore();
+
 			this.drawFps(this.ctx);
 		}
 	}
