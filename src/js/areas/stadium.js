@@ -24,13 +24,21 @@
 			case "window.keystroke":
 				switch (event.char) {
 					case "w":
-					case "up": Self.dispatch({ type: "pan-arena", step: { x: 0, y: 1 } }); break;
+					case "up":
+						break;
 					case "s":
-					case "down": Self.dispatch({ type: "pan-arena", step: { x: 0, y: -1 } }); break;
+					case "down":
+						break;
 					case "a":
-					case "left": Self.dispatch({ type: "pan-arena", step: { x: 1, y: 0 } }); break;
+					case "left":
+						break;
 					case "d":
-					case "right": Self.dispatch({ type: "pan-arena", step: { x: -1, y: 0 } }); break;
+					case "right":
+						break;
+					case "p":
+						if (Self.arena.fpsControl._stopped) Self.arena.fpsControl.start();
+						else Self.arena.fpsControl.stop();
+						break;
 				}
 				break;
 			// custom events
@@ -88,7 +96,6 @@
 			case "mousemove":
 				let y = Drag.offset.y - (event.clientY - Drag.click.y),
 					x = Drag.offset.x - (event.clientX - Drag.click.x);
-
 				Drag.arena.stadium.ball.position.y = y;
 				Drag.arena.stadium.ball.position.x = x;
 				break;

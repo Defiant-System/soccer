@@ -15,7 +15,8 @@ class Viewport {
 			offsetY: 0,
 		};
 
-		this.scale = 1; // window.innerWidth / sW;
+		this.scale = 1;
+		// this.scale = w / this.arena.stadium.config.sW;
 
 		// mid point of viewport
 		this.half = { w: w >> 1, h: h >> 1 };

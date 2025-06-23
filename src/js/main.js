@@ -42,7 +42,8 @@ const soccer = {
 					case "down":
 					case "left":
 					case "right":
-						Self.game.dispatch(event);
+					case "p":
+						Self.stadium.dispatch(event);
 						break;
 				}
 				break;
