@@ -21,8 +21,8 @@ class Player {
 			w2 = 57,
 			mX = 171,
 			mY = 0,
-			x = this.x,
-			y = this.y;
+			x = (this.x * 4.5) + 80,
+			y = this.y * 4.5;
 
 		// player
 		// ctx.drawImage(this.asset.cvs, 0, 0, 684, 456, 140, 140, 684, 456);

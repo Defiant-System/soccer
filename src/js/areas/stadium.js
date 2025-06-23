@@ -10,6 +10,8 @@
 		};
 		// instantiate arena
 		this.arena = new Arena({ canvas: this.els.canvas });
+		// temp: bind event handlers
+		this.els.el.on("mousedown", this.doPan);
 	},
 	async dispatch(event) {
 		let APP = football,
@@ -55,6 +57,41 @@
 				this.arena.setTeamColors(teams);
 				this.arena.setStadium();
 				this.arena.setTeam(teams);
+				break;
+		}
+	},
+	doPan(event) {
+		let APP = football,
+			Self = APP.stadium,
+			Drag = Self.drag;
+		switch (event.type) {
+			case "mousedown":
+				// prevent default behaviour
+				event.preventDefault();
+
+				let doc = $(document),
+					tgt = $(event.target),
+					offset = {
+						top: Self.arena.top,
+						left: Self.arena.left,
+					},
+					click = {
+						y: event.clientY,
+						x: event.clientX,
+					};
+
+				// drag info
+				Self.drag = { doc, el, click, offset };
+				// bind event handlers
+				Self.drag.doc.on("mousemove mouseup", Self.dragEditbox);
+				break;
+			case "mousemove":
+				let dY = event.clientY - Drag.click.y,
+					dX = event.clientX - Drag.click.x;
+				break;
+			case "mouseup":
+				// unbind event handlers
+				Self.drag.doc.off("mousemove mouseup", Self.dragEditbox);
 				break;
 		}
 	}

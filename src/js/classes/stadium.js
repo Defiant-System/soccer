@@ -27,9 +27,9 @@ class Stadium {
 	setTeam(teams) {
 		Object.keys(teams).map(side => {
 			// if away team - mirror players positions
-			if (side === "away") {
+			if (side === "home") {
 				teams[side].players.map(pos => {
-					pos.y = 500 + Math.abs(pos.y - 500);
+					pos.y = Math.abs(pos.y - 500);
 					pos.x = Math.abs(pos.x - 390);
 				});
 			}

@@ -5,6 +5,9 @@ class Arena {
 
 		this.cvs = canvas;
 		this.ctx = this.cvs[0].getContext("2d");
+		// offset + dimensions
+		this.top = 0;
+		this.left = 0;
 		this.width = window.innerWidth;
 		this.height = window.innerHeight;
 		// set dimenstions
