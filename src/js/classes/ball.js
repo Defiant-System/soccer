@@ -6,6 +6,11 @@ class Ball {
 		this.parent = parent;
 		this.asset = asset;
 
+		// ball position
+		let x = (this.parent.config.sW / 2),
+			y = (this.parent.config.sH / 2) + 10; // TODO: calculate "10"
+		this.position = new Point(x, y);
+
 		// ball animation / rotation
 		this.frame = {
 			index: 0,
@@ -22,17 +27,14 @@ class Ball {
 			this.frame.index++;
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
-
-		this.top = (this.parent.config.sH / 2) + 10; // TODO: calculate "10"
-		this.left = (this.parent.config.sW / 2);
 	}
 
 	render(ctx) {
 		let w1 = 32,
 			w2 = 32,
 			f = this.frame.index * w1,
-			x = this.left,
-			y = this.top,
+			x = this.position.x,
+			y = this.position.y,
 			r = (w2-2) >> 1,
 			gx = x+r,
 			gy = y+r,

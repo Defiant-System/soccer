@@ -1,4 +1,5 @@
 
+@import "./classes/point.js"
 @import "./classes/arena.js"
 @import "./classes/viewport.js"
 @import "./classes/stadium.js"

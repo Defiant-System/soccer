@@ -61,7 +61,7 @@
 		}
 	},
 	doPan(event) {
-		let APP = football,
+		let APP = soccer,
 			Self = APP.stadium,
 			Drag = Self.drag;
 		switch (event.type) {
@@ -70,7 +70,7 @@
 				event.preventDefault();
 
 				let doc = $(document),
-					tgt = $(event.target),
+					arena = Self.arena,
 					offset = {
 						top: Self.arena.top,
 						left: Self.arena.left,
@@ -81,17 +81,18 @@
 					};
 
 				// drag info
-				Self.drag = { doc, el, click, offset };
+				Self.drag = { doc, arena, click, offset };
 				// bind event handlers
-				Self.drag.doc.on("mousemove mouseup", Self.dragEditbox);
+				Self.drag.doc.on("mousemove mouseup", Self.doPan);
 				break;
 			case "mousemove":
-				let dY = event.clientY - Drag.click.y,
-					dX = event.clientX - Drag.click.x;
+				let top = event.clientY - Drag.click.y + Drag.offset.top,
+					left = event.clientX - Drag.click.x + Drag.offset.top;
+				Drag.arena.viewport.scroll({ top, left });
 				break;
 			case "mouseup":
 				// unbind event handlers
-				Self.drag.doc.off("mousemove mouseup", Self.dragEditbox);
+				Self.drag.doc.off("mousemove mouseup", Self.doPan);
 				break;
 		}
 	}

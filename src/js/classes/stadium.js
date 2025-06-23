@@ -10,17 +10,17 @@ class Stadium {
 		this.entries = [];
 		this.patterns = {};
 		this.field = new Field({ ...config, scale, parent });
-		this.ball = new Ball({ parent: this, asset: parent.assets.ball });
-		
+		// field dimensions
 		this.config.sW = this.field.sW + this.config.margin.l + this.config.margin.r;
 		this.config.sH = this.field.sH + this.config.margin.t + this.config.margin.b;
 		this.full = Utils.createCanvas(this.config.sW, this.config.sH);
+		// add ball to stadium
+		this.ball = new Ball({ parent: this, asset: parent.assets.ball });
 
 		// paint full hi-res stadium
 		this.paint();
 
 		// add ball
-		// this.entries.push(this.field);
 		this.entries.push(this.ball);
 	}
 
@@ -50,12 +50,6 @@ class Stadium {
 			stripe = (this.field.sH / 10),
 			pS = this.parent.pixScale,
 			fixture;
-
-		// 
-		this.zoom = {
-			in: 1,
-			out: window.innerWidth / sW,
-		};
 
 		// reset canvas
 		this.full.cvs.attr({ width: sW });
@@ -118,15 +112,9 @@ class Stadium {
 		let home = 0,
 			away = window.innerHeight - this.config.sH,
 			center = window.innerHeight - (this.config.sH >> 1) - this.config.margin.t;
-
-		ctx.save();
-		ctx.scale(this.zoom.out, this.zoom.out);
-		ctx.translate(-0, home);
+		// draw clean stadium
 		ctx.drawImage(this.full.cvs[0], 0, 0);
-
 		// draw entries
 		this.entries.map(entry => entry.render(ctx));
-
-		ctx.restore();
 	}
 }

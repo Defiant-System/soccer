@@ -5,9 +5,6 @@ class Arena {
 
 		this.cvs = canvas;
 		this.ctx = this.cvs[0].getContext("2d");
-		// offset + dimensions
-		this.top = 0;
-		this.left = 0;
 		this.width = window.innerWidth;
 		this.height = window.innerHeight;
 		// set dimenstions
@@ -175,7 +172,7 @@ class Arena {
 			config = this.config,
 			assets = this.assets;
 		this.stadium = new Stadium({ parent, scale, config, assets });
-		this.viewport = new Viewport({ parent });
+		this.viewport = new Viewport({ arena: this, x: 0, y: 0, w: this.width, h: this.height });
 	}
 
 	update(delta, time) {
@@ -183,11 +180,17 @@ class Arena {
 		this.viewport.update(delta, time);
 	}
 
-	render(ctx) {
+	render() {
 		// clear canvas
 		this.cvs.attr({ width: this.width });
+		// center viewport + render map, etc
+		this.viewport.center();
+
 		// render stadium
+		this.ctx.save();
+		this.ctx.translate(this.viewport.x, this.viewport.y);
 		this.stadium.render(this.ctx);
+		this.ctx.restore();
 		
 		if (this.debug.mode >= 1) {
 			this.drawFps(this.ctx);
