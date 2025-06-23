@@ -188,6 +188,7 @@ class Arena {
 
 		// render stadium
 		this.ctx.save();
+		this.ctx.scale(this.viewport.scale, this.viewport.scale);
 		this.ctx.translate(this.viewport.x, this.viewport.y);
 		this.stadium.render(this.ctx);
 		this.ctx.restore();

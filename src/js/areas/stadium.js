@@ -72,8 +72,8 @@
 				let doc = $(document),
 					arena = Self.arena,
 					offset = {
-						top: Self.arena.top,
-						left: Self.arena.left,
+						y: arena.stadium.ball.position.y,
+						x: arena.stadium.ball.position.x,
 					},
 					click = {
 						y: event.clientY,
@@ -86,9 +86,11 @@
 				Self.drag.doc.on("mousemove mouseup", Self.doPan);
 				break;
 			case "mousemove":
-				let top = event.clientY - Drag.click.y + Drag.offset.top,
-					left = event.clientX - Drag.click.x + Drag.offset.top;
-				Drag.arena.viewport.scroll({ top, left });
+				let y = Drag.offset.y - (event.clientY - Drag.click.y),
+					x = Drag.offset.x - (event.clientX - Drag.click.x);
+
+				Drag.arena.stadium.ball.position.y = y;
+				Drag.arena.stadium.ball.position.x = x;
 				break;
 			case "mouseup":
 				// unbind event handlers
