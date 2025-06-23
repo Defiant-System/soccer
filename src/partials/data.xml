@@ -1,3 +1,4 @@
 <data>
-	@import "data/swe.xml"
+	@import "data/sweden.xml"
+	@import "data/turkiye.xml"
 </data>

@@ -61,23 +61,20 @@ class Arena {
 	}
 
 	ready() {
-		// apply team colors on sprite
-		this.setTeamColors({
-			home: [[252,0,0],[252,252,252]],
-			away: [[0,0,255],[0,0,109]],
-		});
 		// stadium & field
-		this.setStadium();
+		// this.setStadium();
 		// play FPS control
 		// this.fpsControl.start();
 	}
 
-	setTeamColors(colors) {
+	// apply team colors on sprite
+	setTeamColors(teams) {
 		let palette = [[252,0,0],[252,252,252]];
 		let { width, height } = this.assets.sprite.item;
 		// team colors
-		Object.keys(colors).map(team => {
-			let { cvs, ctx } = Utils.createCanvas(width, height);
+		Object.keys(teams).map(side => {
+			let { cvs, ctx } = Utils.createCanvas(width, height),
+				colors = teams[side].colors;
 			// repaints sprite for fighter
 			ctx.drawImage(this.assets.sprite.img, 0, 0);
 			let pixels = ctx.getImageData(0, 0, width, height),
@@ -89,7 +86,7 @@ class Arena {
 					len = 2;
 				while (len--) {
 					if (palette[len][0] === r && palette[len][1] === g && palette[len][2] === b) {
-						[r,g,b] = colors[team][len];
+						[r,g,b] = colors[len];
 					}
 				}
 				data[i+0] = r;
@@ -98,7 +95,7 @@ class Arena {
 			}
 			ctx.putImageData(pixels, 0, 0);
 			// save reference
-			this.assets[team] = { cvs: cvs[0], ctx };
+			this.assets[side] = { cvs: cvs[0], ctx };
 		});
 		// statium fixtures
 		this.fixtures = [

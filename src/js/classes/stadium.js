@@ -24,12 +24,15 @@ class Stadium {
 		this.entries.push(this.ball);
 	}
 
-	setTeam(data) {
-		console.log(data);
-		
-		// let asset = this.parent.fixtures.find(e => e.name == "home player");
-		// let player = new Player({ parent: this, asset });
-		// this.entries.push(player);
+	setTeam(teams) {
+		let asset = this.parent.fixtures.find(e => e.name == "home player");
+		Object.keys(teams).map(side => {
+			teams[side].map(opt => {
+				console.log(side, opt);
+				// let player = new Player({ ...opt, parent: this, asset });
+				// this.entries.push(player);
+			});
+		});
 	}
 
 	paint() {

@@ -12,7 +12,7 @@
 		};
 
 		this.dispatch({ type: "draw-field" });
-		this.dispatch({ type: "render-team-list" });
+		this.dispatch({ type: "render-team-list", home: "Sweden", away: "Turkiye" });
 	},
 	async dispatch(event) {
 		let APP = football,
@@ -25,13 +25,13 @@
 			case "render-team-list":
 				window.render({
 					template: "team-list",
-					match: "//data/team",
+					match: `//data/team[@name="${event.home}"]`,
 					target: Self.els.list,
 				});
 
 				window.render({
 					template: "team-formation",
-					match: "//data/team/form",
+					match: `//data/team/form[@name="${event.home}"]`,
 					target: Self.els.form,
 				});
 				break;

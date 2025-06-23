@@ -1,5 +1,5 @@
 
-<team type="national" name="Sweden">
+<team type="national" name="Sweden" colors="[[234,215,42],[42,44,234]]">
 	<i num="1" name="Thomas Ravelli" price="1.1M" pos="G" nat="Swe"/>
 	<i num="2" name="Roland Nilsson" price="850K" pos="RB" nat="Swe" pass="7" vel="3" head="6" tackling="5" ball="2" speed="2" finish="1" total="26" />
 	<i num="3" name="Patrik Andersson" price="1.9M" pos="D" nat="Swe" pass="5" vel="5" head="7" tackling="7" ball="4" speed="3" finish="3" total="34" />

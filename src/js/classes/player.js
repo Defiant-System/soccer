@@ -1,10 +1,15 @@
 
 class Player {
 	constructor(cfg) {
-		let { parent, asset } = cfg;
+		let { parent, asset, name, num, x, y } = cfg;
 
 		this.parent = parent;
 		this.asset = asset;
+
+		this.name = name;
+		this.num = num;
+		this.x = x;
+		this.y = y;
 	}
 
 	update(delta, time) {
@@ -16,8 +21,8 @@ class Player {
 			w2 = 57,
 			mX = 171,
 			mY = 0,
-			x = 560,
-			y = 600;
+			x = this.x,
+			y = this.y;
 
 		// player
 		// ctx.drawImage(this.asset.cvs, 0, 0, 684, 456, 140, 140, 684, 456);

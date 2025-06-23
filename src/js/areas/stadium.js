@@ -32,9 +32,18 @@
 				}
 				break;
 			// custom events
-			case "add-team":
-				let team = window.bluePrint.selectSingleNode(`//team/form`),
-					data = team.selectNodes("./i").map(xPos => {
+			case "add-teams":
+				let teams = {
+						home: { name: "Sweden" },
+						away: { name: "Turkiye" },
+					};
+				Object.keys(teams).map(key => {
+					// save reference to team node
+					teams[key].xTeam = window.bluePrint.selectSingleNode(`//team[@name="${teams[key].name}"]`);
+					// team colors
+					teams[key].colors = JSON.parse(teams[key].xTeam.getAttribute("colors"));
+					// team formation
+					teams[key].players = teams[key].xTeam.selectNodes("./form/i").map(xPos => {
 						let num = xPos.getAttribute("num"),
 							y = xPos.getAttribute("y"),
 							x = xPos.getAttribute("x"),
@@ -42,8 +51,10 @@
 							name = xPlayer.getAttribute("name");
 						return { name, num, x, y };
 					});
-				// render team on arena
-				this.arena.stadium.setTeam(data);
+				});
+				this.arena.setTeamColors(teams);
+				this.arena.setStadium();
+				// this.arena.stadium.setTeam(teams);
 				break;
 		}
 	}
