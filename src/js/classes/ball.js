@@ -34,7 +34,7 @@ class Ball {
 		this.frame.last -= delta;
 		if (this.frame.last < 0) {
 			this.frame.last = (this.frame.last + this.frame.speed) % this.frame.speed;
-			this.frame.index += this.body.speed | 0;
+			this.frame.index += (this.body.speed * 1.5) | 0;
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
 
