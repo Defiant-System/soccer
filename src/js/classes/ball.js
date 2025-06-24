@@ -37,34 +37,51 @@ class Ball {
 			this.frame.index += this.body.speed | 0;
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
-		
+
+		// this.angle = this.body.angle;
+		let vel = this.body.velocity;
+		this.angle = Math.atan2(vel.y, vel.x) - (Math.PI * 1.5);
+
 		// copy physical position to "this" internal position
 		this.position.x = this.body.position.x;
 		this.position.y = this.body.position.y;
-
-		this.angle = this.body.angle;
-		// console.log(this.angle);
-		// this.frame.speed = this.body.speed;
-		// this.angle = Math.atan2(this.body.velocity.y, this.body.velocity.x);
-		// console.log(this.body.speed);
-		// console.log(this.body.velocity);
 	}
 
 	render(ctx) {
 		let w1 = this.oR,
 			w2 = this.gR,
-			f = 0, // this.frame.index * w1,
+			f = this.frame.index * w1,
 			x = this.position.x,
 			y = this.position.y,
 			r = this.radius,
-			gx = x+r,
-			gy = y+r,
 			gradient;
 		// ball
 		ctx.save();
 		ctx.translate(x, y);
+
+		// shadow
+		ctx.fillStyle = "#0005";
+		ctx.beginPath();
+		ctx.arc(3, 3, r-2, 0, Math.TAU);
+		ctx.fill();
+
+		ctx.save();
 		ctx.rotate(this.angle);
+		// ball
 		ctx.drawImage(this.asset.img, f, 0, w1, w1, -r, -r, w2, w2);
+		ctx.restore();
+
+		// 3d roundness
+		gradient = ctx.createRadialGradient(-5, -5, 0, -5, -5, r+3);
+		gradient.addColorStop(0.0, "#fff7");
+		gradient.addColorStop(0.65, "#1114");
+		gradient.addColorStop(1.0, "#0009");
+		// gradient
+		ctx.fillStyle = gradient;
+		ctx.beginPath();
+		ctx.arc(0, 0, r-1.5, 0, Math.TAU);
+		ctx.fill();
+
 		ctx.restore();
 	}
 }
