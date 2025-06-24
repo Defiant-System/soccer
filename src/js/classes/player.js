@@ -22,8 +22,8 @@ class Player {
 		this.speed = 1;
 
 		// physical body
-		this.body = Matter.Bodies.circle(x, y, 17, { density: .95, frictionAir: .05 });
-		// this.body = Matter.Bodies.rectangle(x, y, w, h, { density: .15, frictionAir: .05 });
+		// this.body = Matter.Bodies.circle(x, y, 17, { density: .95, frictionAir: .05 });
+		this.body = Matter.Bodies.rectangle(x, y+25, 38, 19, { density: 1.15, frictionAir: .05 });
 		this.body.label = this.id;
 		// prevents rotation
 		Matter.Body.setInertia(this.body, Infinity);

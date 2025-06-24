@@ -7,7 +7,7 @@ class Ball {
 		this.asset = asset;
 
 		this.oR = 32;
-		this.gR = 28;
+		this.gR = 22;
 		this.radius = this.gR >> 1;
 		this.angle = 0;
 
@@ -17,8 +17,7 @@ class Ball {
 		this.position = new Point(x, y);
 
 		// physics body
-		this.body = Matter.Bodies.circle(x, y, this.radius-2, { density: .15, frictionAir: .05 });
-		// this.body = Matter.Bodies.rectangle(x, y, 25, 25, { density: .15, frictionAir: .05 });
+		this.body = Matter.Bodies.circle(x, y, this.radius-2, { density: .0001, frictionAir: .05 });
 		this.body.label = "ball";
 
 		// ball animation / rotation
@@ -34,7 +33,7 @@ class Ball {
 		this.frame.last -= delta;
 		if (this.frame.last < 0) {
 			this.frame.last = (this.frame.last + this.frame.speed) % this.frame.speed;
-			this.frame.index += (this.body.speed * 1.5) | 0;
+			this.frame.index += this.body.speed * 1.5;
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
 
@@ -50,7 +49,7 @@ class Ball {
 	render(ctx) {
 		let w1 = this.oR,
 			w2 = this.gR,
-			f = this.frame.index * w1,
+			f = (this.frame.index | 0) * w1,
 			x = this.position.x,
 			y = this.position.y,
 			r = this.radius,
@@ -79,7 +78,7 @@ class Ball {
 		// gradient
 		ctx.fillStyle = gradient;
 		ctx.beginPath();
-		ctx.arc(0, 0, r-1.5, 0, Math.TAU);
+		ctx.arc(0, 0, r-1, 0, Math.TAU);
 		ctx.fill();
 
 		ctx.restore();
