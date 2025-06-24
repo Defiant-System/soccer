@@ -23,7 +23,7 @@ class Arena {
 		// create FPS controller
 		let Self = this;
 		this.fpsControl = karaqu.FpsControl({
-			fps: 50,
+			fps: 60,
 			callback(time, delta) {
 				Matter.Runner.tick(Self.runner, Self.engine);
 				Self.update(delta, time);
@@ -184,9 +184,11 @@ class Arena {
 			assets = this.assets;
 		this.stadium = new Stadium({ parent, scale, config, assets });
 		this.viewport = new Viewport({ arena: this, x: 0, y: 0, w: this.width, h: this.height });
+	}
 
-		let bodies = [];
-		bodies.push(this.stadium.ball.body);
+	setPhysicalWorld() {
+		// add items to the physical world
+		let bodies = this.stadium.entries.map(item => item.body).filter(e => !!e);
 		// physics setup
 		Matter.Composite.add(this.engine.world, bodies);
 	}

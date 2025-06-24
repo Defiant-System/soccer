@@ -1,18 +1,31 @@
 
 class Player {
 	constructor(cfg) {
-		let { parent, asset, name, num, x, y } = cfg;
+		let { parent, asset, body, name, num, x, y } = cfg;
 
 		this.parent = parent;
 		this.asset = asset;
 
+		this.id = `player-${Date.now()}`;
 		this.name = name;
 		this.num = num;
-		this.position = new Point(+x, +y);
 
-		let pixScale = parent.parent.pixScale;
-		this.w = 19 * pixScale;
-		this.h = 19 * pixScale;
+
+		let pixScale = parent.parent.pixScale,
+			w = 19 * pixScale,
+			h = 19 * pixScale;
+		x = (+x * 4.5) + 85;
+		y = +y * 4.5;
+		this.position = new Point(+x, +y);
+		this.w = w;
+		this.h = h;
+		this.speed = 1;
+
+		// physical body
+		this.body = Matter.Bodies.rectangle(x, y, w, h, { density: .15, frictionAir: .05 });
+		this.body.label = this.id;
+		// prevents rotation
+		Matter.Body.setInertia(this.body, Infinity);
 
 		this.sheet = {
 			"0":   { dir: "n",  sheet: [[0,0],[19,0],[38,0]] },
@@ -33,6 +46,12 @@ class Player {
 	}
 
 	move(force) {
+		force.x = force.x * this.speed;
+		force.y = force.y * this.speed;
+		Matter.Body.applyForce(this.body, this.body.position, force);
+	}
+
+	move2(force) {
 		let target = this.position.add(force),
 			dir = this.position.direction(target),
 			angle = (dir * 180 / Math.PI) + 90;
@@ -43,19 +62,23 @@ class Player {
 	}
 
 	update(delta, time) {
-		
+		// copy physical position to "this" internal position
+		this.position.x = this.body.position.x;
+		this.position.y = this.body.position.y;
 	}
 
 	render(ctx) {
 		let sheet = this.strip.sheet[0],
-			w1 = this.w,
-			w2 = this.h,
+			w = this.w,
+			h = this.h,
 			mX = sheet[0],
 			mY = sheet[1],
-			x = (this.position.x * 4.5) + 65,
-			y = this.position.y * 4.5;
-
+			x = this.position.x,
+			y = this.position.y;
 		// player
-		ctx.drawImage(this.asset.cvs, mX, mY, w1, w1, x, y, w2, w2);
+		ctx.save();
+		ctx.translate(-w*.5, -h*.5);
+		ctx.drawImage(this.asset.cvs, mX, mY, w, h, x, y, w, h);
+		ctx.restore();
 	}
 }

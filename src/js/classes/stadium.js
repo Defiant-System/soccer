@@ -40,9 +40,12 @@ class Stadium {
 				let player = new Player({ ...opt, parent: this, asset });
 				this.entries.push(player);
 
+				// TEMP for initial development
 				if (side === "away" && i == 8) this.player = player;
 			});
 		});
+		// build physical world
+		this.parent.setPhysicalWorld();
 	}
 
 	paint() {

@@ -151,7 +151,7 @@
 				// drag info
 				Self.drag = { doc, arena, click, offset };
 				// bind event handlers
-				Self.drag.doc.on("mousemove mouseup", Self.doPan);
+				Self.drag.doc.on("mousemove mouseup", Self.doPanZoom);
 				break;
 			case "mousemove":
 				let y = Drag.offset.y - (event.clientY - Drag.click.y),
@@ -161,7 +161,7 @@
 				break;
 			case "mouseup":
 				// unbind event handlers
-				Self.drag.doc.off("mousemove mouseup", Self.doPan);
+				Self.drag.doc.off("mousemove mouseup", Self.doPanZoom);
 				break;
 		}
 	}

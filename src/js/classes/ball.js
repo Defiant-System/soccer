@@ -16,7 +16,7 @@ class Ball {
 		this.position = new Point(x, y);
 
 		// physics body
-		this.body = Matter.Bodies.circle(x, y, this.radius);
+		this.body = Matter.Bodies.circle(x, y, this.radius-2, { density: .15, frictionAir: .05 });
 
 		// ball animation / rotation
 		this.frame = {
@@ -34,6 +34,9 @@ class Ball {
 			this.frame.index++;
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
+		// copy physical position to "this" internal position
+		this.position.x = this.body.position.x;
+		this.position.y = this.body.position.y;
 	}
 
 	render(ctx) {
