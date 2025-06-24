@@ -211,7 +211,7 @@ class Arena {
 		this.stadium.render(this.ctx);
 		this.ctx.restore();
 		
-		if (this.debug.mode >= 1) {
+		if (this.debug.mode > 1) {
 			let bodies = Matter.Composite.allBodies(this.engine.world);
 
 			this.ctx.save();
@@ -229,24 +229,24 @@ class Arena {
 			this.ctx.stroke();
 			this.ctx.restore();
 
-			if (this.debug.mode > 1) {
-				// draws ball direction
-				let ball = this.stadium.ball,
-					x = this.viewport.x + ball.position.x,
-					y = this.viewport.y + ball.position.y,
-					r = ball.radius;
-				this.ctx.save();
-				this.ctx.translate(x, y);
-				this.ctx.rotate(ball.angle + Math.PI);
-				this.ctx.lineWidth = 3;
-				this.ctx.strokeStyle = "#f00";
-				this.ctx.beginPath();
-				this.ctx.moveTo(0, 0);
-				this.ctx.lineTo(0, 15);
-				this.ctx.stroke();
-				this.ctx.restore();
-			}
+			// draws ball direction
+			let ball = this.stadium.ball,
+				x = this.viewport.x + ball.position.x,
+				y = this.viewport.y + ball.position.y,
+				r = ball.radius;
+			this.ctx.save();
+			this.ctx.translate(x, y);
+			this.ctx.rotate(ball.angle + Math.PI);
+			this.ctx.lineWidth = 3;
+			this.ctx.strokeStyle = "#f00";
+			this.ctx.beginPath();
+			this.ctx.moveTo(0, 0);
+			this.ctx.lineTo(0, 15);
+			this.ctx.stroke();
+			this.ctx.restore();
+		}
 
+		if (this.debug.mode >= 1) {
 			this.drawFps(this.ctx);
 		}
 	}
