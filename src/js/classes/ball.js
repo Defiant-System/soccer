@@ -9,6 +9,7 @@ class Ball {
 		this.oR = 32;
 		this.gR = 28;
 		this.radius = this.gR >> 1;
+		this.angle = Math.PI / 2;
 
 		// ball position
 		let x = (this.parent.config.sW / 2),
@@ -31,12 +32,19 @@ class Ball {
 		this.frame.last -= delta;
 		if (this.frame.last < 0) {
 			this.frame.last = (this.frame.last + this.frame.speed) % this.frame.speed;
-			this.frame.index++;
+			this.frame.index += this.body.speed | 0;
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
+		
 		// copy physical position to "this" internal position
 		this.position.x = this.body.position.x;
 		this.position.y = this.body.position.y;
+
+		this.angle = this.body.angle;
+		// this.frame.speed = this.body.speed;
+		// this.angle = Math.atan2(this.body.velocity.y, this.body.velocity.x);
+		// console.log(this.body.speed);
+		// console.log(this.body.velocity);
 	}
 
 	render(ctx) {
@@ -50,34 +58,11 @@ class Ball {
 			gy = y+r,
 			gradient;
 
-		ctx.save();
-		// ctx.globalAlpha = .5;
-		ctx.translate(-r, -r);
-		// 3d roundness
-		gradient = ctx.createRadialGradient(gx-2.8, gy-2.8, 0, gx, gy, r);
-		gradient.addColorStop(0.0, "#fff7");
-		gradient.addColorStop(0.65, "#1114");
-		gradient.addColorStop(1.0, "#0009");
-
-		// shadow
-		ctx.fillStyle = "#0005";
-		ctx.beginPath();
-		ctx.arc(gx+3.5, gy+3.5, r-2, 0, Math.TAU);
-		ctx.fill();
 		// ball
-		ctx.drawImage(this.asset.img, f, 0, w1, w1, x, y, w2, w2);
-		// gradient
-		ctx.fillStyle = gradient;
-		ctx.beginPath();
-		ctx.arc(gx, gy, r-1.5, 0, Math.TAU);
-		ctx.fill();
+		ctx.save();
+		ctx.translate(x, y);
+		ctx.rotate(this.angle);
+		ctx.drawImage(this.asset.img, f, 0, w1, w1, -r, -r, w2, w2);
 		ctx.restore();
-
-		/* indicates ball pos
-		ctx.fillStyle = "#f00";
-		ctx.beginPath();
-		ctx.arc(x, y, 4, 0, Math.TAU);
-		ctx.fill();
-		*/
 	}
 }
