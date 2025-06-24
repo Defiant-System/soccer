@@ -9,7 +9,7 @@ class Ball {
 		this.oR = 32;
 		this.gR = 28;
 		this.radius = this.gR >> 1;
-		this.angle = Math.PI / 2;
+		this.angle = 0;
 
 		// ball position
 		let x = (this.parent.config.sW / 2),
@@ -18,6 +18,8 @@ class Ball {
 
 		// physics body
 		this.body = Matter.Bodies.circle(x, y, this.radius-2, { density: .15, frictionAir: .05 });
+		// this.body = Matter.Bodies.rectangle(x, y, 25, 25, { density: .15, frictionAir: .05 });
+		this.body.label = "ball";
 
 		// ball animation / rotation
 		this.frame = {
@@ -41,6 +43,7 @@ class Ball {
 		this.position.y = this.body.position.y;
 
 		this.angle = this.body.angle;
+		// console.log(this.angle);
 		// this.frame.speed = this.body.speed;
 		// this.angle = Math.atan2(this.body.velocity.y, this.body.velocity.x);
 		// console.log(this.body.speed);
@@ -50,14 +53,13 @@ class Ball {
 	render(ctx) {
 		let w1 = this.oR,
 			w2 = this.gR,
-			f = this.frame.index * w1,
+			f = 0, // this.frame.index * w1,
 			x = this.position.x,
 			y = this.position.y,
 			r = this.radius,
 			gx = x+r,
 			gy = y+r,
 			gradient;
-
 		// ball
 		ctx.save();
 		ctx.translate(x, y);

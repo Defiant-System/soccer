@@ -229,6 +229,24 @@ class Arena {
 			this.ctx.stroke();
 			this.ctx.restore();
 
+			bodies.map(body => {
+				if (body.label == "ball") {
+					// console.log(body);
+					this.ctx.save();
+					this.ctx.translate(this.viewport.x + body.position.x, this.viewport.y + body.position.y);
+					this.ctx.lineWidth = 3;
+					this.ctx.strokeStyle = "#f00";
+					this.ctx.rotate(body.angle);
+					this.ctx.beginPath();
+					// this.ctx.moveTo(body.position.x, body.position.y);
+					// this.ctx.lineTo(body.position.x + 15, body.position.y);
+					this.ctx.moveTo(0, 0);
+					this.ctx.lineTo(15, 0);
+					this.ctx.stroke();
+					this.ctx.restore();
+				}
+			});
+
 			this.drawFps(this.ctx);
 		}
 	}
