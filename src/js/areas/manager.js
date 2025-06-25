@@ -102,6 +102,7 @@
 
 				let el = $(event.target).parents(".player");
 				if (!el.length) return;
+				el.addClass("dragged");
 
 				let doc = $(document),
 					offset = el.offset(),
@@ -121,6 +122,8 @@
 				Drag.el.css({ "--y": y +"px", "--x": x +"px" });
 				break;
 			case "mouseup":
+				// reset element
+				Drag.el.removeClass("dragged");
 				// unbind event handlers
 				Self.drag.doc.off("mousemove mouseup", Self.movePlayer);
 				break;
