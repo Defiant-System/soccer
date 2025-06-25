@@ -14,8 +14,8 @@ class Stadium {
 		let mmCfg = {
 				scale: 1,
 				skew: 1,
-				line: 1,
-				color: "#fffb",
+				line: 1.25,
+				color: "#fff9",
 				height: 210,
 				width: 126,
 				margin: {

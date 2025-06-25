@@ -1,4 +1,6 @@
 <data>
+	@import "data/formations.xml"
+	
 	@import "data/sweden.xml"
 	@import "data/turkiye.xml"
 </data>

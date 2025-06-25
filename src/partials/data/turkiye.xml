@@ -1,5 +1,5 @@
 
-<team type="national" name="Turkiye" colors="[[255,0,0],[255,255,255]]">
+<team type="national" name="Turkiye" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
 	<i num="1" name="Rustu Recber" price="950K" pos="G" nat="Tur" />
 	<i num="2" name="Recep Cetin" price="700K" pos="RB" nat="Tur" pass="2" vel="2" head="1" tackling="7" ball="2" speed="6" finish="3" total="23" />
 	<i num="3" name="Ogun Temizkanoglu" price="650K" pos="D" nat="Tur" pass="2" vel="2" head="7" tackling="5" ball="2" speed="2" finish="2" total="22" />
@@ -18,18 +18,4 @@
 	<i num="16" name="Arif Erdem" price="700K" pos="A" nat="Tur" pass="1" vel="5" head="2" tackling="2" ball="1" speed="5" finish="7" total="23" />
 	<tot price="12.95M" pass="49" vel="40" head="52" tackling="69" ball="37" speed="45" finish="48" total="340" />
 	<avg price="809K" pass="3.5" vel="2.9" head="3.7" tackling="4.9" ball="2.6" speed="3.2" finish="3.4" total="24.3" />
-
-	<form id="4-4-2">
-		<i num="1" y="425" x="220" />
-		<i num="2" y="325" x="350" />
-		<i num="3" y="350" x="174" />
-		<i num="4" y="350" x="264" />
-		<i num="5" y="325" x="89" />
-		<i num="6" y="230" x="89" />
-		<i num="7" y="230" x="350" />
-		<i num="8" y="240" x="264" />
-		<i num="9" y="275" x="170" />
-		<i num="10" y="118" x="298" />
-		<i num="11" y="118" x="144" />
-	</form>
 </team>

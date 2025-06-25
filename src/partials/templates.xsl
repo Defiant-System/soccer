@@ -36,9 +36,10 @@
 	</xsl:template>
 
 	<xsl:template name="team-formation">
-		<xsl:for-each select="./i">
-			<xsl:variable name="player" select="ancestor::team/i[@num = current()/@num]"/>
-			<div>
+		<xsl:variable name="team" select="."/>
+		<xsl:for-each select="//Formations/form[@id = $team/@form]/i">
+			<xsl:variable name="player" select="$team/i[@num = current()/@num]"/>
+			<div class="player">
 				<xsl:attribute name="style">--y: <xsl:value-of select="@y" />px; --x: <xsl:value-of select="@x" />px;</xsl:attribute>
 				<span><xsl:value-of select="substring-after($player/@name, ' ')" /></span>
 				<span><xsl:call-template name="abr-title">

@@ -1,7 +1,7 @@
 
 class Field {
 	constructor(cfg) {
-		let { parent, scale, margin, width, height, color, line, skew, corner } = cfg;
+		let { parent, scale, margin, width, height, color, line, skew, corner, mini } = cfg;
 
 		this.parent = parent;
 		this.top = margin.t;
@@ -18,6 +18,7 @@ class Field {
 		this.line = line || 3;
 		this.color = color || "#fff";
 		this.scale = scale;
+		this.mini = mini;
 
 		this.sW = this.width * this.scale;
 		this.sH = this.height * this.scale * this.skew;
@@ -26,8 +27,8 @@ class Field {
 	}
 
 	update(delta, time) {
-		this.oX = this.left+.5;
-		this.oY = this.top+.5;
+		this.oX = this.left + .5;
+		this.oY = this.top + .5;
 		
 		this.coR = this.corner * this.scale;
 		this.cR = this.center.radius * this.scale;
@@ -86,10 +87,6 @@ class Field {
 		ctx.beginPath();
 		ctx.ellipse(this.cX, this.cY, this.cR, this.cR*this.skew, 0, 0, Math.TAU);
 		ctx.stroke();
-		// center dot
-		ctx.beginPath();
-		ctx.arc(this.cX, this.cY, this.cdR, 0, Math.TAU);
-		ctx.fill();
 
 		// top goal
 		// ctx.beginPath();
@@ -103,10 +100,6 @@ class Field {
 		ctx.beginPath();
 		ctx.rect(this.tgbX, this.tgbY, this.gbW, this.gbH);
 		ctx.stroke();
-		// top penalty circle
-		ctx.beginPath();
-		ctx.arc(this.pX, this.tpY, this.pR, 0, Math.TAU);
-		ctx.fill();
 		// top penalty arc
 		ctx.save();
 		ctx.beginPath();
@@ -114,7 +107,6 @@ class Field {
 		ctx.clip();
 		ctx.beginPath();
 		ctx.ellipse(this.pX, this.tpY, this.paR, this.paR*this.skew, 0, 0, Math.TAU);
-		// ctx.arc(this.pX, this.tpY, this.paR, 0, Math.TAU);
 		ctx.stroke();
 		ctx.restore();
 
@@ -130,10 +122,6 @@ class Field {
 		ctx.beginPath();
 		ctx.rect(this.bgbX, this.bgbY, this.gbW, this.gbH);
 		ctx.stroke();
-		// bottom penalty circle
-		ctx.beginPath();
-		ctx.arc(this.pX, this.bpY, this.pR, 0, Math.TAU);
-		ctx.fill();
 		// bottom penalty arc
 		ctx.save();
 		ctx.beginPath();
@@ -141,20 +129,33 @@ class Field {
 		ctx.clip();
 		ctx.beginPath();
 		ctx.ellipse(this.pX, this.bpY, this.paR, this.paR*this.skew, 0, 0, Math.TAU);
-		// ctx.arc(this.pX, this.bpY, this.paR, 0, Math.TAU);
 		ctx.stroke();
 		ctx.restore();
 
-		// corners
-		ctx.beginPath();
-		ctx.rect(0, 0, w, h);
-		ctx.clip();
-		ctx.beginPath();
-		ctx.arc(0, 0, this.coR, 0, Math.TAU);
-		ctx.arc(w, 0, this.coR, 0, Math.TAU);
-		ctx.arc(w, h, this.coR, 0, Math.TAU);
-		ctx.arc(0, h, this.coR, 0, Math.TAU);
-		ctx.stroke();
+		if (!this.mini) {
+			// corners
+			ctx.beginPath();
+			ctx.rect(0, 0, w, h);
+			ctx.clip();
+			ctx.beginPath();
+			ctx.arc(0, 0, this.coR, 0, Math.TAU);
+			ctx.arc(w, 0, this.coR, 0, Math.TAU);
+			ctx.arc(w, h, this.coR, 0, Math.TAU);
+			ctx.arc(0, h, this.coR, 0, Math.TAU);
+			ctx.stroke();
+			// top penalty circle
+			ctx.beginPath();
+			ctx.arc(this.pX, this.tpY, this.pR, 0, Math.TAU);
+			ctx.fill();
+			// bottom penalty circle
+			ctx.beginPath();
+			ctx.arc(this.pX, this.bpY, this.pR, 0, Math.TAU);
+			ctx.fill();
+			// center dot
+			ctx.beginPath();
+			ctx.arc(this.cX, this.cY, this.cdR, 0, Math.TAU);
+			ctx.fill();
+		}
 		
 		// restore context
 		ctx.restore();
