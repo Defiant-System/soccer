@@ -66,7 +66,7 @@ content {
 				
 				.field {
 					position: relative;
-					width: 440px;
+					width: 410px;
 					background: #017d3f;
 					border-radius: 5px;
 					margin-right: 7px;
@@ -121,6 +121,21 @@ content {
 								pointer-events: none;
 							}
 
+							&:after {
+								content: attr(data-num);
+								position: absolute;
+								top: -21px;
+								left: -9px;
+								width: 18px;
+								height: 12px;
+								border-radius: 15px;
+								background: #0005;
+								color: #fff9;
+								font-size: 10px;
+								font-weight: 700;
+								padding-top: 3px;
+							}
+
 							span {
 								position: relative;
 								width: 71px;
@@ -163,6 +178,43 @@ content {
 							}
 						}
 					}
+
+					.form-buttons {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						height: 90px;
+						font-size: 12px;
+						text-align: center;
+
+						span {
+							position: relative;
+							display: inline-block;
+							width: 91px;
+							padding: 4px 0;
+							margin-bottom: 7px;
+							border-radius: 5px;
+							background: #0002;
+							color: #fff9;
+							box-shadow: 0 4px 0 0 #0003;
+							cursor: pointer;
+
+							&:before {
+								content: attr(data-arg);
+							}
+
+							&:after {
+								content: "";
+								position: absolute;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								height: 1px;
+								background: linear-gradient(90deg, #fff0, #fff3, #fff0);
+							}
+						}
+					}
 				}
 				
 				.list {
@@ -195,14 +247,19 @@ content {
 								background: #0001;
 							}
 
+							&.benched {
+								color: #9a9;
+							}
+
 							span {
 								padding: 7px 5px;
 
-								&:nth-child(1) { width: 30px; }
+								&:nth-child(1) { width: 25px; text-align: right; }
 								&:nth-child(2) { flex: 1; }
-								&:nth-child(3) { width: 70px; }
-								&:nth-child(4) { width: 60px; }
-								&:nth-child(5) { width: 40px; text-align: right; }
+								&:nth-child(3) { width: 30px; }
+								&:nth-child(4) { width: 50px; }
+								&:nth-child(5) { width: 60px; }
+								&:nth-child(6) { width: 40px; text-align: right; }
 							}
 						}
 

@@ -19,6 +19,7 @@
 	async dispatch(event) {
 		let APP = soccer,
 			Self = APP.manager,
+			data,
 			el;
 		// console.log(event);
 		switch (event.type) {
@@ -39,7 +40,7 @@
 				});
 				break;
 			case "draw-field":
-				let margin = { t: 30, l: 50, b: 0, r: 0 },
+				let margin = { t: 20, l: 35, b: 0, r: 0 },
 					width = +Self.els.cvs.prop("offsetWidth"),
 					height = +Self.els.cvs.prop("offsetHeight"),
 					scale = 5;
@@ -57,11 +58,22 @@
 				height = Self.ovField.sH;
 				Self.els.form.css({ top, left, width, height });
 				break;
+			case "output-formation-positions":
+				data = [];
+				Self.els.form.find(".player").map(elem => {
+					let el = $(elem),
+						num = el.data("num"),
+						y = parseInt(el.cssProp("--y"), 10),
+						x = parseInt(el.cssProp("--x"), 10);
+					data.push(`<i num="${num}" y="${y}" x="${x}" />`);
+				});
+				console.log(data.join("\n"));
+				break;
 		}
 	},
 	movePlayer(event) {
 		let APP = soccer,
-			Self = APP.stadium,
+			Self = APP.manager,
 			Drag = Self.drag;
 		switch (event.type) {
 			// pan stadium
@@ -69,31 +81,29 @@
 				// prevent default behaviour
 				event.preventDefault();
 
+				let el = $(event.target).parents(".player");
+				if (!el.length) return;
+
 				let doc = $(document),
-					el = $(event.target).parents("div.player"),
-					offset = {
-						y: arena.stadium.ball.position.y,
-						x: arena.stadium.ball.position.x,
-					},
+					offset = el.offset(),
 					click = {
 						y: event.clientY,
 						x: event.clientX,
 					};
 
 				// drag info
-				Self.drag = { doc, arena, click, offset };
+				Self.drag = { doc, el, click, offset };
 				// bind event handlers
-				Self.drag.doc.on("mousemove mouseup", Self.doPanZoom);
+				Self.drag.doc.on("mousemove mouseup", Self.movePlayer);
 				break;
 			case "mousemove":
-				let y = Drag.offset.y - (event.clientY - Drag.click.y),
-					x = Drag.offset.x - (event.clientX - Drag.click.x);
-				Drag.arena.stadium.ball.position.y = y;
-				Drag.arena.stadium.ball.position.x = x;
+				let top = (event.clientY - Drag.click.y) + Drag.offset.top,
+					left = (event.clientX - Drag.click.x) + Drag.offset.left;
+				Drag.el.css({ top, left });
 				break;
 			case "mouseup":
 				// unbind event handlers
-				Self.drag.doc.off("mousemove mouseup", Self.doPanZoom);
+				Self.drag.doc.off("mousemove mouseup", Self.movePlayer);
 				break;
 		}
 	}

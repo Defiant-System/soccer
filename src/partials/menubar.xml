@@ -14,6 +14,8 @@
 			<Menu name="1" check-group="debug" click="set-debug-mode" arg="1"/>
 			<Menu name="2" check-group="debug" click="set-debug-mode" arg="2"/>
 		</Menu>
+		<Menu type="divider"/>
+		<Menu name="Output Formation" click="output-formation-positions"/>
 	</Menu>
 	<Menu name="Help">
 		<Menu name="Help" click="open-help"/>

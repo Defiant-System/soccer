@@ -11,11 +11,11 @@
 	<i num="9" name="Jonas Thern" price="1.5M" pos="M" nat="Swe" pass="6" vel="2" head="3" tackling="7" ball="7" speed="3" finish="3" total="31" />
 	<i num="10" name="Martin Dahlin" price="2.75M" pos="A" nat="Swe" pass="2" vel="7" head="7" tackling="4" ball="3" speed="7" finish="7" total="37" />
 	<i num="11" name="Pär Zetterberg" price="2M" pos="M" nat="Swe" pass="7" vel="7" head="3" tackling="4" ball="7" speed="3" finish="4" total="35" />
-	<i num="12" name="Bengt Andersson" price="750K" pos="G" nat="Swe"/>
-	<i num="13" name="Teddy Lucic" price="800K" pos="D" nat="Swe" pass="1" vel="3" head="7" tackling="7" ball="4" speed="1" finish="2" total="25" />
-	<i num="14" name="Niclas Alexandersson" price="1.6M" pos="RW" nat="Swe" pass="7" vel="2" head="2" tackling="7" ball="6" speed="6" finish="2" total="32" />
-	<i num="15" name="Klas Ingesson" price="1.1M" pos="M" nat="Swe" pass="6" vel="5" head="3" tackling="6" ball="3" speed="5" finish="1" total="29" />
-	<i num="16" name="Jörgen Pettersson" price="1.6M" pos="A" nat="Swe" pass="5" vel="7" head="2" tackling="2" ball="3" speed="7" finish="6" total="32" />
+	<i num="12" name="Bengt Andersson" price="750K" pos="G" nat="Swe" bench="1"/>
+	<i num="13" name="Teddy Lucic" price="800K" pos="D" nat="Swe" pass="1" vel="3" head="7" tackling="7" ball="4" speed="1" finish="2" total="25" bench="1"/>
+	<i num="14" name="Niclas Alexandersson" price="1.6M" pos="RW" nat="Swe" pass="7" vel="2" head="2" tackling="7" ball="6" speed="6" finish="2" total="32" bench="1"/>
+	<i num="15" name="Klas Ingesson" price="1.1M" pos="M" nat="Swe" pass="6" vel="5" head="3" tackling="6" ball="3" speed="5" finish="1" total="29" bench="1"/>
+	<i num="16" name="Jörgen Pettersson" price="1.6M" pos="A" nat="Swe" pass="5" vel="7" head="2" tackling="2" ball="3" speed="7" finish="6" total="32" bench="1"/>
 	<tot price="24.7M" pass="71" vel="69" head="64" tackling="76" ball="58" speed="59" finish="47" total="444" />
 	<avg price="2M" pass="5.1" vel="4.9" head="4.6" tackling="5.4" ball="4.1" speed="4.2" finish="3.4" total="31.7" />
 </team>

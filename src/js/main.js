@@ -60,8 +60,10 @@ const soccer = {
 				if (!el && event.origin) el = event.origin.el;
 				if (el) {
 					let pEl = el.parents(`?div[data-area]`);
+					if (!pEl.length) pEl = Self.content;
 					if (pEl.length) {
 						let name = pEl.data("area");
+						if (!name) name = pEl.data("show");
 						return Self[name].dispatch(event);
 					}
 				} else if (Self.active) {

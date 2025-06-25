@@ -4,8 +4,10 @@
 		<div class="team-list">
 		<xsl:for-each select="./i">
 			<div class="player-row">
-				<span><xsl:value-of select="@pos" /></span>
+				<xsl:if test="@bench = 1"><xsl:attribute name="class">player-row benched</xsl:attribute></xsl:if>
+				<span><xsl:value-of select="position()" /></span>
 				<span><xsl:value-of select="@name" /></span>
+				<span><xsl:value-of select="@pos" /></span>
 				<span><xsl:value-of select="@nat" /></span>
 				<span><xsl:value-of select="@price" /></span>
 				<span>
@@ -41,6 +43,7 @@
 			<xsl:variable name="player" select="$team/i[@num = current()/@num]"/>
 			<div class="player">
 				<xsl:attribute name="style">--y: <xsl:value-of select="@y" />px; --x: <xsl:value-of select="@x" />px;</xsl:attribute>
+				<xsl:attribute name="data-num"><xsl:value-of select="@num" /></xsl:attribute>
 				<span><xsl:value-of select="substring-after($player/@name, ' ')" /></span>
 				<span><xsl:call-template name="abr-title">
 					<xsl:with-param name="pos" select="$player/@pos" />
