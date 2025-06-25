@@ -62,6 +62,10 @@
 				event.el.parent().find(".active").removeClass("active");
 				event.el.addClass("active");
 
+				Self.els.form.cssSequence("rearrange", "transitionend", el => {
+					el.removeClass("rearrange");
+				});
+
 				window.bluePrint
 					.selectNodes(`//Formations/form[@id="${event.el.data("arg")}"]/i`)
 					.map(x => {
