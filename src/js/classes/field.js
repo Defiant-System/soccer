@@ -1,7 +1,7 @@
 
 class Field {
 	constructor(cfg) {
-		let { parent, scale, margin, width, height, line, skew, corner } = cfg;
+		let { parent, scale, margin, width, height, color, line, skew, corner } = cfg;
 
 		this.parent = parent;
 		this.top = margin.t;
@@ -16,6 +16,7 @@ class Field {
 		this.goal = { width: 8, height: 1.5 };
 		this.skew = skew || .85;
 		this.line = line || 3;
+		this.color = color || "#fff";
 		this.scale = scale;
 
 		this.sW = this.width * this.scale;
@@ -25,8 +26,8 @@ class Field {
 	}
 
 	update(delta, time) {
-		this.oX = this.left;
-		this.oY = this.top;
+		this.oX = this.left+.5;
+		this.oY = this.top+.5;
 		
 		this.coR = this.corner * this.scale;
 		this.cR = this.center.radius * this.scale;
@@ -70,7 +71,7 @@ class Field {
 		ctx.save();
 		ctx.translate(this.oX, this.oY);
 		ctx.fillStyle =
-		ctx.strokeStyle = "#fff";
+		ctx.strokeStyle = this.color;
 		ctx.lineWidth = this.line;
 		// whole box
 		ctx.beginPath();

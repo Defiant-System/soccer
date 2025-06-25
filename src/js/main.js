@@ -3,10 +3,10 @@
 @import "./classes/point.js"
 @import "./classes/user.js"
 @import "./classes/arena.js"
-@import "./classes/minimap.js"
 @import "./classes/viewport.js"
 @import "./classes/stadium.js"
 @import "./classes/field.js"
+@import "./classes/minimap.js"
 @import "./classes/player.js"
 @import "./classes/ball.js"
 

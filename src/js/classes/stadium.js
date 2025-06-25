@@ -10,6 +10,22 @@ class Stadium {
 		this.entries = [];
 		this.patterns = {};
 		this.field = new Field({ ...config, scale, parent });
+
+		let mmCfg = {
+				scale: 1,
+				skew: 1,
+				line: 1,
+				color: "#fffb",
+				height: 210,
+				width: 126,
+				margin: {
+					t: 20,
+					l: 20,
+					b: 0,
+					r: 0 
+				},
+			};
+		this.minimap = new Minimap({ ...mmCfg, parent });
 		// field dimensions
 		this.config.sW = this.field.sW + this.config.margin.l + this.config.margin.r;
 		this.config.sH = this.field.sH + this.config.margin.t + this.config.margin.b;

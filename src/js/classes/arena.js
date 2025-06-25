@@ -184,7 +184,6 @@ class Arena {
 			assets = this.assets;
 		this.stadium = new Stadium({ parent, scale, config, assets });
 		this.viewport = new Viewport({ arena: this, x: 0, y: 0, w: this.width, h: this.height });
-		this.minimap = new Minimap({ parent: this });
 	}
 
 	setPhysicalWorld() {
@@ -197,7 +196,7 @@ class Arena {
 	update(delta, time) {
 		this.stadium.update(delta, time);
 		this.viewport.update(delta, time);
-		this.minimap.update(delta, time);
+		this.stadium.minimap.update(delta, time);
 	}
 
 	render() {
@@ -252,7 +251,7 @@ class Arena {
 		}
 
 		// render overlay minimap
-		this.minimap.render(this.ctx);
+		this.stadium.minimap.render(this.ctx);
 	}
 
 	drawFps(ctx) {
