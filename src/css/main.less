@@ -213,6 +213,17 @@ content {
 								height: 1px;
 								background: linear-gradient(90deg, #fff0, #fff3, #fff0);
 							}
+
+							&:hover:not(.active) {
+								background: #0003;
+								color: #fff;
+							}
+
+							&.active {
+								top: 3px;
+								background: #3d35;
+								box-shadow: 0 1px 0 0 #0913;
+							}
 						}
 					}
 				}

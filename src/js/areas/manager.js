@@ -58,6 +58,21 @@
 				height = Self.ovField.sH;
 				Self.els.form.css({ top, left, width, height });
 				break;
+			case "set-formation":
+				event.el.parent().find(".active").removeClass("active");
+				event.el.addClass("active");
+
+				window.bluePrint
+					.selectNodes(`//Formations/form[@id="${event.el.data("arg")}"]/i`)
+					.map(x => {
+						Self.els.form
+							.find(`.player[data-num="${x.getAttribute("num")}"]`)
+							.css({
+								"--y": x.getAttribute("y") +"px",
+								"--x": x.getAttribute("x") +"px",
+							});
+					});
+				break;
 			case "output-formation-positions":
 				data = [];
 				Self.els.form.find(".player").map(elem => {
@@ -67,7 +82,7 @@
 						x = parseInt(el.cssProp("--x"), 10);
 					data.push(`<i num="${num}" y="${y}" x="${x}" />`);
 				});
-				console.log(data.join("\n"));
+				console.log(data.join("\n\t\t"));
 				break;
 		}
 	},
@@ -97,9 +112,9 @@
 				Self.drag.doc.on("mousemove mouseup", Self.movePlayer);
 				break;
 			case "mousemove":
-				let top = (event.clientY - Drag.click.y) + Drag.offset.top,
-					left = (event.clientX - Drag.click.x) + Drag.offset.left;
-				Drag.el.css({ top, left });
+				let y = (event.clientY - Drag.click.y) + Drag.offset.top,
+					x = (event.clientX - Drag.click.x) + Drag.offset.left;
+				Drag.el.css({ "--y": y +"px", "--x": x +"px" });
 				break;
 			case "mouseup":
 				// unbind event handlers
