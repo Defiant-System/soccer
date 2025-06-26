@@ -87,8 +87,7 @@ class Player {
 	}
 
 	render(ctx) {
-		let margin = this.parent.config.margin,
-			sheet = this.strip.sheet[0],
+		let sheet = this.strip.sheet[0],
 			w = this.w,
 			h = this.h,
 			mX = sheet[0],
@@ -97,7 +96,7 @@ class Player {
 			y = this.position.y;
 		// player
 		ctx.save();
-		ctx.translate(margin.l-w*.5, margin.t-h*.5);
+		ctx.translate(-w*.5, -h*.5);
 		ctx.drawImage(this.asset.cvs, mX, mY, w, h, x, y, w, h);
 		ctx.restore();
 	}
