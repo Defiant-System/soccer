@@ -1,6 +1,18 @@
-<content data-show="manager" data-context="game-content">
+<content data-show="start" data-context="game-content">
+	<!-- start view -->
+	<div data-area="start">
+		<h2>Fútbol is Life</h2>
+	</div>
+
+	<!-- manager view -->
 	<div data-area="manager">
-		<div class="head"></div>
+		<div class="head">
+			<span class="home-emblem"></span>
+			<h3 class="home-team">Sweden</h3>
+			<h4 class="score">0-0</h4>
+			<h3 class="away-team">Turkiye</h3>
+			<span class="away-emblem"></span>
+		</div>
 		<div class="body">
 			<div class="field">
 				<canvas class="overview"></canvas>
@@ -27,6 +39,8 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- stadium view -->
 	<div data-area="stadium">
 		<canvas class="canvas"></canvas>
 	</div>

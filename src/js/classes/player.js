@@ -1,7 +1,7 @@
 
 class Player {
 	constructor(cfg) {
-		let { parent, asset, body, name, num, x, y } = cfg;
+		let { parent, asset, name, num, team, side, positions, xPlayer } = cfg;
 
 		this.parent = parent;
 		this.asset = asset;
@@ -9,17 +9,35 @@ class Player {
 		this.id = `player-${Date.now()}`;
 		this.name = name;
 		this.num = num;
+		this.team = team;
+		this.side = side;
+		this.positions = positions;
 
+		Object.keys(this.positions).map(key => {
+			let { x, y } = this.positions[key];
+			// scale down
+			this.positions[key].x /= 5;
+			this.positions[key].y /= 5;
+			// adjust for skew value
+			this.positions[key].y *= 1.2;
+			// mirror
+			if (side == "home") {
+				this.positions[key].x = 68 - this.positions[key].x;
+				this.positions[key].y = 105 - this.positions[key].y;
+			}
+			// scaler
+			this.positions[key].x *= 22;
+			this.positions[key].y *= 22;
+		});
 
 		let pixScale = parent.parent.pixScale,
 			w = 19 * pixScale,
-			h = 19 * pixScale;
-		x = (+x * 4.5) + 85;
-		y = +y * 4.5;
-		this.position = new Point(+x, +y);
+			h = 19 * pixScale,
+			{ x, y } = this.positions[side == "home" ? "begin1" : "begin2"];
+		this.position = new Point(x, y);
 		this.w = w;
 		this.h = h;
-		this.speed = 1;
+		this.speed = +xPlayer.getAttribute("vel") / 7;
 
 		// physical body
 		// this.body = Matter.Bodies.circle(x, y, 17, { density: .95, frictionAir: .05 });
@@ -69,7 +87,8 @@ class Player {
 	}
 
 	render(ctx) {
-		let sheet = this.strip.sheet[0],
+		let margin = this.parent.config.margin,
+			sheet = this.strip.sheet[0],
 			w = this.w,
 			h = this.h,
 			mX = sheet[0],
@@ -78,7 +97,7 @@ class Player {
 			y = this.position.y;
 		// player
 		ctx.save();
-		ctx.translate(-w*.5, -h*.5);
+		ctx.translate(margin.l-w*.5, margin.t-h*.5);
 		ctx.drawImage(this.asset.cvs, mX, mY, w, h, x, y, w, h);
 		ctx.restore();
 	}

@@ -25,7 +25,7 @@ class Stadium {
 					r: 0 
 				},
 			};
-		this.minimap = new Minimap({ ...mmCfg, parent });
+		this.minimap = new Minimap({ ...mmCfg, parent: this });
 		// field dimensions
 		this.config.sW = this.field.sW + this.config.margin.l + this.config.margin.r;
 		this.config.sH = this.field.sH + this.config.margin.t + this.config.margin.b;
@@ -44,16 +44,11 @@ class Stadium {
 
 	setTeam(teams) {
 		Object.keys(teams).map(side => {
-			// if away team - mirror players positions
-			if (side === "home") {
-				teams[side].players.map(pos => {
-					pos.y = Math.abs(pos.y - 500);
-					pos.x = Math.abs(pos.x - 390);
-				});
-			}
 			let asset = this.parent.fixtures.find(e => e.name == `${side} player`);
 			teams[side].players.map((opt, i) => {
-				let player = new Player({ ...opt, parent: this, asset });
+				// if (side === "away") return;
+
+				let player = new Player({ ...opt, side, team: teams[side], parent: this, asset });
 				this.entries.push(player);
 
 				// TEMP for initial development

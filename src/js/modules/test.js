@@ -1,6 +1,9 @@
 
 let Test = {
 	init(APP) {
+
+		APP.content.data({ show: "stadium" });
+
 		setTimeout(() => {
 			APP.stadium.dispatch({ type: "add-teams" });
 			APP.stadium.arena.fpsControl.start();

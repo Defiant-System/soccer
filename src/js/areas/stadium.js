@@ -98,19 +98,37 @@
 						away: { name: "Turkiye" },
 					};
 				Object.keys(teams).map(key => {
+					let xBeginHome = window.bluePrint.selectSingleNode(`//Formations/form[@id="begin-home"]`),
+						xBeginAway = window.bluePrint.selectSingleNode(`//Formations/form[@id="begin-away"]`);
 					// save reference to team node
 					teams[key].xTeam = window.bluePrint.selectSingleNode(`//team[@name="${teams[key].name}"]`);
 					// team colors
 					teams[key].colors = JSON.parse(teams[key].xTeam.getAttribute("colors"));
 					// team formation
-					teams[key].players = teams[key].xTeam.selectNodes("./form/i").map(xPos => {
-						let num = xPos.getAttribute("num"),
-							y = xPos.getAttribute("y"),
-							x = xPos.getAttribute("x"),
-							xUser = xPos.selectSingleNode(`../../i[@num = "${num}"]`),
-							name = xUser.getAttribute("name");
-						return { name, num, x, y };
-					});
+					teams[key].players = window.bluePrint
+						.selectNodes(`//Formations/form[@id = "${teams[key].xTeam.getAttribute("form")}"]/i`)
+						.map(xPos => {
+							let num = xPos.getAttribute("num"),
+								xBegin1 = xBeginHome.selectSingleNode(`./i[@num="${num}"]`),
+								xBegin2 = xBeginAway.selectSingleNode(`./i[@num="${num}"]`),
+								xPlayer = teams[key].xTeam.selectSingleNode(`./i[@num = "${num}"]`),
+								name = xPlayer.getAttribute("name"),
+								positions = {
+									home: {
+										y: +xPos.getAttribute("y"),
+										x: +xPos.getAttribute("x"),
+									},
+									begin1: {
+										y: +xBegin1.getAttribute("y"),
+										x: +xBegin1.getAttribute("x"),
+									},
+									begin2: {
+										y: +xBegin2.getAttribute("y"),
+										x: +xBegin2.getAttribute("x"),
+									},
+								};
+							return { name, num, positions, xPlayer };
+						});
 				});
 				this.arena.setTeamColors(teams);
 				this.arena.setStadium();
