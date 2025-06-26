@@ -46,8 +46,6 @@ class Stadium {
 		Object.keys(teams).map(side => {
 			let asset = this.parent.fixtures.find(e => e.name == `${side} player`);
 			teams[side].players.map((opt, i) => {
-				// if (side === "away") return;
-
 				let player = new Player({ ...opt, side, team: teams[side], parent: this, asset });
 				this.entries.push(player);
 

@@ -22,8 +22,8 @@ class Player {
 			this.positions[key].y *= 1.2;
 			// mirror
 			if (side == "home") {
-				this.positions[key].x = 68 - this.positions[key].x;
-				this.positions[key].y = 105 - this.positions[key].y;
+				this.positions[key].x = parent.parent.config.width - this.positions[key].x;
+				this.positions[key].y = parent.parent.config.height - this.positions[key].y;
 			}
 			// scaler
 			this.positions[key].x *= 22;

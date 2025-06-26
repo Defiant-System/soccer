@@ -17,11 +17,14 @@ class Viewport {
 
 		this._zoom = 100;
 		this._scaleMax = 1;
-		this._scaleMin = w / this.arena.stadium.config.sW;
+		this._scaleMin = w / (this.arena.stadium.config.width * 22);
 		this.scale = this._scaleMax;
 
 		// mid point of viewport
-		this.half = { w: w >> 1, h: h >> 1 };
+		this.half = {
+			w: (w >> 1) - arena.config.margin.l,
+			h: (h >> 1) - arena.config.margin.t,
+		};
 	}
 
 	set zoom(v) {
