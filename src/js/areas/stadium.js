@@ -174,8 +174,8 @@
 			case "mousemove":
 				let y = Drag.offset.y - (event.clientY - Drag.click.y),
 					x = Drag.offset.x - (event.clientX - Drag.click.x);
-				Drag.arena.stadium.ball.position.y = y;
-				Drag.arena.stadium.ball.position.x = x;
+				Drag.arena.stadium.ball.body.position.y = y;
+				Drag.arena.stadium.ball.body.position.x = x;
 				break;
 			case "mouseup":
 				// unbind event handlers

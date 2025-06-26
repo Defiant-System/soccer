@@ -46,8 +46,8 @@ class Viewport {
 
 	center() {
 		let arena = this.arena,
-			centerX = this.half.w - arena.stadium.ball.position.x + this.shake.offsetX,
-			centerY = this.half.h - arena.stadium.ball.position.y + this.shake.offsetY;
+			centerX = this.half.w - arena.stadium.ball.position.x,
+			centerY = this.half.h - arena.stadium.ball.position.y;
 		this.scroll(centerX, centerY);
 	}
 

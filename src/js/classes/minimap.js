@@ -1,7 +1,23 @@
 
 class Minimap extends Field {
 	constructor(cfg) {
-		super(cfg);
+		let { parent, config } = cfg,
+			opt = {
+				...cfg,
+				scale: 2,
+				skew: 1,
+				line: 1,
+				color: "#fff",
+				height: config.height,
+				width: config.width,
+				margin: {
+					t: 15,
+					l: 15,
+					b: 0,
+					r: 0 
+				},
+			};
+		super(opt);
 
 		let width = (this.width * 2) + 8;
 		let height = (this.height * 2) + 8;

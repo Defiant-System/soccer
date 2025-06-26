@@ -61,7 +61,7 @@ class Player {
 			this.sheet[key].sheet = this.sheet[key].sheet.map(frame =>
 				[frame[0] * pixScale, frame[1] * pixScale]));
 		// default sheet
-		this.strip = this.sheet["0"];
+		this.strip = this.sheet[side == "home" ? "180" : "0"];
 	}
 
 	move(force) {

@@ -208,9 +208,21 @@ class Arena {
 		// render stadium
 		this.ctx.save();
 		this.ctx.scale(this.viewport.scale, this.viewport.scale);
-		this.ctx.translate(this.viewport.x, this.viewport.y);
-		this.stadium.render(this.ctx);
+		let tX = -this.viewport.x,
+			tY = 2-this.viewport.y;
+		this.ctx.translate(tX, tY);
+		// this.ctx.translate(0, 0);
+
+		// draw clean stadium
+		this.ctx.drawImage(this.stadium.full.cvs[0], 0, 0);
 		this.ctx.restore();
+
+		// draw entries
+		this.ctx.save();
+		this.ctx.translate(this.config.margin.l - tX, this.config.margin.t - tY);
+		this.stadium.entries.map(entry => entry.render(this.ctx));
+		this.ctx.restore();
+
 		
 		if (this.debug.mode >= 2) {
 			let bodies = Matter.Composite.allBodies(this.engine.world);

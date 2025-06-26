@@ -11,21 +11,7 @@ class Stadium {
 		this.patterns = {};
 		this.field = new Field({ ...config, scale, parent });
 
-		let mmCfg = {
-				scale: 2,
-				skew: 1,
-				line: 1,
-				color: "#fff",
-				height: config.height,
-				width: config.width,
-				margin: {
-					t: 15,
-					l: 15,
-					b: 0,
-					r: 0 
-				},
-			};
-		this.minimap = new Minimap({ ...mmCfg, parent: this });
+		this.minimap = new Minimap({ config, parent: this });
 		// field dimensions
 		this.config.sW = this.field.sW + this.config.margin.l + this.config.margin.r;
 		this.config.sH = this.field.sH + this.config.margin.t + this.config.margin.b;
@@ -125,15 +111,6 @@ class Stadium {
 	}
 
 	render(ctx) {
-		let home = 0,
-			away = window.innerHeight - this.config.sH,
-			center = window.innerHeight - (this.config.sH >> 1) - this.config.margin.t;
-		// draw clean stadium
-		ctx.drawImage(this.full.cvs[0], 0, 0);
-		// draw entries
-		ctx.save();
-		ctx.translate(this.config.margin.t, this.config.margin.l);
-		this.entries.map(entry => entry.render(ctx));
-		ctx.restore();
+		
 	}
 }
