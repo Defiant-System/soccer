@@ -211,7 +211,6 @@ class Arena {
 		let tX = -this.viewport.x,
 			tY = 2-this.viewport.y;
 		this.ctx.translate(tX, tY);
-		// this.ctx.translate(0, 0);
 
 		// draw clean stadium
 		this.ctx.drawImage(this.stadium.full.cvs[0], 0, 0);
@@ -219,7 +218,7 @@ class Arena {
 
 		// draw entries
 		this.ctx.save();
-		this.ctx.translate(this.config.margin.l - tX, this.config.margin.t - tY);
+		this.ctx.translate(this.config.margin.l + tX, this.config.margin.t + tY);
 		this.stadium.entries.map(entry => entry.render(this.ctx));
 		this.ctx.restore();
 

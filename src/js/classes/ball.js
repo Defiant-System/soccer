@@ -12,8 +12,8 @@ class Ball {
 		this.angle = 0;
 
 		// ball position
-		let x = 0, // (this.parent.config.width * 22) / 2,
-			y = 0; // (this.parent.config.height * 22) / 2;
+		let x = 1161, // (this.parent.config.width * 22) / 2,
+			y = 100; // (this.parent.config.height * 22) / 2;
 		this.position = new Point(x, y);
 
 		// physics body

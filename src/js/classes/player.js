@@ -90,14 +90,19 @@ class Player {
 		let sheet = this.strip.sheet[0],
 			w = this.w,
 			h = this.h,
+			wH = w >> 1,
 			mX = sheet[0],
 			mY = sheet[1],
 			x = this.position.x,
 			y = this.position.y;
 		// player
 		ctx.save();
-		ctx.translate(-w*.5, -h*.5);
-		ctx.drawImage(this.asset.cvs, mX, mY, w, h, x, y, w, h);
+		ctx.translate(x-wH, y-wH);
+		ctx.drawImage(this.asset.cvs, mX, mY, w, h, -wH, -wH, w, h);
+		// ctx.fillStyle = "#33e";
+		// ctx.beginPath();
+		// ctx.arc(0, 0, 4, 0, Math.TAU);
+		// ctx.fill();
 		ctx.restore();
 	}
 }
