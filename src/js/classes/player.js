@@ -28,6 +28,8 @@ class Player {
 			// scaler
 			this.positions[key].x *= 22;
 			this.positions[key].y *= 22;
+
+			this.positions[key].y -= 172; // TODO: calculate "172"
 		});
 
 		let pixScale = parent.parent.pixScale,
@@ -41,7 +43,7 @@ class Player {
 
 		// physical body
 		// this.body = Matter.Bodies.circle(x, y, 17, { density: .95, frictionAir: .05 });
-		this.body = Matter.Bodies.rectangle(x, y+25, 38, 19, { density: 1.15, frictionAir: .05 });
+		this.body = Matter.Bodies.rectangle(x, y, 38, 19, { density: 1.15, frictionAir: .05 });
 		this.body.label = this.id;
 		// prevents rotation
 		Matter.Body.setInertia(this.body, Infinity);
@@ -56,6 +58,14 @@ class Player {
 			"270": { dir: "e",  sheet: [[171,0],[190,0],[209,0]] },
 			"315": { dir: "ne", sheet: [[114,19],[133,19],[152,19]] },
 		};
+		// player animation
+		this.frame = {
+			index: 0,
+			total: 3,
+			last: 60,
+			speed: 60,
+		};
+
 		// auto scale up with "pixel scale"
 		Object.keys(this.sheet).map(key =>
 			this.sheet[key].sheet = this.sheet[key].sheet.map(frame =>
@@ -68,28 +78,31 @@ class Player {
 		force.x = force.x * this.speed;
 		force.y = force.y * this.speed;
 		Matter.Body.applyForce(this.body, this.body.position, force);
-	}
-
-	move2(force) {
+		// player direction
 		let target = this.position.add(force),
 			dir = this.position.direction(target),
 			angle = (dir * 180 / Math.PI) + 90;
 		if (angle < 0) angle += 360;
 		this.strip = this.sheet[angle];
-		this.position.x += force.x;
-		this.position.y += force.y;
 	}
 
 	update(delta, time) {
+		this.frame.last -= delta;
+		if (this.frame.last < 0) {
+			this.frame.last = (this.frame.last + this.frame.speed) % this.frame.speed;
+			this.frame.index += this.body.speed * .7;
+			if (this.frame.index > this.frame.total) this.frame.index = 0;
+		}
 		// copy physical position to "this" internal position
 		this.position.x = this.body.position.x;
 		this.position.y = this.body.position.y;
 	}
 
 	render(ctx) {
-		let sheet = this.strip.sheet[0],
-			w = this.w,
+		let w = this.w,
 			h = this.h,
+			f = (this.frame.index | 0),
+			sheet = this.strip.sheet[f],
 			wH = w >> 1,
 			mX = sheet[0],
 			mY = sheet[1],

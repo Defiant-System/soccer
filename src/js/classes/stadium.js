@@ -36,7 +36,7 @@ class Stadium {
 				this.entries.push(player);
 
 				// TEMP for initial development
-				if (side === "away" && i == 8) this.player = player;
+				if (side === "away" && i == 9) this.player = player;
 			});
 		});
 		// build physical world
@@ -106,8 +106,7 @@ class Stadium {
 	}
 
 	update(delta, time) {
-		// update entries
-		this.entries.map(item => item.update(delta, time));
+		
 	}
 
 	render(ctx) {

@@ -17,7 +17,7 @@ class Arena {
 
 		// dev / debug purpose
 		this.debug = {
-			mode: 1,
+			mode: 2,
 		};
 
 		// create FPS controller
@@ -194,7 +194,8 @@ class Arena {
 	}
 
 	update(delta, time) {
-		this.stadium.update(delta, time);
+		// update entries
+		this.stadium.entries.map(item => item.update(delta, time));
 		this.viewport.update(delta, time);
 		this.stadium.minimap.update(delta, time);
 	}
@@ -218,16 +219,14 @@ class Arena {
 
 		// draw entries
 		this.ctx.save();
+		this.ctx.scale(this.viewport.scale, this.viewport.scale);
 		this.ctx.translate(this.config.margin.l + tX, this.config.margin.t + tY);
 		this.stadium.entries.map(entry => entry.render(this.ctx));
-		this.ctx.restore();
-
 		
 		if (this.debug.mode >= 2) {
 			let bodies = Matter.Composite.allBodies(this.engine.world);
 
 			this.ctx.save();
-			this.ctx.translate(this.viewport.x, this.viewport.y);
 			this.ctx.lineWidth = 1;
 			this.ctx.fillStyle = "#33669977";
 			this.ctx.strokeStyle = "#113355cc";
@@ -241,10 +240,10 @@ class Arena {
 			this.ctx.stroke();
 			this.ctx.restore();
 
-			// draws ball direction
+			/* draws ball direction
 			let ball = this.stadium.ball,
-				x = this.viewport.x + ball.position.x,
-				y = this.viewport.y + ball.position.y,
+				x = ball.position.x,
+				y = ball.position.y,
 				r = ball.radius;
 			this.ctx.save();
 			this.ctx.translate(x, y);
@@ -256,7 +255,10 @@ class Arena {
 			this.ctx.lineTo(0, 15);
 			this.ctx.stroke();
 			this.ctx.restore();
+			*/
 		}
+		this.ctx.restore();
+
 		if (this.debug.mode >= 1) {
 			this.drawFps(this.ctx);
 		}

@@ -51,9 +51,9 @@ class Viewport {
 	}
 
 	center() {
-		let arena = this.arena,
-			centerX = arena.stadium.ball.position.x - this.half.w + this.shake.offsetX,
-			centerY = arena.stadium.ball.position.y - this.half.h + this.shake.offsetY;
+		let ball = this.arena.stadium.ball,
+			centerX = ball.position.x - this.half.w + this.shake.offsetX,
+			centerY = ball.position.y - this.half.h + this.shake.offsetY;
 		if (centerX < this.min.x) centerX = this.min.x;
 		if (centerY < this.min.y) centerY = this.min.y;
 		if (centerX > this.max.x) centerX = this.max.x;
