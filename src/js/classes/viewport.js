@@ -18,7 +18,7 @@ class Viewport {
 
 		this._zoom = 100;
 		this._scaleMax = 1;
-		this._scaleMin = w / (this.config.width * 22);
+		this._scaleMin = w / ((this.config.width * 22) + this.config.margin.l + this.config.margin.r);
 		this.min = { x: 0, y: 0 };
 		this.max = {
 			x: (this.config.width * 22) + this.config.margin.l + this.config.margin.r - this.w,

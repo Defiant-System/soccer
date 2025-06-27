@@ -47,6 +47,18 @@
 	<form id="penaly-s">
 	</form>
 
+	<form id="kickin-ne">
+	</form>
+
+	<form id="kickin-nw">
+	</form>
+
+	<form id="kickin-se">
+	</form>
+
+	<form id="kickin-sw">
+	</form>
+
 	<form id="4-4-2">
 		<i num="1" y="402" x="170" />
 		<i num="2" y="295" x="300" />

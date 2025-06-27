@@ -18,7 +18,7 @@ class Player {
 			// scale down
 			this.positions[key].x /= 5;
 			// adjust for skew value
-			this.positions[key].y = ((y/5) / .8);
+			this.positions[key].y = ((y/5));
 			// mirror
 			if (side == "home") {
 				this.positions[key].x = parent.parent.config.width - this.positions[key].x;

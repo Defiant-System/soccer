@@ -14,6 +14,23 @@
 			<Menu name="1" check-group="debug" click="set-debug-mode" arg="1"/>
 			<Menu name="2" check-group="debug" click="set-debug-mode" arg="2"/>
 		</Menu>
+		<Menu name="More Formations">
+			<Menu name="begin-home" click="set-formation" arg="begin-home"/>
+			<Menu name="begin-away" click="set-formation" arg="begin-away"/>
+			<Menu type="divider"/>
+			<Menu name="corner-ne" click="set-formation" arg="corner-ne"/>
+			<Menu name="corner-nw" click="set-formation" arg="corner-nw"/>
+			<Menu name="corner-se" click="set-formation" arg="corner-se"/>
+			<Menu name="corner-sw" click="set-formation" arg="corner-sw"/>
+			<Menu type="divider"/>
+			<Menu name="penaly-n" click="set-formation" arg="penaly-n"/>
+			<Menu name="penaly-s" click="set-formation" arg="penaly-s"/>
+			<Menu type="divider"/>
+			<Menu name="kickin-ne" click="set-formation" arg="kickin-ne"/>
+			<Menu name="kickin-nw" click="set-formation" arg="kickin-nw"/>
+			<Menu name="kickin-se" click="set-formation" arg="kickin-se"/>
+			<Menu name="kickin-sw" click="set-formation" arg="kickin-sw"/>
+		</Menu>
 		<Menu type="divider"/>
 		<Menu name="Output Formation" click="output-formation-positions"/>
 	</Menu>

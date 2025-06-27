@@ -16,6 +16,7 @@
 	async dispatch(event) {
 		let APP = soccer,
 			Self = APP.manager,
+			value,
 			data,
 			el;
 		// console.log(event);
@@ -61,15 +62,16 @@
 				Self.els.form.css({ top, left, width, height });
 				break;
 			case "set-formation":
-				event.el.parent().find(".active").removeClass("active");
-				event.el.addClass("active");
-
-				Self.els.form.cssSequence("rearrange", "transitionend", el => {
-					el.removeClass("rearrange");
-				});
-
+				if (event.el) {
+					event.el.parent().find(".active").removeClass("active");
+					event.el.addClass("active");
+				}
+				// prepare animation
+				Self.els.form.cssSequence("rearrange", "transitionend", el => el.removeClass("rearrange"));
+				// re-arrange
+				value = event.el ? event.el.data("arg") : event.arg;
 				window.bluePrint
-					.selectNodes(`//Formations/form[@id="${event.el.data("arg")}"]/i`)
+					.selectNodes(`//Formations/form[@id="${value}"]/i`)
 					.map(x => {
 						Self.els.form
 							.find(`.player[data-num="${x.getAttribute("num")}"]`)
