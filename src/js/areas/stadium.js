@@ -92,6 +92,8 @@
 				}
 				break;
 			// custom events
+			case "init-view":
+				break;
 			case "add-teams":
 				let teams = {
 						home: { name: "Sweden" },

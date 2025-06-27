@@ -2,7 +2,7 @@
 let Test = {
 	init(APP) {
 
-		APP.content.data({ show: "stadium" });
+		APP.dispatch({ type: "show-view", arg: "stadium" });
 
 		setTimeout(() => {
 			APP.stadium.dispatch({ type: "add-teams" });

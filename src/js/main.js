@@ -47,6 +47,7 @@ const soccer = {
 			// custom events
 			case "show-view":
 				Self.content.data({ show: event.arg });
+				Self[event.arg].dispatch({ type: "init-view" });
 				break;
 			case "open-help":
 				karaqu.shell("fs -u '~/help/index.md'");
@@ -71,6 +72,7 @@ const soccer = {
 				}
 		}
 	},
+	start: @import "./areas/start.js",
 	stadium: @import "./areas/stadium.js",
 	manager: @import "./areas/manager.js",
 };

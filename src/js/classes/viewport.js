@@ -35,7 +35,7 @@ class Viewport {
 
 	set zoom(v) {
 		this._zoom = v;
-		this.scale = Math.lerp(this._scaleMin, this._scaleMax, this._zoom/100)
+		this.scale = Math.lerp(this._scaleMin, this._scaleMax, this._zoom/100);
 	}
 
 	get zoom() {

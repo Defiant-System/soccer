@@ -17,9 +17,8 @@ class Player {
 			let { x, y } = this.positions[key];
 			// scale down
 			this.positions[key].x /= 5;
-			this.positions[key].y /= 5;
 			// adjust for skew value
-			this.positions[key].y *= 1.2;
+			this.positions[key].y = ((y/5) / .8);
 			// mirror
 			if (side == "home") {
 				this.positions[key].x = parent.parent.config.width - this.positions[key].x;
@@ -29,7 +28,7 @@ class Player {
 			this.positions[key].x *= 22;
 			this.positions[key].y *= 22;
 
-			this.positions[key].y -= 172; // TODO: calculate "172"
+			// this.positions[key].y -= 172; // TODO: calculate "172"
 		});
 
 		let pixScale = parent.parent.pixScale,
@@ -39,7 +38,7 @@ class Player {
 		this.position = new Point(x, y);
 		this.w = w;
 		this.h = h;
-		this.speed = +xPlayer.getAttribute("vel") / 3;
+		this.speed = +xPlayer.getAttribute("vel");
 
 		// physical body
 		// this.body = Matter.Bodies.circle(x, y, 17, { density: .95, frictionAir: .05 });
@@ -90,12 +89,12 @@ class Player {
 		this.frame.last -= delta;
 		if (this.frame.last < 0) {
 			this.frame.last = (this.frame.last + this.frame.speed) % this.frame.speed;
-			this.frame.index += this.body.speed;
+			this.frame.index += this.body.speed * .1;
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
 		// copy physical position to "this" internal position
 		let wH = this.w >> 1,
-			hH = this.h >> 1;
+			hH = this.h >> 2;
 		this.position.x = this.body.position.x + wH;
 		this.position.y = this.body.position.y + hH;
 	}

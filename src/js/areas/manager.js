@@ -10,9 +10,6 @@
 			form: window.find(`div[data-area="manager"] .field .players`),
 			cvs: window.find(`div[data-area="manager"] .field canvas.overview`),
 		};
-		// default pain
-		this.dispatch({ type: "draw-field" });
-		this.dispatch({ type: "render-team-list", home: "Sweden", away: "Turkiye" });
 		// temp event handler
 		this.els.form.on("mousedown", this.movePlayer);
 	},
@@ -24,6 +21,11 @@
 		// console.log(event);
 		switch (event.type) {
 			// custom events
+			case "init-view":
+				// default pain
+				Self.dispatch({ type: "draw-field" });
+				Self.dispatch({ type: "render-team-list", home: "Sweden", away: "Turkiye" });
+				break;
 			case "render-team-list":
 				// team troop list
 				window.render({

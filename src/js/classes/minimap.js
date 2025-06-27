@@ -66,6 +66,16 @@ class Minimap extends Field {
 				ctx.arc(x, y, r, 0, Math.TAU);
 				ctx.fill();
 			});
+		// render ball
+		let r = 3,
+			{ x, y } = this.parent.ball.position;
+		x = ((x / 22) * 2) - r;
+		y = ((y / 22) * 2) - r;
+		ctx.fillStyle = `#fff`;
+		ctx.beginPath();
+		ctx.arc(x, y, r, 0, Math.TAU);
+		ctx.fill();
+
 		ctx.restore();
 	}
 }
