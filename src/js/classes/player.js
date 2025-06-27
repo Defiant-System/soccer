@@ -39,7 +39,7 @@ class Player {
 		this.position = new Point(x, y);
 		this.w = w;
 		this.h = h;
-		this.speed = +xPlayer.getAttribute("vel") / 7;
+		this.speed = +xPlayer.getAttribute("vel") / 3;
 
 		// physical body
 		// this.body = Matter.Bodies.circle(x, y, 17, { density: .95, frictionAir: .05 });
@@ -81,7 +81,7 @@ class Player {
 		// player direction
 		let target = this.position.add(force),
 			dir = this.position.direction(target),
-			angle = (dir * 180 / Math.PI) + 90;
+			angle = Math.round((dir * 180 / Math.PI) + 90);
 		if (angle < 0) angle += 360;
 		this.strip = this.sheet[angle];
 	}
@@ -90,12 +90,14 @@ class Player {
 		this.frame.last -= delta;
 		if (this.frame.last < 0) {
 			this.frame.last = (this.frame.last + this.frame.speed) % this.frame.speed;
-			this.frame.index += this.body.speed * .7;
+			this.frame.index += this.body.speed;
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
 		// copy physical position to "this" internal position
-		this.position.x = this.body.position.x;
-		this.position.y = this.body.position.y;
+		let wH = this.w >> 1,
+			hH = this.h >> 1;
+		this.position.x = this.body.position.x + wH;
+		this.position.y = this.body.position.y + hH;
 	}
 
 	render(ctx) {
@@ -104,14 +106,12 @@ class Player {
 			f = (this.frame.index | 0),
 			sheet = this.strip.sheet[f],
 			wH = w >> 1,
-			mX = sheet[0],
-			mY = sheet[1],
 			x = this.position.x,
 			y = this.position.y;
 		// player
 		ctx.save();
 		ctx.translate(x-wH, y-wH);
-		ctx.drawImage(this.asset.cvs, mX, mY, w, h, -wH, -wH, w, h);
+		ctx.drawImage(this.asset.cvs, sheet[0], sheet[1], w, h, -wH, -wH, w, h);
 		// ctx.fillStyle = "#33e";
 		// ctx.beginPath();
 		// ctx.arc(0, 0, 4, 0, Math.TAU);
