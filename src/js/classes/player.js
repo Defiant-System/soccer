@@ -18,6 +18,11 @@ class Player {
 			// scale down
 			this.positions[key].x = ((x / 5) * 22);
 			this.positions[key].y = ((y / 4) * 22) * .85;
+			// mirror
+			if (side == "home") {
+				this.positions[key].x = parent.field.sW - this.positions[key].x;
+				this.positions[key].y = parent.field.sH - this.positions[key].y;
+			}
 		});
 
 		let pixScale = parent.parent.pixScale,
