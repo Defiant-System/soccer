@@ -16,19 +16,8 @@ class Player {
 		Object.keys(this.positions).map(key => {
 			let { x, y } = this.positions[key];
 			// scale down
-			this.positions[key].x /= 5;
-			// adjust for skew value
-			this.positions[key].y = ((y/5));
-			// mirror
-			if (side == "home") {
-				this.positions[key].x = parent.parent.config.width - this.positions[key].x;
-				this.positions[key].y = parent.parent.config.height - this.positions[key].y;
-			}
-			// scaler
-			this.positions[key].x *= 22;
-			this.positions[key].y *= 22;
-
-			// this.positions[key].y -= 172; // TODO: calculate "172"
+			this.positions[key].x = ((x / 5) * 22);
+			this.positions[key].y = ((y / 4) * 22) * .85;
 		});
 
 		let pixScale = parent.parent.pixScale,

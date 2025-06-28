@@ -9,7 +9,7 @@ let Test = {
 			APP.stadium.arena.fpsControl.start();
 		}, 400);
 		setTimeout(() => {
-			let vec = Matter.Vector.create(320, 963);
+			let vec = Matter.Vector.create(320, 1163);
 			// let vec = Matter.Vector.create(220, 1963);
 			// let vec = Matter.Vector.create(310, 1290);
 			Matter.Body.setPosition(APP.stadium.arena.stadium.ball.body, vec);
