@@ -30,7 +30,7 @@ class Minimap extends Field {
 
 		// semi-transparent box
 		ctx.save();
-		ctx.fillStyle = "#0002";
+		ctx.fillStyle = "#0003";
 		ctx.beginPath();
 		ctx.rect(0, 0, this.width, this.height);
 		ctx.fill();
@@ -53,6 +53,7 @@ class Minimap extends Field {
 
 		ctx.save();
 		ctx.translate(this.oX+4, this.oY+4);
+		// ctx.globalCompositeOperation = "hard-light";
 		// render player positions
 		this.parent.entries
 			.filter(item => item.id?.startsWith("player-"))

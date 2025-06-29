@@ -90,25 +90,10 @@ class Arena {
 		Object.keys(teams).map(side => {
 			let { cvs, ctx } = Utils.createCanvas(width, height),
 				colors = teams[side].colors;
-			// repaints sprite for fighter
+			// sprite for team
 			ctx.drawImage(this.assets.sprite.img, 0, 0);
-			let pixels = ctx.getImageData(0, 0, width, height),
-				data = pixels.data;
-			for (let i=0; i<data.length; i+=4) {
-				let r = data[i+0],
-					g = data[i+1],
-					b = data[i+2],
-					len = 2;
-				while (len--) {
-					if (palette[len][0] === r && palette[len][1] === g && palette[len][2] === b) {
-						[r,g,b] = colors[len];
-					}
-				}
-				data[i+0] = r;
-				data[i+1] = g;
-				data[i+2] = b;
-			}
-			ctx.putImageData(pixels, 0, 0);
+			// repaints sprite for players
+			Utils.repaint(ctx, width, height, palette, colors);
 			// save reference
 			this.assets[side] = { cvs: cvs[0], ctx };
 		});
@@ -118,6 +103,7 @@ class Arena {
 			{ name: "home goal", cvs: this.assets.home.cvs, mapW: 92, mapH: 31, mapX: 22, mapY: 101, sX: 759, sY: 249 },
 			{ name: "home trainer", cvs: this.assets.home.cvs, mapW: 9, mapH: 15, mapX: 0, mapY: 116, sX: 72, sY: 1171 },
 			{ name: "home player", cvs: this.assets.home.cvs, mapW: 228, mapH: 152, mapX: 0, mapY: 135 },
+			{ name: "home goalie", cvs: this.assets.home.cvs, mapW: 228, mapH: 152, mapX: 0, mapY: 135 },
 			{ name: "home pitch", cvs: this.assets.home.cvs, mapW: 21, mapH: 68, mapX: 251, mapY: 101, sX: 0, sY: 1030 },
 			{ name: "home pitch p1", cvs: this.assets.home.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1060 },
 			{ name: "home pitch p2", cvs: this.assets.home.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1084 },
@@ -132,6 +118,7 @@ class Arena {
 			{ name: "away goal", cvs: this.assets.away.cvs, mapW: 90, mapH: 34, mapX: 114, mapY: 101, sX: 759, sY: 2230 },
 			{ name: "away trainer", cvs: this.assets.away.cvs, mapW: 9, mapH: 15, mapX: 11, mapY: 116, sX: 51, sY: 1403 },
 			{ name: "away player", cvs: this.assets.away.cvs, mapW: 228, mapH: 152, mapX: 0, mapY: 135 },
+			{ name: "away goalie", cvs: this.assets.away.cvs, mapW: 228, mapH: 152, mapX: 0, mapY: 135 },
 			{ name: "away pitch", cvs: this.assets.away.cvs, mapW: 21, mapH: 68, mapX: 251, mapY: 101, sX: 0, sY: 1385 },
 			{ name: "away pitch p1", cvs: this.assets.away.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1445 },
 			{ name: "away pitch p2", cvs: this.assets.away.cvs, mapW: 9, mapH: 18, mapX: 232, mapY: 101, sX: 48, sY: 1469 },
@@ -168,6 +155,17 @@ class Arena {
 		fixture.ctx = item.ctx;
 		fixture.ctx.imageSmoothingEnabled = false;
 		fixture.ctx.drawImage(this.assets.home.cvs, fixture.mapX, fixture.mapY, fixture.mapW, fixture.mapH, 0, 0, fixture.mapW*pS, fixture.mapH*pS);
+		// home goalie
+		fixture = this.fixtures.find(e => e.name == "home goalie");
+		item = Utils.createCanvas(fixture.mapW*pS, fixture.mapH*pS);
+		fixture.cvs = item.cvs[0];
+		fixture.ctx = item.ctx;
+		fixture.ctx.imageSmoothingEnabled = false;
+		fixture.ctx.drawImage(this.assets.home.cvs, fixture.mapX, fixture.mapY, fixture.mapW, fixture.mapH, 0, 0, fixture.mapW*pS, fixture.mapH*pS);
+		// home goalie colors
+		palette = [teams.home.colors[0], teams.home.colors[0]];
+		Utils.repaint(fixture.ctx, fixture.mapW*pS, fixture.mapH*pS, teams.home.colors, palette);
+
 		// away player
 		fixture = this.fixtures.find(e => e.name == "away player");
 		item = Utils.createCanvas(fixture.mapW*pS, fixture.mapH*pS);
@@ -175,6 +173,16 @@ class Arena {
 		fixture.ctx = item.ctx;
 		fixture.ctx.imageSmoothingEnabled = false;
 		fixture.ctx.drawImage(this.assets.away.cvs, fixture.mapX, fixture.mapY, fixture.mapW, fixture.mapH, 0, 0, fixture.mapW*pS, fixture.mapH*pS);
+		// away goalie
+		fixture = this.fixtures.find(e => e.name == "away goalie");
+		item = Utils.createCanvas(fixture.mapW*pS, fixture.mapH*pS);
+		fixture.cvs = item.cvs[0];
+		fixture.ctx = item.ctx;
+		fixture.ctx.imageSmoothingEnabled = false;
+		fixture.ctx.drawImage(this.assets.away.cvs, fixture.mapX, fixture.mapY, fixture.mapW, fixture.mapH, 0, 0, fixture.mapW*pS, fixture.mapH*pS);
+		// away goalie colors
+		palette = [teams.away.colors[0], teams.away.colors[0]];
+		Utils.repaint(fixture.ctx, fixture.mapW*pS, fixture.mapH*pS, teams.away.colors, palette);
 	}
 
 	setStadium() {
