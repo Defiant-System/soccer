@@ -94,6 +94,9 @@
 			// custom events
 			case "init-view":
 				break;
+			case "set-formation":
+				console.log(event);
+				break;
 			case "add-teams":
 				let teams = {
 						home: { name: "Sweden" },

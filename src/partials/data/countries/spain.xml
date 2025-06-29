@@ -1,0 +1,21 @@
+
+<team type="national" name="Spain" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Andoni Zubizarreta" price="2.75M" pos="G" nat="Esp" />
+	<i num="2" name="Alberto Belsue" price="1.9M" pos="RB" nat="Esp" pass="3" vel="4" head="4" tackling="7" ball="6" speed="7" finish="3" total="34" />
+	<i num="3" name="Sergi Barjuan" price="3M" pos="LB" nat="Esp" pass="7" vel="3" head="4" tackling="7" ball="7" speed="7" finish="3" total="38" />
+	<i num="4" name="Miguel Angel Nadal" price="2M" pos="D" nat="Esp" pass="3" vel="3" head="7" tackling="7" ball="7" speed="3" finish="5" total="35" />
+	<i num="5" name="Abelardo Fernandez" price="1.5M" pos="D" nat="Esp" pass="3" vel="4" head="7" tackling="7" ball="3" speed="3" finish="4" total="31" />
+	<i num="6" name="Fernando Hierro" price="2.25M" pos="M" nat="Esp" pass="3" vel="7" head="7" tackling="7" ball="3" speed="4" finish="5" total="36" />
+	<i num="7" name="Luis Enrique Martinez" price="1.1M" pos="LW" nat="Esp" pass="7" vel="2" head="2" tackling="3" ball="6" speed="6" finish="3" total="29" />
+	<i num="8" name="Julen Guerrero" price="3M" pos="M" nat="Esp" pass="7" vel="7" head="4" tackling="5" ball="7" speed="3" finish="5" total="38" />
+	<i num="9" name="Alfonso Perez" price="3.5M" pos="A" nat="Esp" pass="4" vel="7" head="4" tackling="3" ball="7" speed="7" finish="7" total="39" />
+	<i num="10" name="Jose Luis Caminero" price="3M" pos="RW" nat="Esp" pass="6" vel="7" head="2" tackling="7" ball="7" speed="3" finish="6" total="38" />
+	<i num="11" name="Raul Gonzalez" price="8M" pos="A" nat="Esp" pass="7" vel="7" head="5" tackling="4" ball="7" speed="7" finish="7" total="44" />
+	<i num="12" name="Santiago Canizares" price="1.1M" pos="G" nat="Esp" />
+	<i num="13" name="Rafael Alkorta" price="850K" pos="D" nat="Esp" pass="2" vel="2" head="7" tackling="7" ball="3" speed="1" finish="4" total="26" />
+	<i num="14" name="Guillermo Amor" price="1.6M" pos="M" nat="Esp" pass="7" vel="3" head="2" tackling="7" ball="7" speed="3" finish="3" total="32" />
+	<i num="15" name="Kiko" price="1.9M" pos="A" nat="Esp" pass="3" vel="7" head="7" tackling="4" ball="3" speed="3" finish="7" total="34" />
+	<i num="16" name="Juan Antonio Pizzi" price="3.5M" pos="A" nat="Esp" pass="5" vel="7" head="7" tackling="4" ball="5" speed="4" finish="7" total="39" />
+	<tot price="40.95M" pass="67" vel="70" head="69" tackling="79" ball="78" speed="61" finish="69" total="493" />
+	<avg price="3M" pass="4.8" vel="5.0" head="4.9" tackling="5.6" ball="5.6" speed="4.4" finish="4.9" total="35.2" />
+</team>

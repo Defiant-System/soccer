@@ -1,0 +1,23 @@
+
+<team type="national" name="Germany" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Andreas Kopke" price="M" pos="G" nat="Ger" />
+	<i num="2" name="Stefan Reuter" price="2.25M" pos="RW" nat="Ger" pass="7" vel="4" head="2" tackling="7" ball="7" speed="7" finish="2" total="36" />
+	<i num="3" name="Christian Ziege" price="2.75M" pos="LW" nat="Ger" pass="7" vel="6" head="2" tackling="7" ball="7" speed="6" finish="2" total="37" />
+	<i num="4" name="Jurgen Kohler" price="2M" pos="RB" nat="Ger" pass="5" vel="4" head="7" tackling="7" ball="4" speed="4" finish="4" total="35" />
+	<i num="5" name="Thomas Helmer" price="2.25M" pos="LB" nat="Ger" pass="5" vel="5" head="3" tackling="7" ball="5" speed="7" finish="4" total="36" />
+	<i num="6" name="Matthias Sammer" price="8M" pos="D" nat="Ger" pass="7" vel="7" head="6" tackling="7" ball="7" speed="5" finish="5" total="44" />
+	<i num="7" name="Andreas Moller" price="7M" pos="M" nat="Ger" pass="7" vel="7" head="3" tackling="5" ball="7" speed="7" finish="7" total="43" />
+	<i num="8" name="Dieter Eilts" price="2.75M" pos="M" nat="Ger" pass="7" vel="4" head="5" tackling="7" ball="4" speed="5" finish="5" total="37" />
+	<i num="9" name="Jurgen Klinsmann" price="12M" pos="A" nat="Ger" pass="7" vel="7" head="7" tackling="5" ball="7" speed="7" finish="7" total="47" />
+	<i num="10" name="Thomas Hassler" price="4.5M" pos="M" nat="Ger" pass="7" vel="6" head="3" tackling="7" ball="7" speed="7" finish="3" total="40" />
+	<i num="11" name="Fredi Bobic" price="2.75M" pos="A" nat="Ger" pass="4" vel="7" head="7" tackling="4" ball="5" speed="3" finish="7" total="37" />
+	<i num="12" name="Oliver Kahn" price="2.75M" pos="G" nat="Ger" />
+	<i num="13" name="Marcus Babbel" price="1.1M" pos="D" nat="Ger" pass="4" vel="4" head="7" tackling="7" ball="3" speed="2" finish="2" total="29" />
+	<i num="14" name="Thomas Strunz" price="1.5M" pos="M" nat="Ger" pass="7" vel="2" head="3" tackling="7" ball="7" speed="3" finish="2" total="31" />
+	<i num="15" name="Steffen Freund" price="1.5M" pos="M" nat="Ger" pass="7" vel="3" head="3" tackling="7" ball="5" speed="3" finish="3" total="31" />
+	<i num="16" name="Oliver Bierhoff" price="3M" pos="A" nat="Ger" pass="4" vel="7" head="7" tackling="5" ball="4" speed="4" finish="7" total="38" />
+	<tot price="59.1M" pass="85" vel="73" head="65" tackling="89" ball="79" speed="70" finish="60" total="521" />
+	<avg price="4M" pass="6.1" vel="5.2" head="4.6" tackling="6.4" ball="5.6" speed="5.0" finish="4.3" total="37.2" />
+</team>
+								
+								

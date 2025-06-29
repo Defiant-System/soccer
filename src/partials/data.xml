@@ -1,6 +1,10 @@
 <data>
 	@import "data/formations.xml"
 	
-	@import "data/sweden.xml"
-	@import "data/turkiye.xml"
+	@import "data/countries/sweden.xml"
+	@import "data/countries/turkiye.xml"
+	@import "data/countries/germany.xml"
+	@import "data/countries/england.xml"
+	@import "data/countries/france.xml"
+	@import "data/countries/spain.xml"
 </data>

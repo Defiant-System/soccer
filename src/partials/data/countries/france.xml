@@ -1,0 +1,21 @@
+
+<team type="national" name="France" form="4-4-2" colors="[[30,30,240],[255,255,255]]">
+	<i num="1" name="Bernard Lama" price="4.5M" pos="G" nat="Fra" />
+	<i num="2" name="Lilian Thuram" price="2M" pos="RB" nat="Fra" pass="3" vel="5" head="5" tackling="7" ball="4" speed="7" finish="4" total="35" />
+	<i num="3" name="Bixente Lizarazu" price="1.3M" pos="LB" nat="Fra" pass="3" vel="6" head="2" tackling="6" ball="3" speed="7" finish="3" total="30" />
+	<i num="4" name="Christian Karembeu" price="2.75M" pos="RW" nat="Fra" pass="7" vel="3" head="3" tackling="6" ball="7" speed="7" finish="4" total="37" />
+	<i num="5" name="Laurent Blanc" price="1.6M" pos="D" nat="Fra" pass="7" vel="3" head="6" tackling="7" ball="3" speed="3" finish="3" total="32" />
+	<i num="6" name="Vincent Guerin" price="1.1M" pos="M" nat="Fra" pass="6" vel="3" head="4" tackling="7" ball="3" speed="3" finish="3" total="29" />
+	<i num="7" name="Didier Deschamps" price="2M" pos="LW" nat="Fra" pass="7" vel="7" head="2" tackling="7" ball="7" speed="3" finish="2" total="35" />
+	<i num="8" name="Marcel Desailly" price="5M" pos="D" nat="Fra" pass="7" vel="7" head="7" tackling="7" ball="5" speed="4" finish="4" total="41" />
+	<i num="9" name="Youri Djorkaeff" price="6M" pos="M" nat="Fra" pass="7" vel="7" head="4" tackling="5" ball="7" speed="5" finish="7" total="42" />
+	<i num="10" name="Zinedine Zidane" price="2M" pos="M" nat="Fra" pass="7" vel="7" head="3" tackling="4" ball="7" speed="4" finish="3" total="35" />
+	<i num="11" name="Patrice Loko" price="1.6M" pos="A" nat="Fra" pass="3" vel="7" head="6" tackling="2" ball="2" speed="5" finish="7" total="32" />
+	<i num="12" name="Fabien Barthez" price="800K" pos="G" nat="Fra" />
+	<i num="13" name="Alain Roche" price="1.5M" pos="D" nat="Fra" pass="4" vel="4" head="7" tackling="7" ball="4" speed="3" finish="2" total="31" />
+	<i num="14" name="Reynald Pedros" price="1.5M" pos="M" nat="Fra" pass="6" vel="6" head="1" tackling="3" ball="7" speed="5" finish="3" total="31" />
+	<i num="15" name="Robert Pires" price="1.5M" pos="M" nat="Fra" pass="5" vel="2" head="2" tackling="3" ball="6" speed="7" finish="6" total="31" />
+	<i num="16" name="Christophe Dugarry" price="1.6M" pos="A" nat="Fra" pass="3" vel="7" head="2" tackling="1" ball="7" speed="6" finish="6" total="32" />
+	<tot price="36.75M" pass="75" vel="74" head="54" tackling="72" ball="72" speed="69" finish="57" total="473" />
+	<avg price="2M" pass="5.4" vel="5.3" head="3.9" tackling="5.1" ball="5.1" speed="4.9" finish="4.1" total="33.8" />
+</team>

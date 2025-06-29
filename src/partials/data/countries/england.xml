@@ -1,0 +1,21 @@
+
+<team type="national" name="England" form="4-4-2" colors="[[255,255,255],[255,0,0]]">
+	<i num="1" name="David Seaman" price="4.5M" pos="G" nat="Eng" />
+	<i num="2" name="Gary Neville" price="2M" pos="RW" nat="Eng" pass="7" vel="4" head="2" tackling="7" ball="4" speed="7" finish="4" total="35" />
+	<i num="3" name="Stuart Pearce" price="1.5M" pos="LB" nat="Eng" pass="7" vel="6" head="2" tackling="5" ball="3" speed="6" finish="2" total="31" />
+	<i num="4" name="Paul Ince" price="3.5M" pos="M" nat="Eng" pass="7" vel="7" head="4" tackling="7" ball="4" speed="5" finish="5" total="39" />
+	<i num="5" name="Tony Adams" price="1.6M" pos="D" nat="Eng" pass="4" vel="3" head="7" tackling="7" ball="4" speed="3" finish="4" total="32" />
+	<i num="6" name="Gareth Southgate" price="1.8M" pos="RB" nat="Eng" pass="6" vel="3" head="7" tackling="7" ball="4" speed="3" finish="3" total="33" />
+	<i num="7" name="Steve Mcmanaman" price="5M" pos="M" nat="Eng" pass="7" vel="5" head="5" tackling="4" ball="7" speed="7" finish="6" total="41" />
+	<i num="8" name="Paul Gascoigne" price="5M" pos="M" nat="Eng" pass="7" vel="7" head="4" tackling="5" ball="7" speed="5" finish="6" total="41" />
+	<i num="9" name="Alan Shearer" price="15M" pos="A" nat="Eng" pass="7" vel="7" head="7" tackling="7" ball="7" speed="7" finish="7" total="49" />
+	<i num="10" name="Teddy Sheringham" price="3M" pos="A" nat="Eng" pass="7" vel="6" head="7" tackling="3" ball="7" speed="2" finish="6" total="38" />
+	<i num="11" name="Andy Hinchcliffe" price="1M" pos="LW" nat="Eng" pass="6" vel="5" head="2" tackling="7" ball="2" speed="3" finish="3" total="28" />
+	<i num="12" name="Ian Walker" price="1.5M" pos="G" nat="Eng" />
+	<i num="13" name="Gary Pallister" price="2M" pos="D" nat="Eng" pass="4" vel="5" head="7" tackling="7" ball="3" speed="4" finish="5" total="35" />
+	<i num="14" name="David Beckham" price="2.75M" pos="M" nat="Eng" pass="7" vel="7" head="2" tackling="2" ball="7" speed="6" finish="6" total="37" />
+	<i num="15" name="David Platt" price="4.5M" pos="M" nat="Eng" pass="7" vel="7" head="7" tackling="5" ball="3" speed="4" finish="7" total="40" />
+	<i num="16" name="Les Ferdinand" price="3M" pos="A" nat="Eng" pass="3" vel="7" head="7" tackling="3" ball="4" speed="7" finish="7" total="38" />
+	<tot price="57.65M" pass="86" vel="79" head="70" tackling="76" ball="66" speed="69" finish="71" total="517" />
+	<avg price="4M" pass="6.1" vel="5.6" head="5.0" tackling="5.4" ball="4.7" speed="4.9" finish="5.1" total="36.9" />
+</team>
