@@ -19,7 +19,24 @@ class Stadium {
 
 		// field borders + goal
 		this.bodies = [];
-		this.bodies.push(Matter.Bodies.rectangle(300, 300, 100, 100, { isStatic: true }));
+
+		let thick = 25,
+			bW = this.field.sW,
+			bH = this.field.sH;
+		// top side
+		this.bodies.push(Matter.Bodies.rectangle(bW*.5, -thick, bW+(thick*2), thick, { isStatic: true }));
+		// bottom side
+		this.bodies.push(Matter.Bodies.rectangle(bW*.5, bH+thick, bW+(thick*2), thick, { isStatic: true }));
+		// left side
+		this.bodies.push(Matter.Bodies.rectangle(bW+thick, bH*.5, thick, bH, { isStatic: true }));
+		// right side
+		this.bodies.push(Matter.Bodies.rectangle(-thick, bH*.5, thick, bH, { isStatic: true }));
+
+		// top goal
+		this.bodies.push(Matter.Bodies.rectangle(bW*.5, -thick, 210, thick*2, { isStatic: true }));
+		// bottom goal
+		this.bodies.push(Matter.Bodies.rectangle(bW*.5, bH+thick, 210, thick*2, { isStatic: true }));
+
 
 		// add ball to stadium
 		this.user = new User({ parent: this });
