@@ -1,0 +1,21 @@
+
+<team type="national" name="Romania" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Bogdan Stelea" price="950K" pos="G" nat="Rom" />
+	<i num="2" name="Dan Petrescu" price="2.25M" pos="RB" nat="Rom" pass="7" vel="7" head="3" tackling="7" ball="2" speed="6" finish="4" total="36" />
+	<i num="3" name="Daniel Prodan" price="950K" pos="D" nat="Rom" pass="2" vel="3" head="7" tackling="7" ball="3" speed="2" finish="3" total="27" />
+	<i num="4" name="Corneliu Papura" price="800K" pos="D" nat="Rom" pass="2" vel="3" head="7" tackling="5" ball="2" speed="3" finish="3" total="25" />
+	<i num="5" name="Ioan Lupescu" price="1.3M" pos="M" nat="Rom" pass="6" vel="2" head="7" tackling="7" ball="2" speed="3" finish="3" total="30" />
+	<i num="6" name="Gheorghe Popescu" price="3M" pos="RW" nat="Rom" pass="4" vel="7" head="7" tackling="7" ball="5" speed="4" finish="4" total="38" />
+	<i num="7" name="Dorinel Munteanu" price="2.25M" pos="LW" nat="Rom" pass="7" vel="3" head="4" tackling="4" ball="7" speed="7" finish="4" total="36" />
+	<i num="8" name="Tibor Selymes" price="1.5M" pos="LB" nat="Rom" pass="2" vel="3" head="3" tackling="7" ball="6" speed="7" finish="3" total="31" />
+	<i num="9" name="Florin Raducioiu" price="2.25M" pos="A" nat="Rom" pass="6" vel="7" head="3" tackling="1" ball="6" speed="7" finish="6" total="36" />
+	<i num="10" name="Gheorghe Hagi" price="6M" pos="M" nat="Rom" pass="7" vel="7" head="6" tackling="5" ball="7" speed="3" finish="7" total="42" />
+	<i num="11" name="Adrian Ilie" price="2.25M" pos="M" nat="Rom" pass="7" vel="7" head="2" tackling="4" ball="6" speed="3" finish="7" total="36" />
+	<i num="12" name="Florian Prunea" price="650K" pos="G" nat="Rom" />
+	<i num="13" name="Anton Dobos" price="750K" pos="D" nat="Rom" pass="1" vel="3" head="7" tackling="7" ball="2" speed="1" finish="3" total="24" />
+	<i num="14" name="Constantin Galca" price="650K" pos="M" nat="Rom" pass="6" vel="1" head="1" tackling="5" ball="5" speed="2" finish="2" total="22" />
+	<i num="15" name="Ilie Dumitrescu" price="1.3M" pos="M" nat="Rom" pass="6" vel="5" head="2" tackling="3" ball="2" speed="6" finish="6" total="30" />
+	<i num="16" name="Dinu Viorel Moldovan" price="1.6M" pos="A" nat="Rom" pass="7" vel="5" head="3" tackling="2" ball="3" speed="6" finish="6" total="32" />
+	<tot price="28.45M" pass="70" vel="63" head="62" tackling="71" ball="58" speed="60" finish="61" total="445" />
+	<avg price="2M" pass="5.0" vel="4.5" head="4.4" tackling="5.1" ball="4.1" speed="4.3" finish="4.4" total="31.8" />
+</team>

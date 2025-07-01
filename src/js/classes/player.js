@@ -32,7 +32,7 @@ class Player {
 		this.position = new Point(x, y);
 		this.w = w;
 		this.h = h;
-		this.speed = +xPlayer.getAttribute("vel");
+		this.speed = +xPlayer.getAttribute("vel") / 4;
 
 		// physical body
 		// this.body = Matter.Bodies.circle(x, y, 17, { density: .95, frictionAir: .05 });

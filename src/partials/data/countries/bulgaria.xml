@@ -1,0 +1,21 @@
+
+<team type="national" name="Bulgaria" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Borislav Mikhailov" price="800K" pos="G" nat="Bul" />
+	<i num="2" name="Radostin Kishishev" price="950K" pos="RB" nat="Bul" pass="2" vel="4" head="2" tackling="7" ball="2" speed="7" finish="3" total="27" />
+	<i num="3" name="Trifon Ivanov" price="1.3M" pos="D" nat="Bul" pass="3" vel="3" head="7" tackling="7" ball="3" speed="3" finish="4" total="30" />
+	<i num="4" name="Tsanko Tzvetanov" price="1M" pos="LB" nat="Bul" pass="3" vel="2" head="2" tackling="7" ball="3" speed="7" finish="4" total="28" />
+	<i num="5" name="Petar Khubchev" price="950K" pos="D" nat="Bul" pass="3" vel="2" head="7" tackling="7" ball="3" speed="3" finish="2" total="27" />
+	<i num="6" name="Zlatko Yankov" price="950K" pos="M" nat="Bul" pass="3" vel="3" head="3" tackling="7" ball="4" speed="4" finish="3" total="27" />
+	<i num="7" name="Emil Kostadinov" price="2M" pos="A" nat="Bul" pass="2" vel="6" head="7" tackling="3" ball="3" speed="7" finish="7" total="35" />
+	<i num="8" name="Hristo Stoichkov" price="9M" pos="A" nat="Bul" pass="7" vel="7" head="4" tackling="6" ball="7" speed="7" finish="7" total="45" />
+	<i num="9" name="Georgi Donov" price="950K" pos="A" nat="Bul" pass="2" vel="5" head="6" tackling="2" ball="3" speed="2" finish="7" total="27" />
+	<i num="10" name="Krasimir Balakov" price="2M" pos="LW" nat="Bul" pass="7" vel="7" head="4" tackling="3" ball="7" speed="3" finish="4" total="35" />
+	<i num="11" name="Yordan Lechkov" price="1.9M" pos="RW" nat="Bul" pass="7" vel="3" head="3" tackling="7" ball="7" speed="4" finish="3" total="34" />
+	<i num="12" name="Dimitar Popov" price="550K" pos="G" nat="Bul" />
+	<i num="13" name="Ilian Kiriakov" price="1M" pos="RB" nat="Bul" pass="3" vel="2" head="2" tackling="7" ball="7" speed="6" finish="1" total="28" />
+	<i num="14" name="Ivailo Yordanov" price="700K" pos="M" nat="Bul" pass="6" vel="1" head="2" tackling="7" ball="1" speed="1" finish="5" total="23" />
+	<i num="15" name="Daniel Borimirov" price="850K" pos="M" nat="Bul" pass="5" vel="7" head="1" tackling="3" ball="2" speed="2" finish="6" total="26" />
+	<i num="16" name="Marian Hristov" price="700K" pos="M" nat="Bul" pass="1" vel="6" head="5" tackling="3" ball="2" speed="1" finish="5" total="23" />
+	<tot price="25.6M" pass="54" vel="58" head="55" tackling="76" ball="54" speed="57" finish="61" total="415" />
+	<avg price="2M" pass="3.9" vel="4.1" head="3.9" tackling="5.4" ball="3.9" speed="4.1" finish="4.4" total="29.6" />
+</team>

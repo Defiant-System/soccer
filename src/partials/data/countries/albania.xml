@@ -1,0 +1,21 @@
+
+<team type="national" name="Albania" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Foto Strakosha" price="300K" pos="G" nat="Alb" />
+	<i num="2" name="Saimir Malko" price="700K" pos="RB" nat="Alb" pass="3" vel="2" head="1" tackling="6" ball="2" speed="7" finish="2" total="23" />
+	<i num="3" name="Ilir Shulku" price="500K" pos="LB" nat="Alb" pass="2" vel="2" head="2" tackling="6" ball="1" speed="4" finish="2" total="19" />
+	<i num="4" name="Gjergj Dema" price="300K" pos="D" nat="Alb" pass="1" vel="1" head="4" tackling="4" ball="2" speed="2" finish="2" total="16" />
+	<i num="5" name="Rudi Vata" price="600K" pos="D" nat="Alb" pass="2" vel="2" head="7" tackling="6" ball="1" speed="2" finish="1" total="21" />
+	<i num="6" name="Artur Lekbello" price="600K" pos="D" nat="Alb" pass="2" vel="2" head="7" tackling="5" ball="1" speed="2" finish="2" total="21" />
+	<i num="7" name="Sokol Kushta" price="850K" pos="A" nat="Alb" pass="1" vel="6" head="2" tackling="3" ball="3" speed="5" finish="6" total="26" />
+	<i num="8" name="Arian Bellai" price="600K" pos="RW" nat="Alb" pass="7" vel="2" head="2" tackling="1" ball="4" speed="4" finish="1" total="21" />
+	<i num="9" name="Salvator Kacaj" price="550K" pos="LW" nat="Alb" pass="3" vel="4" head="2" tackling="1" ball="3" speed="4" finish="3" total="20" />
+	<i num="10" name="Altin Rraklli" price="750K" pos="A" nat="Alb" pass="4" vel="7" head="2" tackling="2" ball="1" speed="1" finish="7" total="24" />
+	<i num="11" name="Sulejman Demollari" price="500K" pos="M" nat="Alb" pass="6" vel="2" head="1" tackling="1" ball="6" speed="1" finish="2" total="19" />
+	<i num="12" name="Blendi Nallbani" price="180K" pos="G" nat="Alb" />
+	<i num="13" name="Edmond Abazi" price="300K" pos="D" nat="Alb" pass="1" vel="1" head="5" tackling="6" ball="0" speed="2" finish="1" total="16" />
+	<i num="14" name="Bledar Kola" price="450K" pos="M" nat="Alb" pass="5" vel="1" head="0" tackling="6" ball="2" speed="2" finish="2" total="18" />
+	<i num="15" name="Ledio Pano" price="450K" pos="M" nat="Alb" pass="5" vel="6" head="1" tackling="4" ball="0" speed="1" finish="1" total="18" />
+	<i num="16" name="Kliton Bozgo" price="550K" pos="A" nat="Alb" pass="2" vel="4" head="0" tackling="1" ball="1" speed="7" finish="5" total="20" />
+	<tot price="8.18M" pass="44" vel="42" head="36" tackling="52" ball="27" speed="44" finish="37" total="282" />
+	<avg price="511K" pass="3.1" vel="3.0" head="2.6" tackling="3.7" ball="1.9" speed="3.1" finish="2.6" total="20.1" />
+</team>

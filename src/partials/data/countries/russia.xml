@@ -1,0 +1,21 @@
+
+<team type="national" name="Russia" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Stanislav Cherchesov" price="950K" pos="G" nat="Rus" />
+	<i num="2" name="Yuri Kovtun" price="950K" pos="RB" nat="Rus" pass="2" vel="3" head="7" tackling="7" ball="2" speed="3" finish="3" total="27" />
+	<i num="3" name="Yuri Nikiforov" price="3.5M" pos="D" nat="Rus" pass="6" vel="7" head="7" tackling="7" ball="6" speed="3" finish="3" total="39" />
+	<i num="4" name="Ilia Tsymbalar" price="2M" pos="LW" nat="Rus" pass="7" vel="6" head="3" tackling="7" ball="3" speed="6" finish="3" total="35" />
+	<i num="5" name="Victor Onopko" price="1.5M" pos="M" nat="Rus" pass="7" vel="3" head="3" tackling="6" ball="7" speed="2" finish="3" total="31" />
+	<i num="6" name="Valeri Karpin" price="2.75M" pos="M" nat="Rus" pass="6" vel="3" head="4" tackling="7" ball="7" speed="7" finish="3" total="37" />
+	<i num="7" name="Omari Tetradze" price="1.6M" pos="LB" nat="Rus" pass="7" vel="3" head="6" tackling="7" ball="3" speed="3" finish="3" total="32" />
+	<i num="8" name="Andrei Kanchelskis" price="6M" pos="RW" nat="Rus" pass="7" vel="7" head="5" tackling="5" ball="7" speed="7" finish="4" total="42" />
+	<i num="9" name="Aleksandr Mostovoi" price="2M" pos="M" nat="Rus" pass="7" vel="7" head="4" tackling="2" ball="7" speed="4" finish="4" total="35" />
+	<i num="10" name="Dmitri Radchenko" price="1.9M" pos="A" nat="Rus" pass="4" vel="7" head="3" tackling="3" ball="3" speed="7" finish="7" total="34" />
+	<i num="11" name="Igor Kolyvanov" price="3.5M" pos="A" nat="Rus" pass="5" vel="7" head="6" tackling="4" ball="3" speed="7" finish="7" total="39" />
+	<i num="12" name="Dmitri Kharin" price="800K" pos="G" nat="Rus" />
+	<i num="13" name="Ramiz Mamedov" price="650K" pos="RB" nat="Rus" pass="2" vel="2" head="1" tackling="5" ball="2" speed="7" finish="3" total="22" />
+	<i num="14" name="Yevgeni Bushmanov" price="850K" pos="D" nat="Rus" pass="2" vel="3" head="7" tackling="7" ball="2" speed="3" finish="2" total="26" />
+	<i num="15" name="Vladislav Radimov" price="1.6M" pos="M" nat="Rus" pass="7" vel="5" head="3" tackling="3" ball="7" speed="3" finish="4" total="32" />
+	<i num="16" name="Vladimir Beschastnykh" price="2M" pos="A" nat="Rus" pass="4" vel="7" head="2" tackling="3" ball="5" speed="7" finish="7" total="35" />
+	<tot price="32.55M" pass="73" vel="70" head="61" tackling="73" ball="64" speed="69" finish="56" total="466" />
+	<avg price="2M" pass="5.2" vel="5.0" head="4.4" tackling="5.2" ball="4.6" speed="4.9" finish="4.0" total="33.3" />
+</team>

@@ -1,0 +1,21 @@
+
+<team type="national" name="Denmark" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Peter Schmeichel" price="3.5M" pos="G" nat="Den" />
+	<i num="2" name="Thomas Helveg" price="1.6M" pos="RB" nat="Den" pass="6" vel="3" head="3" tackling="7" ball="3" speed="7" finish="3" total="32" />
+	<i num="3" name="Marc Rieper" price="800K" pos="D" nat="Den" pass="2" vel="3" head="7" tackling="6" ball="3" speed="1" finish="3" total="25" />
+	<i num="4" name="Jes Hogh" price="850K" pos="D" nat="Den" pass="6" vel="2" head="6" tackling="5" ball="3" speed="3" finish="1" total="26" />
+	<i num="5" name="Jacob Laursen" price="1M" pos="LB" nat="Den" pass="3" vel="3" head="7" tackling="7" ball="4" speed="2" finish="2" total="28" />
+	<i num="6" name="Claus Thomsen" price="850K" pos="RW" nat="Den" pass="4" vel="3" head="3" tackling="7" ball="3" speed="4" finish="2" total="26" />
+	<i num="7" name="Brian Steen Nielsen" price="1.3M" pos="LW" nat="Den" pass="7" vel="5" head="3" tackling="2" ball="5" speed="6" finish="2" total="30" />
+	<i num="8" name="Allan Nielsen" price="1.3M" pos="M" nat="Den" pass="7" vel="7" head="2" tackling="6" ball="2" speed="3" finish="3" total="30" />
+	<i num="9" name="Peter Moller" price="850K" pos="A" nat="Den" pass="3" vel="5" head="2" tackling="1" ball="2" speed="7" finish="6" total="26" />
+	<i num="10" name="Michael Laudrup" price="6M" pos="M" nat="Den" pass="7" vel="7" head="4" tackling="3" ball="7" speed="7" finish="7" total="42" />
+	<i num="11" name="Brian Laudrup" price="4.5M" pos="A" nat="Den" pass="7" vel="6" head="3" tackling="3" ball="7" speed="7" finish="7" total="40" />
+	<i num="12" name="Mogens Krogh" price="600K" pos="G" nat="Den" />
+	<i num="13" name="Jacob Friis-Hansen" price="950K" pos="D" nat="Den" pass="3" vel="2" head="7" tackling="7" ball="2" speed="3" finish="3" total="27" />
+	<i num="14" name="Michael Schjonberg" price="850K" pos="M" nat="Den" pass="7" vel="2" head="2" tackling="2" ball="6" speed="5" finish="2" total="26" />
+	<i num="15" name="Mikkel Beck" price="1M" pos="A" nat="Den" pass="3" vel="6" head="6" tackling="3" ball="2" speed="2" finish="6" total="28" />
+	<i num="16" name="Erik Bo Andersen" price="1.3M" pos="A" nat="Den" pass="3" vel="6" head="7" tackling="2" ball="2" speed="3" finish="7" total="30" />
+	<tot price="27.25M" pass="68" vel="60" head="62" tackling="61" ball="51" speed="60" finish="54" total="416" />
+	<avg price="2M" pass="4.9" vel="4.3" head="4.4" tackling="4.4" ball="3.6" speed="4.3" finish="3.9" total="29.7" />
+</team>

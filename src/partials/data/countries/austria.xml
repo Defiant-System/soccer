@@ -1,0 +1,21 @@
+
+<team type="national" name="Austria" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Michael Konsel" price="750K" pos="G" nat="Aut" />
+	<i num="2" name="Markus Schopp" price="750K" pos="RW" nat="Aut" pass="2" vel="1" head="2" tackling="6" ball="6" speed="6" finish="1" total="24" />
+	<i num="3" name="Wolfgang Feiersinger" price="750K" pos="RB" nat="Aut" pass="2" vel="2" head="5" tackling="5" ball="2" speed="6" finish="2" total="24" />
+	<i num="4" name="Anton Pfeffer" price="650K" pos="LB" nat="Aut" pass="2" vel="3" head="6" tackling="6" ball="3" speed="1" finish="1" total="22" />
+	<i num="5" name="Peter Schottel" price="700K" pos="D" nat="Aut" pass="7" vel="2" head="4" tackling="5" ball="2" speed="1" finish="2" total="23" />
+	<i num="6" name="Stefan Marasek" price="700K" pos="LW" nat="Aut" pass="4" vel="3" head="1" tackling="6" ball="6" speed="2" finish="1" total="23" />
+	<i num="7" name="Heimo Pfeifenberger" price="650K" pos="A" nat="Aut" pass="1" vel="5" head="1" tackling="1" ball="2" speed="6" finish="6" total="22" />
+	<i num="8" name="Andreas Herzog" price="1.8M" pos="M" nat="Aut" pass="5" vel="5" head="2" tackling="7" ball="6" speed="6" finish="2" total="33" />
+	<i num="9" name="Anton Polster" price="2.25M" pos="A" nat="Aut" pass="4" vel="7" head="7" tackling="4" ball="4" speed="3" finish="7" total="36" />
+	<i num="10" name="Dietmar Kuhbauer" price="650K" pos="M" nat="Aut" pass="2" vel="1" head="4" tackling="7" ball="2" speed="3" finish="3" total="22" />
+	<i num="11" name="Peter Stoger" price="1.3M" pos="M" nat="Aut" pass="6" vel="6" head="2" tackling="6" ball="5" speed="3" finish="2" total="30" />
+	<i num="12" name="Otto Konrad" price="700K" pos="G" nat="Aut" />
+	<i num="13" name="Michael Hatz" price="500K" pos="D" nat="Aut" pass="1" vel="1" head="6" tackling="6" ball="2" speed="2" finish="1" total="19" />
+	<i num="14" name="Adi Hutter" price="550K" pos="M" nat="Aut" pass="5" vel="4" head="1" tackling="5" ball="1" speed="2" finish="2" total="20" />
+	<i num="15" name="Dieter Ramusch" price="650K" pos="M" nat="Aut" pass="5" vel="2" head="2" tackling="7" ball="1" speed="3" finish="2" total="22" />
+	<i num="16" name="Arnold Wetl" price="950K" pos="A" nat="Aut" pass="2" vel="7" head="2" tackling="2" ball="2" speed="5" finish="7" total="27" />
+	<tot price="14.3M" pass="48" vel="49" head="45" tackling="73" ball="44" speed="49" finish="39" total="347" />
+	<avg price="894K" pass="3.4" vel="3.5" head="3.2" tackling="5.2" ball="3.1" speed="3.5" finish="2.8" total="24.8" />
+</team>

@@ -1,0 +1,21 @@
+
+<team type="national" name="Luxembourg" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Paul Koch" price="180K" pos="G" nat="Lux" />
+	<i num="2" name="Jean Vanek" price="250K" pos="RB" nat="Lux" pass="0" vel="1" head="1" tackling="7" ball="2" speed="3" finish="1" total="15" />
+	<i num="3" name="Jeff Strasser" price="200K" pos="LB" nat="Lux" pass="1" vel="1" head="0" tackling="5" ball="0" speed="5" finish="2" total="14" />
+	<i num="4" name="Marc Birsens" price="350K" pos="M" nat="Lux" pass="2" vel="1" head="4" tackling="5" ball="2" speed="2" finish="1" total="17" />
+	<i num="5" name="Frank Deville" price="250K" pos="D" nat="Lux" pass="2" vel="1" head="4" tackling="6" ball="1" speed="1" finish="0" total="15" />
+	<i num="6" name="Jeff Saibene" price="250K" pos="LW" nat="Lux" pass="5" vel="0" head="2" tackling="4" ball="2" speed="1" finish="1" total="15" />
+	<i num="7" name="Guy Hellers" price="200K" pos="M" nat="Lux" pass="4" vel="0" head="1" tackling="6" ball="0" speed="1" finish="2" total="14" />
+	<i num="8" name="Carlo Weis" price="300K" pos="D" nat="Lux" pass="1" vel="2" head="1" tackling="1" ball="6" speed="4" finish="1" total="16" />
+	<i num="9" name="Luc Holtz" price="350K" pos="RW" nat="Lux" pass="4" vel="1" head="0" tackling="1" ball="5" speed="5" finish="1" total="17" />
+	<i num="10" name="Roby Langers" price="450K" pos="A" nat="Lux" pass="2" vel="6" head="1" tackling="2" ball="1" speed="2" finish="4" total="18" />
+	<i num="11" name="Manuel Cardoni" price="350K" pos="M" nat="Lux" pass="1" vel="5" head="5" tackling="2" ball="0" speed="1" finish="3" total="17" />
+	<i num="12" name="Serge Rohmann" price="150K" pos="G" nat="Lux" />
+	<i num="13" name="Ralph Ferron" price="150K" pos="D" nat="Lux" pass="1" vel="0" head="5" tackling="2" ball="1" speed="1" finish="1" total="11" />
+	<i num="14" name="Claude Ganser" price="150K" pos="D" nat="Lux" pass="0" vel="0" head="4" tackling="5" ball="1" speed="0" finish="1" total="11" />
+	<i num="15" name="Joel Groff" price="180K" pos="M" nat="Lux" pass="5" vel="1" head="1" tackling="5" ball="1" speed="0" finish="0" total="13" />
+	<i num="16" name="Dany Theis" price="180K" pos="A" nat="Lux" pass="1" vel="3" head="5" tackling="0" ball="0" speed="1" finish="3" total="13" />
+	<tot price="3.94M" pass="29" vel="22" head="34" tackling="51" ball="22" speed="27" finish="21" total="206" />
+	<avg price="246K" pass="2.1" vel="1.6" head="2.4" tackling="3.6" ball="1.6" speed="1.9" finish="1.5" total="14.7" />
+</team>

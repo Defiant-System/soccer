@@ -1,0 +1,21 @@
+
+<team type="national" name="Slovenia" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Bosko Boskovic" price="350K" pos="G" nat="Slo" />
+	<i num="2" name="Marinko Galic" price="300K" pos="RB" nat="Slo" pass="2" vel="2" head="0" tackling="5" ball="0" speed="5" finish="2" total="16" />
+	<i num="3" name="Robert Englaro" price="450K" pos="D" nat="Slo" pass="1" vel="1" head="5" tackling="7" ball="2" speed="1" finish="1" total="18" />
+	<i num="4" name="Darko Milanic" price="750K" pos="D" nat="Slo" pass="2" vel="2" head="7" tackling="7" ball="3" speed="1" finish="2" total="24" />
+	<i num="5" name="Peter Binkovski" price="450K" pos="LB" nat="Slo" pass="1" vel="2" head="2" tackling="4" ball="2" speed="5" finish="2" total="18" />
+	<i num="6" name="Ales Ceh" price="450K" pos="M" nat="Slo" pass="5" vel="0" head="4" tackling="4" ball="2" speed="1" finish="2" total="18" />
+	<i num="7" name="Dzoni Novak" price="700K" pos="RW" nat="Slo" pass="4" vel="2" head="6" tackling="5" ball="1" speed="4" finish="1" total="23" />
+	<i num="8" name="Saso Udovic" price="800K" pos="A" nat="Slo" pass="3" vel="5" head="5" tackling="1" ball="1" speed="5" finish="5" total="25" />
+	<i num="9" name="Zlatko Zahovic" price="650K" pos="M" nat="Slo" pass="1" vel="2" head="1" tackling="6" ball="5" speed="5" finish="2" total="22" />
+	<i num="10" name="Matjaz Florjancic" price="850K" pos="A" nat="Slo" pass="2" vel="5" head="1" tackling="3" ball="3" speed="6" finish="6" total="26" />
+	<i num="11" name="Alfred Jermanis" price="600K" pos="LW" nat="Slo" pass="6" vel="1" head="1" tackling="7" ball="2" speed="1" finish="3" total="21" />
+	<i num="12" name="Branko Zupan" price="450K" pos="G" nat="Slo" />
+	<i num="13" name="Ales Krizan" price="450K" pos="D" nat="Slo" pass="2" vel="1" head="5" tackling="5" ball="2" speed="2" finish="1" total="18" />
+	<i num="14" name="Vladimir Kokol" price="450K" pos="M" nat="Slo" pass="5" vel="1" head="1" tackling="4" ball="4" speed="1" finish="2" total="18" />
+	<i num="15" name="Amir Karic" price="450K" pos="M" nat="Slo" pass="1" vel="5" head="1" tackling="2" ball="1" speed="1" finish="7" total="18" />
+	<i num="16" name="Ermin Siljak" price="450K" pos="A" nat="Slo" pass="2" vel="3" head="4" tackling="1" ball="2" speed="2" finish="4" total="18" />
+	<tot price="8.6M" pass="37" vel="32" head="43" tackling="61" ball="30" speed="40" finish="40" total="283" />
+	<avg price="538K" pass="2.6" vel="2.3" head="3.1" tackling="4.4" ball="2.1" speed="2.9" finish="2.9" total="20.2" />
+</team>

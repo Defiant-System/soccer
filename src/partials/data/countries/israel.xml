@@ -1,0 +1,21 @@
+
+<team type="national" name="Israel" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Rafi Cohen" price="350K" pos="G" nat="Isr" />
+	<i num="2" name="Felix Halfon" price="450K" pos="RB" nat="Isr" pass="0" vel="2" head="1" tackling="7" ball="1" speed="6" finish="1" total="18" />
+	<i num="3" name="David Amsalem" price="450K" pos="LB" nat="Isr" pass="2" vel="1" head="0" tackling="7" ball="1" speed="6" finish="1" total="18" />
+	<i num="4" name="Alon Hazan" price="500K" pos="RW" nat="Isr" pass="1" vel="2" head="2" tackling="2" ball="5" speed="6" finish="1" total="19" />
+	<i num="5" name="Gadi Brumer" price="800K" pos="D" nat="Isr" pass="3" vel="3" head="6" tackling="7" ball="1" speed="3" finish="2" total="25" />
+	<i num="6" name="Avi Nimni" price="750K" pos="M" nat="Isr" pass="3" vel="1" head="2" tackling="2" ball="6" speed="7" finish="3" total="24" />
+	<i num="7" name="Tal Banin" price="700K" pos="M" nat="Isr" pass="7" vel="3" head="3" tackling="7" ball="1" speed="1" finish="1" total="23" />
+	<i num="8" name="Amir Shelach" price="350K" pos="D" nat="Isr" pass="2" vel="2" head="5" tackling="5" ball="0" speed="1" finish="2" total="17" />
+	<i num="9" name="Eyal Berkovich" price="800K" pos="LW" nat="Isr" pass="7" vel="2" head="2" tackling="7" ball="3" speed="2" finish="2" total="25" />
+	<i num="10" name="Ronen Harazi" price="800K" pos="A" nat="Isr" pass="1" vel="4" head="5" tackling="2" ball="2" speed="6" finish="5" total="25" />
+	<i num="11" name="Haim Revivo" price="850K" pos="A" nat="Isr" pass="2" vel="7" head="2" tackling="2" ball="2" speed="6" finish="5" total="26" />
+	<i num="12" name="Boni Ginzburg" price="200K" pos="G" nat="Isr" />
+	<i num="13" name="Alon Harazi" price="250K" pos="D" nat="Isr" pass="1" vel="1" head="4" tackling="6" ball="2" speed="1" finish="0" total="15" />
+	<i num="14" name="Nir Klinger" price="550K" pos="M" nat="Isr" pass="6" vel="1" head="2" tackling="7" ball="1" speed="2" finish="1" total="20" />
+	<i num="15" name="Itzhak Zohar" price="550K" pos="M" nat="Isr" pass="5" vel="2" head="2" tackling="4" ball="4" speed="1" finish="2" total="20" />
+	<i num="16" name="Ronny Rosenthal" price="700K" pos="A" nat="Isr" pass="2" vel="6" head="2" tackling="2" ball="2" speed="4" finish="5" total="23" />
+	<tot price="9.05M" pass="42" vel="37" head="38" tackling="67" ball="31" speed="52" finish="31" total="298" />
+	<avg price="566K" pass="3.0" vel="2.6" head="2.7" tackling="4.8" ball="2.2" speed="3.7" finish="2.2" total="21.3" />
+</team>

@@ -1,0 +1,21 @@
+
+<team type="national" name="Azerbaijan" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Aleksandr Zhidkov" price="180K" pos="G" nat="Azb" />
+	<i num="2" name="Igor Getman" price="200K" pos="RB" nat="Azb" pass="1" vel="2" head="1" tackling="3" ball="1" speed="5" finish="1" total="14" />
+	<i num="3" name="Emin Agayev" price="250K" pos="LB" nat="Azb" pass="2" vel="1" head="2" tackling="5" ball="1" speed="4" finish="0" total="15" />
+	<i num="4" name="Tarlan Ahmedov" price="250K" pos="D" nat="Azb" pass="0" vel="1" head="6" tackling="5" ball="1" speed="1" finish="1" total="15" />
+	<i num="5" name="Arif Asadov" price="300K" pos="D" nat="Azb" pass="1" vel="2" head="5" tackling="5" ball="0" speed="1" finish="2" total="16" />
+	<i num="6" name="Rasim Abusov" price="250K" pos="D" nat="Azb" pass="1" vel="0" head="6" tackling="4" ball="2" speed="2" finish="0" total="15" />
+	<i num="7" name="Sahin Diniev" price="200K" pos="LW" nat="Azb" pass="4" vel="1" head="1" tackling="5" ball="1" speed="1" finish="1" total="14" />
+	<i num="8" name="Vidadi Rzaev" price="300K" pos="M" nat="Azb" pass="2" vel="3" head="5" tackling="1" ball="1" speed="0" finish="4" total="16" />
+	<i num="9" name="Vladislav Kadirov" price="250K" pos="RW" nat="Azb" pass="2" vel="0" head="2" tackling="1" ball="4" speed="4" finish="2" total="15" />
+	<i num="10" name="Nezim Suleimanov" price="200K" pos="A" nat="Azb" pass="0" vel="2" head="2" tackling="0" ball="4" speed="4" finish="2" total="14" />
+	<i num="11" name="Velli Kasumov" price="350K" pos="A" nat="Azb" pass="2" vel="5" head="5" tackling="0" ball="0" speed="1" finish="4" total="17" />
+	<i num="12" name="Elhan Hasanov" price="130K" pos="G" nat="Azb" />
+	<i num="13" name="Yashar Vahabzade" price="180K" pos="D" nat="Azb" pass="2" vel="1" head="4" tackling="6" ball="0" speed="0" finish="0" total="13" />
+	<i num="14" name="Vyacheslav Lychkin" price="160K" pos="M" nat="Azb" pass="3" vel="2" head="1" tackling="4" ball="1" speed="1" finish="0" total="12" />
+	<i num="15" name="Yunis Huseinov" price="180K" pos="M" nat="Azb" pass="1" vel="3" head="3" tackling="1" ball="1" speed="1" finish="3" total="13" />
+	<i num="16" name="Samir Alekperov" price="160K" pos="A" nat="Azb" pass="0" vel="4" head="3" tackling="1" ball="1" speed="0" finish="3" total="12" />
+	<tot price="3.54M" pass="21" vel="27" head="46" tackling="41" ball="18" speed="25" finish="23" total="201" />
+	<avg price="221K" pass="1.5" vel="1.9" head="3.3" tackling="2.9" ball="1.3" speed="1.8" finish="1.6" total="14.4" />
+</team>

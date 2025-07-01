@@ -1,0 +1,21 @@
+
+<team type="national" name="San Marino" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Stefano Muccioli" price="250K" pos="G" nat="Smr" />
+	<i num="2" name="Luca Gobbi" price="160K" pos="RB" nat="Smr" pass="0" vel="1" head="0" tackling="4" ball="2" speed="4" finish="1" total="12" />
+	<i num="3" name="Mirco Gennari" price="160K" pos="LB" nat="Smr" pass="1" vel="1" head="1" tackling="3" ball="1" speed="4" finish="1" total="12" />
+	<i num="4" name="Marco Mazza" price="180K" pos="D" nat="Smr" pass="1" vel="2" head="5" tackling="3" ball="0" speed="1" finish="1" total="13" />
+	<i num="5" name="Mauro Valentini" price="180K" pos="D" nat="Smr" pass="1" vel="1" head="5" tackling="5" ball="1" speed="0" finish="0" total="13" />
+	<i num="6" name="William Guerra" price="180K" pos="D" nat="Smr" pass="1" vel="1" head="4" tackling="5" ball="2" speed="0" finish="0" total="13" />
+	<i num="7" name="Pierangelo Manzaroli" price="180K" pos="RW" nat="Smr" pass="1" vel="0" head="0" tackling="1" ball="5" speed="5" finish="1" total="13" />
+	<i num="8" name="Ivan Matteoni" price="300K" pos="M" nat="Smr" pass="6" vel="2" head="1" tackling="5" ball="2" speed="0" finish="0" total="16" />
+	<i num="9" name="Nicola Bacciocchi" price="300K" pos="A" nat="Smr" pass="2" vel="5" head="3" tackling="0" ball="2" speed="1" finish="3" total="16" />
+	<i num="10" name="Paolo Montagna" price="180K" pos="M" nat="Smr" pass="6" vel="1" head="1" tackling="5" ball="0" speed="0" finish="0" total="13" />
+	<i num="11" name="Fabio Francini" price="200K" pos="LW" nat="Smr" pass="2" vel="0" head="2" tackling="1" ball="5" speed="4" finish="0" total="14" />
+	<i num="12" name="Federico Gasperoni" price="130K" pos="G" nat="Smr" />
+	<i num="13" name="Leone Gasperoni" price="130K" pos="D" nat="Smr" pass="0" vel="1" head="2" tackling="5" ball="0" speed="1" finish="1" total="10" />
+	<i num="14" name="Riccardo Muccioli" price="100K" pos="M" nat="Smr" pass="2" vel="1" head="0" tackling="3" ball="0" speed="1" finish="1" total="8" />
+	<i num="15" name="Claudio Peverani" price="110K" pos="A" nat="Smr" pass="0" vel="2" head="2" tackling="1" ball="1" speed="1" finish="2" total="9" />
+	<i num="16" name="Waldes Pasolini" price="150K" pos="A" nat="Smr" pass="4" vel="1" head="0" tackling="5" ball="0" speed="1" finish="0" total="11" />
+	<tot price="2.89M" pass="27" vel="19" head="26" tackling="46" ball="21" speed="23" finish="11" total="173" />
+	<avg price="181K" pass="1.9" vel="1.4" head="1.9" tackling="3.3" ball="1.5" speed="1.6" finish="0.8" total="12.4" />
+</team>

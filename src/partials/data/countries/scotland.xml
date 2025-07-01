@@ -1,0 +1,21 @@
+
+<team type="national" name="Scotland" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Andy Goram" price="2M" pos="G" nat="Sco" />
+	<i num="2" name="Tosh Mckinlay" price="950K" pos="LB" nat="Sco" pass="2" vel="3" head="2" tackling="7" ball="3" speed="7" finish="3" total="27" />
+	<i num="3" name="Tom Boyd" price="850K" pos="RB" nat="Sco" pass="2" vel="2" head="3" tackling="6" ball="6" speed="5" finish="2" total="26" />
+	<i num="4" name="Colin Calderwood" price="1.1M" pos="D" nat="Sco" pass="3" vel="3" head="7" tackling="7" ball="3" speed="3" finish="3" total="29" />
+	<i num="5" name="Colin Hendry" price="1.5M" pos="D" nat="Sco" pass="4" vel="2" head="7" tackling="7" ball="4" speed="4" finish="3" total="31" />
+	<i num="6" name="Craig Burley" price="1.8M" pos="RW" nat="Sco" pass="7" vel="3" head="3" tackling="7" ball="3" speed="7" finish="3" total="33" />
+	<i num="7" name="Scott Booth" price="1.6M" pos="A" nat="Sco" pass="3" vel="7" head="7" tackling="3" ball="3" speed="3" finish="6" total="32" />
+	<i num="8" name="Stuart Mccall" price="2M" pos="M" nat="Sco" pass="7" vel="3" head="5" tackling="5" ball="7" speed="4" finish="4" total="35" />
+	<i num="9" name="Duncan Ferguson" price="3M" pos="A" nat="Sco" pass="3" vel="7" head="7" tackling="3" ball="7" speed="4" finish="7" total="38" />
+	<i num="10" name="Gary Mcallister" price="2M" pos="M" nat="Sco" pass="7" vel="7" head="3" tackling="3" ball="7" speed="4" finish="4" total="35" />
+	<i num="11" name="John Collins" price="2.25M" pos="LW" nat="Sco" pass="7" vel="6" head="3" tackling="3" ball="7" speed="7" finish="3" total="36" />
+	<i num="12" name="Jim Leighton" price="950K" pos="G" nat="Sco" />
+	<i num="13" name="Alan Mclaren" price="1.5M" pos="D" nat="Sco" pass="3" vel="3" head="7" tackling="7" ball="4" speed="4" finish="3" total="31" />
+	<i num="14" name="Billy Mckinlay" price="700K" pos="M" nat="Sco" pass="7" vel="2" head="2" tackling="7" ball="1" speed="2" finish="2" total="23" />
+	<i num="15" name="Darren Jackson" price="850K" pos="A" nat="Sco" pass="3" vel="6" head="6" tackling="1" ball="3" speed="2" finish="5" total="26" />
+	<i num="16" name="Ally Mccoist" price="950K" pos="A" nat="Sco" pass="3" vel="6" head="5" tackling="1" ball="3" speed="2" finish="7" total="27" />
+	<tot price="24M" pass="61" vel="60" head="67" tackling="67" ball="61" speed="58" finish="55" total="429" />
+	<avg price="2M" pass="4.4" vel="4.3" head="4.8" tackling="4.8" ball="4.4" speed="4.1" finish="3.9" total="30.6" />
+</team>

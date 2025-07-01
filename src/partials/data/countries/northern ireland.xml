@@ -1,0 +1,21 @@
+
+<team type="national" name="Northern Ireland" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Alan Fettis" price="750K" pos="G" nat="Nir" />
+	<i num="2" name="Ian Nolan" price="600K" pos="RB" nat="Nir" pass="6" vel="1" head="2" tackling="4" ball="2" speed="5" finish="1" total="21" />
+	<i num="3" name="Keith Rowland" price="600K" pos="LB" nat="Nir" pass="4" vel="2" head="2" tackling="5" ball="2" speed="4" finish="2" total="21" />
+	<i num="4" name="Colin Hill" price="450K" pos="D" nat="Nir" pass="1" vel="1" head="6" tackling="6" ball="1" speed="1" finish="2" total="18" />
+	<i num="5" name="Alan Mcdonald" price="300K" pos="D" nat="Nir" pass="2" vel="0" head="4" tackling="6" ball="2" speed="0" finish="2" total="16" />
+	<i num="6" name="Neil Lennon" price="850K" pos="M" nat="Nir" pass="6" vel="2" head="3" tackling="7" ball="2" speed="3" finish="3" total="26" />
+	<i num="7" name="Keith Gillespie" price="2.25M" pos="RW" nat="Nir" pass="7" vel="7" head="4" tackling="2" ball="7" speed="7" finish="2" total="36" />
+	<i num="8" name="Steve Lomas" price="700K" pos="M" nat="Nir" pass="7" vel="2" head="2" tackling="7" ball="1" speed="2" finish="2" total="23" />
+	<i num="9" name="Iain Dowie" price="650K" pos="A" nat="Nir" pass="2" vel="5" head="5" tackling="1" ball="2" speed="2" finish="5" total="22" />
+	<i num="10" name="Philip Gray" price="750K" pos="A" nat="Nir" pass="2" vel="7" head="1" tackling="1" ball="2" speed="6" finish="5" total="24" />
+	<i num="11" name="Michael Hughes" price="1M" pos="LW" nat="Nir" pass="7" vel="3" head="3" tackling="3" ball="6" speed="5" finish="1" total="28" />
+	<i num="12" name="Aidan Davison" price="180K" pos="G" nat="Nir" />
+	<i num="13" name="Steve Morrow" price="500K" pos="D" nat="Nir" pass="2" vel="1" head="6" tackling="6" ball="2" speed="1" finish="1" total="19" />
+	<i num="14" name="Barry Hunter" price="450K" pos="D" nat="Nir" pass="2" vel="2" head="4" tackling="7" ball="1" speed="2" finish="0" total="18" />
+	<i num="15" name="Michael O'Neill" price="600K" pos="M" nat="Nir" pass="6" vel="4" head="1" tackling="2" ball="2" speed="2" finish="4" total="21" />
+	<i num="16" name="Gerry Mcmahon" price="650K" pos="A" nat="Nir" pass="2" vel="5" head="1" tackling="2" ball="2" speed="5" finish="5" total="22" />
+	<tot price="11.28M" pass="56" vel="42" head="44" tackling="59" ball="34" speed="45" finish="35" total="315" />
+	<avg price="705K" pass="4.0" vel="3.0" head="3.1" tackling="4.2" ball="2.4" speed="3.2" finish="2.5" total="22.5" />
+</team>

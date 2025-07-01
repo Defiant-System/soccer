@@ -1,0 +1,21 @@
+
+<team type="national" name="Faroe Isles" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Jens Martin Knudsen" price="150K" pos="G" nat="Far" />
+	<i num="2" name="Oli Johannesen" price="200K" pos="D" nat="Far" pass="1" vel="1" head="3" tackling="5" ball="1" speed="2" finish="1" total="14" />
+	<i num="3" name="Allan Morkore" price="160K" pos="D" nat="Far" pass="1" vel="1" head="3" tackling="6" ball="0" speed="1" finish="0" total="12" />
+	<i num="4" name="Janus Rasmussen" price="180K" pos="LB" nat="Far" pass="2" vel="1" head="0" tackling="6" ball="0" speed="4" finish="0" total="13" />
+	<i num="5" name="Jens Christian Hansen" price="150K" pos="RB" nat="Far" pass="2" vel="0" head="0" tackling="3" ball="0" speed="5" finish="1" total="11" />
+	<i num="6" name="Ossur Hansen" price="150K" pos="M" nat="Far" pass="3" vel="2" head="0" tackling="5" ball="0" speed="1" finish="0" total="11" />
+	<i num="7" name="Magni Jarnskor" price="200K" pos="M" nat="Far" pass="6" vel="1" head="0" tackling="4" ball="0" speed="2" finish="1" total="14" />
+	<i num="8" name="Jan Dam" price="160K" pos="RW" nat="Far" pass="0" vel="0" head="0" tackling="2" ball="5" speed="4" finish="1" total="12" />
+	<i num="9" name="Jan Allan Muller" price="200K" pos="A" nat="Far" pass="1" vel="5" head="0" tackling="2" ball="1" speed="2" finish="3" total="14" />
+	<i num="10" name="Todi Jonsson" price="350K" pos="A" nat="Far" pass="1" vel="4" head="1" tackling="2" ball="1" speed="1" finish="7" total="17" />
+	<i num="11" name="Henning Jarnskor" price="150K" pos="LW" nat="Far" pass="0" vel="2" head="1" tackling="0" ball="3" speed="4" finish="1" total="11" />
+	<i num="12" name="Jakup Mikkelsen" price="100K" pos="G" nat="Far" />
+	<i num="13" name="Tummas Eli Hansen" price="130K" pos="D" nat="Far" pass="1" vel="1" head="3" tackling="2" ball="1" speed="1" finish="1" total="10" />
+	<i num="14" name="Julian Johnsson" price="150K" pos="M" nat="Far" pass="4" vel="1" head="1" tackling="2" ball="1" speed="1" finish="1" total="11" />
+	<i num="15" name="Allan Joensen" price="130K" pos="M" nat="Far" pass="5" vel="0" head="0" tackling="5" ball="0" speed="0" finish="0" total="10" />
+	<i num="16" name="John Petersen" price="100K" pos="A" nat="Far" pass="1" vel="4" head="0" tackling="0" ball="0" speed="1" finish="2" total="8" />
+	<tot price="2.66M" pass="28" vel="23" head="12" tackling="44" ball="13" speed="29" finish="19" total="168" />
+	<avg price="166K" pass="2.0" vel="1.6" head="0.9" tackling="3.1" ball="0.9" speed="2.1" finish="1.4" total="12.0" />
+</team>

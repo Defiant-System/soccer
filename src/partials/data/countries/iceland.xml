@@ -1,0 +1,21 @@
+
+<team type="national" name="Iceland" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Birkir Kristinsson" price="350K" pos="G" nat="Isl" />
+	<i num="2" name="Thordur Gudjonsson" price="350K" pos="D" nat="Isl" pass="2" vel="2" head="4" tackling="5" ball="1" speed="2" finish="1" total="17" />
+	<i num="3" name="Kristjan Jonsson" price="350K" pos="D" nat="Isl" pass="2" vel="1" head="5" tackling="5" ball="1" speed="2" finish="1" total="17" />
+	<i num="4" name="Sigurdur Jonsson" price="350K" pos="M" nat="Isl" pass="5" vel="5" head="1" tackling="2" ball="3" speed="1" finish="0" total="17" />
+	<i num="5" name="Olafur Adolfsson" price="350K" pos="LB" nat="Isl" pass="1" vel="1" head="1" tackling="4" ball="5" speed="4" finish="1" total="17" />
+	<i num="6" name="Runar Kristinsson" price="350K" pos="LW" nat="Isl" pass="5" vel="1" head="2" tackling="4" ball="2" speed="2" finish="1" total="17" />
+	<i num="7" name="Gudni Bergsson" price="350K" pos="RB" nat="Isl" pass="2" vel="1" head="1" tackling="4" ball="2" speed="5" finish="2" total="17" />
+	<i num="8" name="Larus Sigurdsson" price="650K" pos="RW" nat="Isl" pass="6" vel="5" head="1" tackling="4" ball="2" speed="2" finish="2" total="22" />
+	<i num="9" name="Arnar Gunnlaugsson" price="550K" pos="A" nat="Isl" pass="0" vel="6" head="4" tackling="1" ball="2" speed="2" finish="5" total="20" />
+	<i num="10" name="Arnar Gudjohnsen" price="450K" pos="M" nat="Isl" pass="1" vel="5" head="1" tackling="1" ball="1" speed="4" finish="5" total="18" />
+	<i num="11" name="Eyjolfur Sverrisson" price="450K" pos="A" nat="Isl" pass="2" vel="4" head="4" tackling="0" ball="1" speed="3" finish="4" total="18" />
+	<i num="12" name="Kristjan Finnbogason" price="200K" pos="G" nat="Isl" />
+	<i num="13" name="Hlynur Stefansson" price="200K" pos="D" nat="Isl" pass="0" vel="1" head="5" tackling="6" ball="0" speed="0" finish="2" total="14" />
+	<i num="14" name="Bjarki Gunnlaugsson" price="300K" pos="M" nat="Isl" pass="3" vel="2" head="0" tackling="4" ball="5" speed="1" finish="1" total="16" />
+	<i num="15" name="Olafur Thordarson" price="500K" pos="M" nat="Isl" pass="4" vel="1" head="4" tackling="3" ball="4" speed="2" finish="1" total="19" />
+	<i num="16" name="Rikhardur Dadason" price="250K" pos="A" nat="Isl" pass="0" vel="4" head="3" tackling="1" ball="2" speed="1" finish="4" total="15" />
+	<tot price="6M" pass="33" vel="39" head="36" tackling="44" ball="31" speed="31" finish="30" total="244" />
+	<avg price="375K" pass="2.4" vel="2.8" head="2.6" tackling="3.1" ball="2.2" speed="2.2" finish="2.1" total="17.4" />
+</team>

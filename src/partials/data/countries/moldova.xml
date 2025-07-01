@@ -1,0 +1,21 @@
+
+<team type="national" name="Moldova" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Denis Romanenco" price="350K" pos="G" nat="Mol" />
+	<i num="2" name="Serghei Secu" price="500K" pos="RB" nat="Mol" pass="1" vel="1" head="2" tackling="6" ball="1" speed="6" finish="2" total="19" />
+	<i num="3" name="Ion Testimitanu" price="750K" pos="D" nat="Mol" pass="2" vel="6" head="5" tackling="6" ball="1" speed="3" finish="1" total="24" />
+	<i num="4" name="Sergiu Epureanu" price="350K" pos="M" nat="Mol" pass="7" vel="0" head="1" tackling="4" ball="1" speed="2" finish="2" total="17" />
+	<i num="5" name="Serghei Belous" price="600K" pos="LB" nat="Mol" pass="2" vel="4" head="2" tackling="2" ball="4" speed="5" finish="2" total="21" />
+	<i num="6" name="Sergiu Nani" price="300K" pos="LW" nat="Mol" pass="1" vel="1" head="6" tackling="6" ball="1" speed="1" finish="0" total="16" />
+	<i num="7" name="Vladimir Gaidamasciuk" price="450K" pos="RW" nat="Mol" pass="2" vel="2" head="1" tackling="2" ball="4" speed="5" finish="2" total="18" />
+	<i num="8" name="Vitali Coulibaba" price="300K" pos="D" nat="Mol" pass="1" vel="1" head="1" tackling="4" ball="1" speed="6" finish="2" total="16" />
+	<i num="9" name="Iurie Miterev" price="500K" pos="A" nat="Mol" pass="0" vel="4" head="5" tackling="1" ball="1" speed="2" finish="6" total="19" />
+	<i num="10" name="Alexandru Curtianu" price="650K" pos="M" nat="Mol" pass="7" vel="1" head="2" tackling="5" ball="3" speed="3" finish="1" total="22" />
+	<i num="11" name="Serghei Clescenco" price="450K" pos="A" nat="Mol" pass="2" vel="3" head="4" tackling="2" ball="1" speed="2" finish="4" total="18" />
+	<i num="12" name="Vasili Coselev" price="250K" pos="G" nat="Mol" />
+	<i num="13" name="Oleg Fistican" price="250K" pos="D" nat="Mol" pass="2" vel="1" head="4" tackling="5" ball="2" speed="0" finish="1" total="15" />
+	<i num="14" name="Oleg Siscin" price="250K" pos="M" nat="Mol" pass="6" vel="0" head="0" tackling="4" ball="2" speed="1" finish="2" total="15" />
+	<i num="15" name="Radu Rebeja" price="300K" pos="M" nat="Mol" pass="5" vel="1" head="0" tackling="7" ball="2" speed="0" finish="1" total="16" />
+	<i num="16" name="Alexander Popovici" price="200K" pos="A" nat="Mol" pass="1" vel="5" head="3" tackling="0" ball="1" speed="0" finish="4" total="14" />
+	<tot price="6.45M" pass="39" vel="30" head="36" tackling="54" ball="25" speed="36" finish="30" total="250" />
+	<avg price="403K" pass="2.8" vel="2.1" head="2.6" tackling="3.9" ball="1.8" speed="2.6" finish="2.1" total="17.9" />
+</team>

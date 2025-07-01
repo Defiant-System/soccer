@@ -1,0 +1,21 @@
+
+<team type="national" name="Finland" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Antti Niemi" price="650K" pos="G" nat="Fin" />
+	<i num="2" name="Sami Hyypia" price="800K" pos="RB" nat="Fin" pass="2" vel="2" head="6" tackling="6" ball="1" speed="6" finish="2" total="25" />
+	<i num="3" name="Rami Nieminen" price="600K" pos="D" nat="Fin" pass="2" vel="2" head="6" tackling="7" ball="1" speed="1" finish="2" total="21" />
+	<i num="4" name="Sami Mahlio" price="600K" pos="M" nat="Fin" pass="6" vel="2" head="1" tackling="7" ball="1" speed="2" finish="2" total="21" />
+	<i num="5" name="Kim Suominen" price="750K" pos="M" nat="Fin" pass="5" vel="2" head="2" tackling="2" ball="5" speed="6" finish="2" total="24" />
+	<i num="6" name="Janne Lindberg" price="500K" pos="LW" nat="Fin" pass="6" vel="2" head="1" tackling="5" ball="2" speed="1" finish="2" total="19" />
+	<i num="7" name="Aki Hyrylainen" price="600K" pos="LB" nat="Fin" pass="2" vel="1" head="7" tackling="7" ball="1" speed="2" finish="1" total="21" />
+	<i num="8" name="Marko Myyry" price="600K" pos="RW" nat="Fin" pass="6" vel="1" head="3" tackling="6" ball="2" speed="2" finish="1" total="21" />
+	<i num="9" name="Antti Sumiala" price="1M" pos="A" nat="Fin" pass="1" vel="6" head="3" tackling="2" ball="2" speed="7" finish="7" total="28" />
+	<i num="10" name="Jari Litmanen" price="5M" pos="M" nat="Fin" pass="7" vel="7" head="3" tackling="3" ball="7" speed="7" finish="7" total="41" />
+	<i num="11" name="Jari Vanhala" price="750K" pos="A" nat="Fin" pass="2" vel="5" head="5" tackling="2" ball="2" speed="3" finish="5" total="24" />
+	<i num="12" name="Kari Laukkanen" price="350K" pos="G" nat="Fin" />
+	<i num="13" name="Jukka Koskinen" price="300K" pos="D" nat="Fin" pass="0" vel="1" head="6" tackling="5" ball="2" speed="2" finish="0" total="16" />
+	<i num="14" name="Tommi Gronlund" price="350K" pos="M" nat="Fin" pass="1" vel="1" head="5" tackling="5" ball="2" speed="2" finish="1" total="17" />
+	<i num="15" name="Petri Jarvinen" price="500K" pos="M" nat="Fin" pass="5" vel="1" head="1" tackling="2" ball="4" speed="4" finish="2" total="19" />
+	<i num="16" name="Joonas Kolkka" price="800K" pos="A" nat="Fin" pass="2" vel="1" head="6" tackling="2" ball="7" speed="1" finish="6" total="25" />
+	<tot price="14.15M" pass="47" vel="34" head="55" tackling="61" ball="39" speed="46" finish="40" total="322" />
+	<avg price="884K" pass="3.4" vel="2.4" head="3.9" tackling="4.4" ball="2.8" speed="3.3" finish="2.9" total="23.0" />
+</team>

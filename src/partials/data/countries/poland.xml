@@ -1,0 +1,21 @@
+
+<team type="national" name="Poland" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Andrzej Wozniak" price="650K" pos="G" nat="Pol" />
+	<i num="2" name="Marek Jozwiak" price="650K" pos="RB" nat="Pol" pass="2" vel="1" head="3" tackling="6" ball="3" speed="6" finish="1" total="22" />
+	<i num="3" name="Jaacek Zielinski" price="700K" pos="D" nat="Pol" pass="2" vel="2" head="7" tackling="7" ball="2" speed="1" finish="2" total="23" />
+	<i num="4" name="Tomasz Waldoch" price="650K" pos="D" nat="Pol" pass="3" vel="1" head="7" tackling="5" ball="2" speed="2" finish="2" total="22" />
+	<i num="5" name="Pawel Wojtala" price="500K" pos="LB" nat="Pol" pass="2" vel="2" head="1" tackling="5" ball="2" speed="5" finish="2" total="19" />
+	<i num="6" name="Radoslaw Michalski" price="750K" pos="RW" nat="Pol" pass="6" vel="2" head="2" tackling="6" ball="5" speed="1" finish="2" total="24" />
+	<i num="7" name="Piotr Nowak" price="1.6M" pos="M" nat="Pol" pass="7" vel="7" head="3" tackling="2" ball="7" speed="3" finish="3" total="32" />
+	<i num="8" name="Henryk Baluszynski" price="750K" pos="LW" nat="Pol" pass="3" vel="5" head="1" tackling="4" ball="5" speed="4" finish="2" total="24" />
+	<i num="9" name="Krzysztof Warzycha" price="1.6M" pos="A" nat="Pol" pass="2" vel="7" head="6" tackling="3" ball="2" speed="6" finish="6" total="32" />
+	<i num="10" name="Marek Saganowski" price="1.9M" pos="M" nat="Pol" pass="6" vel="7" head="2" tackling="2" ball="6" speed="5" finish="6" total="34" />
+	<i num="11" name="Marek Citko" price="950K" pos="A" nat="Pol" pass="1" vel="6" head="2" tackling="2" ball="6" speed="5" finish="5" total="27" />
+	<i num="12" name="Maciej Szczesny" price="500K" pos="G" nat="Pol" />
+	<i num="13" name="Krzysztof Bukalski" price="350K" pos="RB" nat="Pol" pass="1" vel="2" head="5" tackling="5" ball="1" speed="2" finish="1" total="17" />
+	<i num="14" name="Tomasz Iwan" price="650K" pos="M" nat="Pol" pass="6" vel="1" head="3" tackling="7" ball="2" speed="1" finish="2" total="22" />
+	<i num="15" name="Sylwester Czereszewski" price="850K" pos="LW" nat="Pol" pass="5" vel="3" head="3" tackling="1" ball="6" speed="7" finish="1" total="26" />
+	<i num="16" name="Marcin Mieciel" price="1M" pos="A" nat="Pol" pass="3" vel="5" head="5" tackling="2" ball="1" speed="5" finish="7" total="28" />
+	<tot price="14.05M" pass="49" vel="51" head="50" tackling="57" ball="50" speed="53" finish="42" total="352" />
+	<avg price="878K" pass="3.5" vel="3.6" head="3.6" tackling="4.1" ball="3.6" speed="3.8" finish="3.0" total="25.1" />
+</team>

@@ -1,0 +1,21 @@
+
+<team type="national" name="Italy" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Angelo Peruzzi" price="1.8M" pos="G" nat="Ita" />
+	<i num="2" name="Roberto Mussi" price="2.25M" pos="RB" nat="Ita" pass="5" vel="4" head="4" tackling="7" ball="5" speed="7" finish="4" total="36" />
+	<i num="3" name="Paolo Maldini" price="15M" pos="LB" nat="Ita" pass="7" vel="7" head="7" tackling="7" ball="7" speed="7" finish="7" total="49" />
+	<i num="4" name="Roberto Di Matteo" price="3M" pos="M" nat="Ita" pass="7" vel="7" head="5" tackling="7" ball="5" speed="4" finish="3" total="38" />
+	<i num="5" name="Ciro Ferrara" price="2M" pos="D" nat="Ita" pass="4" vel="2" head="7" tackling="7" ball="3" speed="7" finish="5" total="35" />
+	<i num="6" name="Alessandro Costacurta" price="2.75M" pos="D" nat="Ita" pass="6" vel="4" head="7" tackling="7" ball="4" speed="4" finish="5" total="37" />
+	<i num="7" name="Angelo Di Livio" price="3M" pos="RW" nat="Ita" pass="7" vel="7" head="2" tackling="4" ball="7" speed="7" finish="4" total="38" />
+	<i num="8" name="Demetrio Albertini" price="4.5M" pos="M" nat="Ita" pass="7" vel="7" head="4" tackling="7" ball="4" speed="6" finish="5" total="40" />
+	<i num="9" name="Alessandro Del Piero" price="9M" pos="LW" nat="Ita" pass="7" vel="7" head="5" tackling="5" ball="7" speed="7" finish="7" total="45" />
+	<i num="10" name="Gianfranco Zola" price="8M" pos="A" nat="Ita" pass="7" vel="7" head="6" tackling="5" ball="7" speed="5" finish="7" total="44" />
+	<i num="11" name="Fabrizio Ravanelli" price="8M" pos="A" nat="Ita" pass="5" vel="7" head="7" tackling="5" ball="6" speed="7" finish="7" total="44" />
+	<i num="12" name="Francesco Toldo" price="1.8M" pos="G" nat="Ita" />
+	<i num="13" name="Alessandro Nesta" price="1M" pos="D" nat="Ita" pass="2" vel="3" head="7" tackling="7" ball="3" speed="3" finish="3" total="28" />
+	<i num="14" name="Antonio Conte" price="2M" pos="M" nat="Ita" pass="7" vel="3" head="5" tackling="7" ball="4" speed="5" finish="4" total="35" />
+	<i num="15" name="Enrico Chiesa" price="9M" pos="A" nat="Ita" pass="7" vel="7" head="5" tackling="5" ball="7" speed="7" finish="7" total="45" />
+	<i num="16" name="Pierluigi Casiraghi" price="5M" pos="A" nat="Ita" pass="4" vel="7" head="7" tackling="5" ball="5" speed="6" finish="7" total="41" />
+	<tot price="78.1M" pass="82" vel="79" head="78" tackling="85" ball="74" speed="82" finish="75" total="555" />
+	<avg price="5M" pass="5.9" vel="5.6" head="5.6" tackling="6.1" ball="5.3" speed="5.9" finish="5.4" total="39.6" />
+</team>

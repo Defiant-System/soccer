@@ -1,0 +1,21 @@
+
+<team type="national" name="Latvia" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Oleg Karavayev" price="250K" pos="G" nat="Lat" />
+	<i num="2" name="Igor Troitsky" price="250K" pos="RB" nat="Lat" pass="1" vel="2" head="0" tackling="6" ball="1" speed="3" finish="2" total="15" />
+	<i num="3" name="Vitaly Astafyev" price="450K" pos="M" nat="Lat" pass="1" vel="2" head="2" tackling="2" ball="4" speed="5" finish="2" total="18" />
+	<i num="4" name="Mikhail Zemlinsky" price="250K" pos="D" nat="Lat" pass="0" vel="0" head="5" tackling="6" ball="1" speed="2" finish="1" total="15" />
+	<i num="5" name="Yury Shevlyakov" price="250K" pos="LB" nat="Lat" pass="1" vel="2" head="2" tackling="4" ball="1" speed="5" finish="0" total="15" />
+	<i num="6" name="Imants Bleidelis" price="180K" pos="LW" nat="Lat" pass="3" vel="1" head="2" tackling="3" ball="1" speed="2" finish="1" total="13" />
+	<i num="7" name="Valery Ivanov" price="300K" pos="RW" nat="Lat" pass="2" vel="2" head="1" tackling="1" ball="5" speed="5" finish="0" total="16" />
+	<i num="8" name="Armands Zeiberlins" price="450K" pos="M" nat="Lat" pass="5" vel="1" head="1" tackling="7" ball="2" speed="1" finish="1" total="18" />
+	<i num="9" name="Vitas Rimkus" price="450K" pos="A" nat="Lat" pass="1" vel="5" head="4" tackling="1" ball="1" speed="2" finish="4" total="18" />
+	<i num="10" name="Vladimir Babichev" price="250K" pos="A" nat="Lat" pass="1" vel="3" head="4" tackling="2" ball="1" speed="0" finish="4" total="15" />
+	<i num="11" name="Artur Zakreshevsky" price="350K" pos="D" nat="Lat" pass="1" vel="1" head="6" tackling="6" ball="1" speed="1" finish="1" total="17" />
+	<i num="12" name="Raimond Laizans" price="160K" pos="G" nat="Lat" />
+	<i num="13" name="Boris Monyak" price="200K" pos="D" nat="Lat" pass="1" vel="2" head="6" tackling="5" ball="0" speed="0" finish="0" total="14" />
+	<i num="14" name="Igor Stepanov" price="160K" pos="D" nat="Lat" pass="2" vel="1" head="5" tackling="3" ball="0" speed="1" finish="0" total="12" />
+	<i num="15" name="Maryan Rakhar" price="180K" pos="A" nat="Lat" pass="6" vel="0" head="0" tackling="5" ball="1" speed="0" finish="1" total="13" />
+	<i num="16" name="Roland Bulders" price="150K" pos="A" nat="Lat" pass="0" vel="4" head="3" tackling="1" ball="1" speed="0" finish="2" total="11" />
+	<tot price="4.28M" pass="25" vel="26" head="41" tackling="52" ball="20" speed="27" finish="19" total="210" />
+	<avg price="268K" pass="1.8" vel="1.9" head="2.9" tackling="3.7" ball="1.4" speed="1.9" finish="1.4" total="15.0" />
+</team>

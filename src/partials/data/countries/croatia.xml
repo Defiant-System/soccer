@@ -1,0 +1,21 @@
+
+<team type="national" name="Croatia" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Drazen Ladic" price="950K" pos="G" nat="Cro" />
+	<i num="2" name="Nikola Jurcevic" price="1.5M" pos="RB" nat="Cro" pass="6" vel="1" head="2" tackling="5" ball="6" speed="5" finish="6" total="31" />
+	<i num="3" name="Robert Jarni" price="1.9M" pos="LB" nat="Cro" pass="4" vel="3" head="3" tackling="7" ball="7" speed="7" finish="3" total="34" />
+	<i num="4" name="Igor Stimac" price="1.1M" pos="D" nat="Cro" pass="3" vel="2" head="6" tackling="6" ball="2" speed="7" finish="3" total="29" />
+	<i num="5" name="Nikola Jerkan" price="850K" pos="D" nat="Cro" pass="2" vel="3" head="7" tackling="7" ball="2" speed="2" finish="3" total="26" />
+	<i num="6" name="Slaven Bilic" price="1.6M" pos="D" nat="Cro" pass="3" vel="7" head="7" tackling="6" ball="3" speed="3" finish="3" total="32" />
+	<i num="7" name="Aljosa Asanovic" price="1.3M" pos="LW" nat="Cro" pass="6" vel="6" head="2" tackling="3" ball="7" speed="3" finish="3" total="30" />
+	<i num="8" name="Robert Prosinecki" price="3M" pos="RW" nat="Cro" pass="7" vel="7" head="4" tackling="4" ball="7" speed="4" finish="5" total="38" />
+	<i num="9" name="Davor Suker" price="9M" pos="A" nat="Cro" pass="7" vel="7" head="7" tackling="3" ball="7" speed="7" finish="7" total="45" />
+	<i num="10" name="Zvonimir Boban" price="3M" pos="M" nat="Cro" pass="7" vel="7" head="4" tackling="7" ball="7" speed="3" finish="3" total="38" />
+	<i num="11" name="Alen Boksic" price="9M" pos="A" nat="Cro" pass="7" vel="7" head="7" tackling="3" ball="7" speed="7" finish="7" total="45" />
+	<i num="12" name="Marijan Mrmic" price="450K" pos="G" nat="Cro" />
+	<i num="13" name="Zvonimir Soldo" price="850K" pos="D" nat="Cro" pass="2" vel="3" head="7" tackling="7" ball="2" speed="2" finish="3" total="26" />
+	<i num="14" name="Nenad Pralija" price="1M" pos="M" nat="Cro" pass="6" vel="1" head="1" tackling="5" ball="7" speed="3" finish="5" total="28" />
+	<i num="15" name="Mario Stanic" price="2.75M" pos="A" nat="Cro" pass="4" vel="7" head="6" tackling="3" ball="3" speed="7" finish="7" total="37" />
+	<i num="16" name="Goran Vlaovic" price="1.5M" pos="A" nat="Cro" pass="3" vel="6" head="5" tackling="2" ball="2" speed="7" finish="6" total="31" />
+	<tot price="39.75M" pass="67" vel="67" head="68" tackling="68" ball="69" speed="67" finish="64" total="470" />
+	<avg price="2M" pass="4.8" vel="4.8" head="4.9" tackling="4.9" ball="4.9" speed="4.8" finish="4.6" total="33.6" />
+</team>

@@ -1,0 +1,21 @@
+
+<team type="national" name="Hungary" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Szabolcs Safar" price="450K" pos="G" nat="Hun" />
+	<i num="2" name="Norbert Nagy" price="650K" pos="LW" nat="Hun" pass="3" vel="2" head="3" tackling="1" ball="6" speed="5" finish="2" total="22" />
+	<i num="3" name="Andras Telek" price="750K" pos="D" nat="Hun" pass="7" vel="2" head="5" tackling="7" ball="1" speed="1" finish="1" total="24" />
+	<i num="4" name="Mihaly Mracsko" price="650K" pos="LB" nat="Hun" pass="2" vel="2" head="6" tackling="5" ball="3" speed="2" finish="2" total="22" />
+	<i num="5" name="Florian Urban" price="650K" pos="M" nat="Hun" pass="1" vel="2" head="2" tackling="2" ball="7" speed="6" finish="2" total="22" />
+	<i num="6" name="Vilmos Sebok" price="550K" pos="RB" nat="Hun" pass="1" vel="4" head="2" tackling="5" ball="5" speed="1" finish="2" total="20" />
+	<i num="7" name="Laszlo Klausz" price="700K" pos="A" nat="Hun" pass="1" vel="5" head="6" tackling="1" ball="1" speed="5" finish="4" total="23" />
+	<i num="8" name="Gabor Halmai" price="600K" pos="M" nat="Hun" pass="5" vel="1" head="3" tackling="6" ball="2" speed="2" finish="2" total="21" />
+	<i num="9" name="Elek Nyilas" price="750K" pos="RW" nat="Hun" pass="5" vel="4" head="2" tackling="1" ball="4" speed="4" finish="4" total="24" />
+	<i num="10" name="Bela Illes" price="800K" pos="M" nat="Hun" pass="4" vel="5" head="2" tackling="6" ball="4" speed="2" finish="2" total="25" />
+	<i num="11" name="Gabor Torma" price="700K" pos="A" nat="Hun" pass="1" vel="5" head="7" tackling="2" ball="1" speed="1" finish="6" total="23" />
+	<i num="12" name="Attila Hajdu" price="550K" pos="G" nat="Hun" />
+	<i num="13" name="Janos Banfi" price="550K" pos="D" nat="Hun" pass="5" vel="0" head="6" tackling="4" ball="1" speed="2" finish="2" total="20" />
+	<i num="14" name="Tibor Balog" price="550K" pos="M" nat="Hun" pass="4" vel="1" head="2" tackling="5" ball="2" speed="1" finish="5" total="20" />
+	<i num="15" name="Tibor Dombi" price="550K" pos="A" nat="Hun" pass="2" vel="4" head="4" tackling="2" ball="2" speed="2" finish="4" total="20" />
+	<i num="16" name="Ferenc Orosz" price="600K" pos="A" nat="Hun" pass="2" vel="6" head="4" tackling="2" ball="1" speed="1" finish="5" total="21" />
+	<tot price="10.05M" pass="43" vel="43" head="54" tackling="49" ball="40" speed="35" finish="43" total="307" />
+	<avg price="628K" pass="3.1" vel="3.1" head="3.9" tackling="3.5" ball="2.9" speed="2.5" finish="3.1" total="21.9" />
+</team>

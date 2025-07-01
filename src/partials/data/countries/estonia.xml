@@ -1,0 +1,21 @@
+
+<team type="national" name="Estonia" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Mart Poom" price="150K" pos="G" nat="Est" />
+	<i num="2" name="Marek Lemsalu" price="150K" pos="RB" nat="Est" pass="0" vel="0" head="0" tackling="7" ball="0" speed="3" finish="1" total="11" />
+	<i num="3" name="Indrek Zelinski" price="160K" pos="D" nat="Est" pass="1" vel="1" head="4" tackling="4" ball="1" speed="1" finish="0" total="12" />
+	<i num="4" name="Toomas Kallaste" price="160K" pos="LB" nat="Est" pass="1" vel="1" head="0" tackling="4" ball="0" speed="6" finish="0" total="12" />
+	<i num="5" name="Risto Kallaste" price="150K" pos="RW" nat="Est" pass="2" vel="1" head="1" tackling="1" ball="3" speed="3" finish="0" total="11" />
+	<i num="6" name="Urmas Rooba" price="160K" pos="D" nat="Est" pass="1" vel="0" head="3" tackling="5" ball="1" speed="1" finish="1" total="12" />
+	<i num="7" name="Meelis Lindmaa" price="180K" pos="M" nat="Est" pass="7" vel="1" head="1" tackling="3" ball="1" speed="0" finish="0" total="13" />
+	<i num="8" name="Meelis Rooba" price="150K" pos="M" nat="Est" pass="5" vel="0" head="1" tackling="3" ball="0" speed="1" finish="1" total="11" />
+	<i num="9" name="Marko Kristal" price="180K" pos="M" nat="Est" pass="0" vel="2" head="5" tackling="0" ball="1" speed="1" finish="4" total="13" />
+	<i num="10" name="Martin Reim" price="160K" pos="A" nat="Est" pass="1" vel="3" head="2" tackling="1" ball="1" speed="1" finish="3" total="12" />
+	<i num="11" name="Lembit Rajala" price="150K" pos="LW" nat="Est" pass="1" vel="2" head="1" tackling="1" ball="3" speed="3" finish="0" total="11" />
+	<i num="12" name="Sergei Pareiko" price="130K" pos="G" nat="Est" />
+	<i num="13" name="Sergei Hohlov-Simson" price="130K" pos="D" nat="Est" pass="1" vel="1" head="3" tackling="3" ball="1" speed="1" finish="0" total="10" />
+	<i num="14" name="Viktor Alonen" price="110K" pos="D" nat="Est" pass="0" vel="0" head="5" tackling="4" ball="0" speed="0" finish="0" total="9" />
+	<i num="15" name="Argo Arbeiter" price="100K" pos="M" nat="Est" pass="2" vel="1" head="0" tackling="4" ball="0" speed="1" finish="0" total="8" />
+	<i num="16" name="Andres Oper" price="110K" pos="A" nat="Est" pass="1" vel="1" head="3" tackling="1" ball="1" speed="0" finish="2" total="9" />
+	<tot price="2.33M" pass="23" vel="14" head="29" tackling="41" ball="13" speed="22" finish="12" total="154" />
+	<avg price="146K" pass="1.6" vel="1.0" head="2.1" tackling="2.9" ball="0.9" speed="1.6" finish="0.9" total="11.0" />
+</team>

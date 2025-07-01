@@ -1,0 +1,21 @@
+
+<team type="national" name="Holland" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Edwin Van Der Sar" price="2.25M" pos="G" nat="Hol" />
+	<i num="2" name="Michael Reiziger" price="1.8M" pos="RB" nat="Hol" pass="7" vel="2" head="6" tackling="6" ball="3" speed="7" finish="2" total="33" />
+	<i num="3" name="Wim Jonk" price="3M" pos="M" nat="Hol" pass="7" vel="7" head="5" tackling="4" ball="7" speed="5" finish="3" total="38" />
+	<i num="4" name="Frank De Boer" price="1.9M" pos="D" nat="Hol" pass="7" vel="7" head="2" tackling="7" ball="6" speed="3" finish="2" total="34" />
+	<i num="5" name="Winston Bogarde" price="1.8M" pos="LB" nat="Hol" pass="6" vel="6" head="3" tackling="7" ball="2" speed="6" finish="3" total="33" />
+	<i num="6" name="Ronald De Boer" price="2.75M" pos="M" nat="Hol" pass="7" vel="7" head="6" tackling="2" ball="6" speed="3" finish="6" total="37" />
+	<i num="7" name="Aron Winter" price="1.9M" pos="RW" nat="Hol" pass="7" vel="4" head="3" tackling="4" ball="7" speed="7" finish="2" total="34" />
+	<i num="8" name="Clarence Seedorf" price="2.75M" pos="M" nat="Hol" pass="6" vel="7" head="4" tackling="7" ball="7" speed="3" finish="3" total="37" />
+	<i num="9" name="Patrick Kluivert" price="9M" pos="A" nat="Hol" pass="4" vel="7" head="7" tackling="6" ball="7" speed="7" finish="7" total="45" />
+	<i num="10" name="Dennis Bergkamp" price="6M" pos="A" nat="Hol" pass="7" vel="7" head="4" tackling="3" ball="7" speed="7" finish="7" total="42" />
+	<i num="11" name="Marc Overmars" price="4.5M" pos="LW" nat="Hol" pass="7" vel="7" head="3" tackling="4" ball="7" speed="7" finish="5" total="40" />
+	<i num="12" name="Ed De Goey" price="1.1M" pos="G" nat="Hol" />
+	<i num="13" name="Johan De Kock" price="850K" pos="D" nat="Hol" pass="2" vel="3" head="7" tackling="7" ball="3" speed="1" finish="3" total="26" />
+	<i num="14" name="Jordi Cruyff" price="1.1M" pos="LW" nat="Hol" pass="6" vel="7" head="2" tackling="1" ball="5" speed="6" finish="2" total="29" />
+	<i num="15" name="Philip Cocu" price="1.5M" pos="M" nat="Hol" pass="6" vel="3" head="3" tackling="2" ball="7" speed="7" finish="3" total="31" />
+	<i num="16" name="Pierre Van Hooijdonk" price="2.75M" pos="A" nat="Hol" pass="3" vel="7" head="7" tackling="4" ball="4" speed="5" finish="7" total="37" />
+	<tot price="44.95M" pass="82" vel="81" head="62" tackling="64" ball="78" speed="74" finish="55" total="496" />
+	<avg price="3M" pass="5.9" vel="5.8" head="4.4" tackling="4.6" ball="5.6" speed="5.3" finish="3.9" total="35.4" />
+</team>

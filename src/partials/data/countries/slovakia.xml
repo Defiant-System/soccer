@@ -1,0 +1,21 @@
+
+<team type="national" name="Slovakia" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Ladislav Molnar" price="550K" pos="G" nat="SVK" />
+	<i num="2" name="Marian Zeman" price="600K" pos="RB" nat="SVK" pass="2" vel="1" head="2" tackling="6" ball="2" speed="6" finish="2" total="21" />
+	<i num="3" name="Miroslav Karhan" price="700K" pos="D" nat="SVK" pass="2" vel="3" head="7" tackling="6" ball="3" speed="1" finish="1" total="23" />
+	<i num="4" name="Robert Tomaschek" price="650K" pos="M" nat="SVK" pass="6" vel="3" head="2" tackling="5" ball="3" speed="1" finish="2" total="22" />
+	<i num="5" name="Vladimir Kinder" price="650K" pos="LB" nat="SVK" pass="1" vel="1" head="3" tackling="7" ball="2" speed="6" finish="2" total="22" />
+	<i num="6" name="Dusan Tittel" price="650K" pos="D" nat="SVK" pass="2" vel="2" head="7" tackling="5" ball="2" speed="2" finish="2" total="22" />
+	<i num="7" name="Igor Balis" price="600K" pos="RW" nat="SVK" pass="7" vel="3" head="1" tackling="5" ball="2" speed="1" finish="2" total="21" />
+	<i num="8" name="Julius Simon" price="650K" pos="M" nat="SVK" pass="2" vel="2" head="6" tackling="6" ball="1" speed="3" finish="2" total="22" />
+	<i num="9" name="Jaroslav Timko" price="750K" pos="A" nat="SVK" pass="2" vel="4" head="4" tackling="2" ball="4" speed="4" finish="4" total="24" />
+	<i num="10" name="Peter Dubovsky" price="1.3M" pos="A" nat="SVK" pass="6" vel="5" head="2" tackling="2" ball="5" speed="3" finish="7" total="30" />
+	<i num="11" name="Lubomir Moravcik" price="1.5M" pos="LW" nat="SVK" pass="7" vel="6" head="2" tackling="2" ball="7" speed="6" finish="1" total="31" />
+	<i num="12" name="Alexander Vencel" price="450K" pos="G" nat="SVK" />
+	<i num="13" name="Ivan Kozak" price="350K" pos="D" nat="SVK" pass="2" vel="0" head="5" tackling="7" ball="0" speed="2" finish="1" total="17" />
+	<i num="14" name="Jozef Juriga" price="600K" pos="M" nat="SVK" pass="6" vel="1" head="3" tackling="6" ball="2" speed="2" finish="1" total="21" />
+	<i num="15" name="Marek Ujlaky" price="300K" pos="M" nat="SVK" pass="4" vel="1" head="2" tackling="4" ball="3" speed="2" finish="0" total="16" />
+	<i num="16" name="Tibor Jancula" price="550K" pos="A" nat="SVK" pass="2" vel="3" head="1" tackling="1" ball="4" speed="4" finish="5" total="20" />
+	<tot price="10.85M" pass="51" vel="35" head="47" tackling="64" ball="40" speed="43" finish="32" total="312" />
+	<avg price="678K" pass="3.6" vel="2.5" head="3.4" tackling="4.6" ball="2.9" speed="3.1" finish="2.3" total="22.3" />
+</team>

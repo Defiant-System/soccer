@@ -1,0 +1,21 @@
+
+<team type="national" name="Wales" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Neville Southall" price="1.6M" pos="G" nat="Wal" />
+	<i num="2" name="Mark Bowen" price="650K" pos="RB" nat="Wal" pass="1" vel="1" head="2" tackling="6" ball="6" speed="5" finish="1" total="22" />
+	<i num="3" name="Mark Pembridge" price="800K" pos="LB" nat="Wal" pass="5" vel="5" head="3" tackling="5" ball="2" speed="4" finish="1" total="25" />
+	<i num="4" name="Kit Symons" price="800K" pos="D" nat="Wal" pass="4" vel="2" head="7" tackling="7" ball="2" speed="2" finish="1" total="25" />
+	<i num="5" name="Chris Coleman" price="700K" pos="D" nat="Wal" pass="2" vel="2" head="7" tackling="6" ball="2" speed="2" finish="2" total="23" />
+	<i num="6" name="Barry Horne" price="800K" pos="M" nat="Wal" pass="7" vel="2" head="2" tackling="7" ball="2" speed="3" finish="2" total="25" />
+	<i num="7" name="John Robinson" price="650K" pos="RW" nat="Wal" pass="1" vel="6" head="2" tackling="6" ball="4" speed="2" finish="1" total="22" />
+	<i num="8" name="Gary Speed" price="4.5M" pos="M" nat="Wal" pass="7" vel="6" head="7" tackling="3" ball="7" speed="3" finish="7" total="40" />
+	<i num="9" name="Dean Saunders" price="1.6M" pos="A" nat="Wal" pass="3" vel="5" head="7" tackling="2" ball="3" speed="6" finish="6" total="32" />
+	<i num="10" name="Mark Hughes" price="1.6M" pos="A" nat="Wal" pass="6" vel="5" head="5" tackling="2" ball="5" speed="3" finish="6" total="32" />
+	<i num="11" name="Ryan Giggs" price="8M" pos="LW" nat="Wal" pass="7" vel="7" head="5" tackling="4" ball="7" speed="7" finish="7" total="44" />
+	<i num="12" name="Danny Coyne" price="450K" pos="G" nat="Wal" />
+	<i num="13" name="Andy Melville" price="650K" pos="D" nat="Wal" pass="3" vel="2" head="7" tackling="6" ball="1" speed="2" finish="1" total="22" />
+	<i num="14" name="Marcus Browning" price="750K" pos="M" nat="Wal" pass="6" vel="1" head="1" tackling="7" ball="3" speed="3" finish="3" total="24" />
+	<i num="15" name="Andy Legg" price="650K" pos="M" nat="Wal" pass="7" vel="2" head="1" tackling="6" ball="1" speed="3" finish="2" total="22" />
+	<i num="16" name="John Hartson" price="1.1M" pos="A" nat="Wal" pass="1" vel="7" head="7" tackling="3" ball="3" speed="2" finish="6" total="29" />
+	<tot price="25.3M" pass="60" vel="53" head="63" tackling="70" ball="48" speed="47" finish="46" total="387" />
+	<avg price="2M" pass="4.3" vel="3.8" head="4.5" tackling="5.0" ball="3.4" speed="3.4" finish="3.3" total="27.6" />
+</team>

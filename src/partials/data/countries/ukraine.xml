@@ -1,0 +1,21 @@
+
+<team type="national" name="Ukraine" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Oleg Suslov" price="450K" pos="G" nat="Ukr" />
+	<i num="2" name="Oleg Luzhny" price="650K" pos="RB" nat="Ukr" pass="2" vel="2" head="2" tackling="7" ball="1" speed="6" finish="2" total="22" />
+	<i num="3" name="Viktor Skrypnyk" price="550K" pos="D" nat="Ukr" pass="2" vel="2" head="7" tackling="5" ball="2" speed="1" finish="1" total="20" />
+	<i num="4" name="Alexander Golovko" price="550K" pos="LB" nat="Ukr" pass="1" vel="2" head="1" tackling="5" ball="2" speed="7" finish="2" total="20" />
+	<i num="5" name="Sergei Rebrov" price="600K" pos="M" nat="Ukr" pass="7" vel="1" head="1" tackling="7" ball="3" speed="1" finish="1" total="21" />
+	<i num="6" name="Vitaly Kosovsky" price="750K" pos="M" nat="Ukr" pass="7" vel="5" head="1" tackling="2" ball="4" speed="4" finish="1" total="24" />
+	<i num="7" name="Gennady Orbu" price="600K" pos="RW" nat="Ukr" pass="5" vel="6" head="1" tackling="6" ball="1" speed="1" finish="1" total="21" />
+	<i num="8" name="Yuri Kalitvintsev" price="600K" pos="LW" nat="Ukr" pass="5" vel="4" head="1" tackling="2" ball="5" speed="2" finish="2" total="21" />
+	<i num="9" name="Sergei Bezhenar" price="350K" pos="D" nat="Ukr" pass="1" vel="1" head="5" tackling="7" ball="1" speed="2" finish="0" total="17" />
+	<i num="10" name="Viktor Leonenko" price="1M" pos="A" nat="Ukr" pass="2" vel="6" head="5" tackling="3" ball="1" speed="6" finish="5" total="28" />
+	<i num="11" name="Timerlan Guseinov" price="650K" pos="A" nat="Ukr" pass="2" vel="5" head="1" tackling="2" ball="1" speed="4" finish="7" total="22" />
+	<i num="12" name="Alexander Shovkovsky" price="350K" pos="G" nat="Ukr" />
+	<i num="13" name="Sergei Shmatovalenko" price="450K" pos="D" nat="Ukr" pass="1" vel="0" head="5" tackling="6" ball="2" speed="2" finish="2" total="18" />
+	<i num="14" name="Sergei Popov" price="350K" pos="M" nat="Ukr" pass="1" vel="2" head="4" tackling="4" ball="2" speed="2" finish="2" total="17" />
+	<i num="15" name="Yury Maksimov" price="450K" pos="M" nat="Ukr" pass="5" vel="0" head="1" tackling="7" ball="2" speed="1" finish="2" total="18" />
+	<i num="16" name="Valery Kriventsov" price="700K" pos="A" nat="Ukr" pass="2" vel="7" head="4" tackling="2" ball="1" speed="2" finish="5" total="23" />
+	<tot price="9.05M" pass="43" vel="43" head="39" tackling="65" ball="28" speed="41" finish="33" total="292" />
+	<avg price="566K" pass="3.1" vel="3.1" head="2.8" tackling="4.6" ball="2.0" speed="2.9" finish="2.4" total="20.9" />
+</team>

@@ -1,0 +1,21 @@
+
+<team type="national" name="Belgium" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Gilbert Bodart" price="1.8M" pos="G" nat="Bel" />
+	<i num="2" name="Bertrand Crasson" price="950K" pos="RB" nat="Bel" pass="2" vel="3" head="2" tackling="7" ball="5" speed="5" finish="3" total="27" />
+	<i num="3" name="Dirk Medved" price="1.1M" pos="D" nat="Bel" pass="2" vel="2" head="7" tackling="7" ball="3" speed="4" finish="4" total="29" />
+	<i num="4" name="Philippe Albert" price="3M" pos="D" nat="Bel" pass="5" vel="7" head="7" tackling="7" ball="4" speed="5" finish="3" total="38" />
+	<i num="5" name="Rudy Smidts" price="800K" pos="LB" nat="Bel" pass="1" vel="7" head="3" tackling="7" ball="1" speed="3" finish="3" total="25" />
+	<i num="6" name="Lorenzo Staelens" price="1.5M" pos="RW" nat="Bel" pass="6" vel="3" head="3" tackling="7" ball="3" speed="3" finish="6" total="31" />
+	<i num="7" name="Gunther Schepens" price="1.1M" pos="LW" nat="Bel" pass="6" vel="7" head="2" tackling="6" ball="3" speed="2" finish="3" total="29" />
+	<i num="8" name="Luc Nilis" price="6M" pos="A" nat="Bel" pass="7" vel="7" head="4" tackling="3" ball="7" speed="7" finish="7" total="42" />
+	<i num="9" name="Marc Degryse" price="2M" pos="M" nat="Bel" pass="7" vel="7" head="3" tackling="2" ball="7" speed="2" finish="7" total="35" />
+	<i num="10" name="Enzo Scifo" price="6M" pos="M" nat="Bel" pass="7" vel="7" head="5" tackling="5" ball="7" speed="4" finish="7" total="42" />
+	<i num="11" name="Gilles De Bilde" price="1.8M" pos="A" nat="Bel" pass="6" vel="6" head="2" tackling="2" ball="6" speed="5" finish="6" total="33" />
+	<i num="12" name="Filip De Wilde" price="950K" pos="G" nat="Bel" />
+	<i num="13" name="Pascal Renier" price="850K" pos="D" nat="Bel" pass="3" vel="3" head="6" tackling="7" ball="2" speed="3" finish="2" total="26" />
+	<i num="14" name="Gert Verheyen" price="1M" pos="RW" nat="Bel" pass="7" vel="3" head="3" tackling="7" ball="4" speed="2" finish="2" total="28" />
+	<i num="15" name="Danny Boffin" price="800K" pos="LW" nat="Bel" pass="1" vel="2" head="3" tackling="3" ball="7" speed="7" finish="2" total="25" />
+	<i num="16" name="Luis Oliveira" price="1.8M" pos="A" nat="Bel" pass="6" vel="6" head="3" tackling="3" ball="3" speed="6" finish="6" total="33" />
+	<tot price="31.45M" pass="66" vel="70" head="53" tackling="73" ball="62" speed="58" finish="61" total="443" />
+	<avg price="2M" pass="4.7" vel="5.0" head="3.8" tackling="5.2" ball="4.4" speed="4.1" finish="4.4" total="31.6" />
+</team>

@@ -1,0 +1,21 @@
+
+<team type="national" name="Armenia" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Harutyun Abrahamyan" price="250K" pos="G" nat="arm" />
+	<i num="2" name="Yervand Sukiasyan" price="350K" pos="RB" nat="arm" pass="2" vel="2" head="1" tackling="4" ball="2" speed="5" finish="1" total="17" />
+	<i num="3" name="Vardan Khachatryan" price="250K" pos="LB" nat="arm" pass="1" vel="0" head="2" tackling="4" ball="2" speed="4" finish="2" total="15" />
+	<i num="4" name="Sarkis Hovsepyan" price="300K" pos="D" nat="arm" pass="2" vel="0" head="6" tackling="5" ball="1" speed="1" finish="1" total="16" />
+	<i num="5" name="Sarkis Oganesyan" price="350K" pos="D" nat="arm" pass="2" vel="1" head="5" tackling="4" ball="2" speed="2" finish="1" total="17" />
+	<i num="6" name="Michel Der Zakarian" price="250K" pos="D" nat="arm" pass="1" vel="1" head="5" tackling="6" ball="0" speed="1" finish="1" total="15" />
+	<i num="7" name="Artur Petrosyan" price="250K" pos="RW" nat="arm" pass="0" vel="1" head="2" tackling="1" ball="5" speed="5" finish="1" total="15" />
+	<i num="8" name="Ramzik Grigoryan" price="250K" pos="LW" nat="arm" pass="1" vel="2" head="1" tackling="1" ball="5" speed="3" finish="2" total="15" />
+	<i num="9" name="Hamlet Mkhitaryan" price="350K" pos="M" nat="arm" pass="6" vel="1" head="2" tackling="4" ball="1" speed="2" finish="1" total="17" />
+	<i num="10" name="Eric Assadourian" price="200K" pos="A" nat="arm" pass="1" vel="3" head="3" tackling="1" ball="1" speed="2" finish="3" total="14" />
+	<i num="11" name="Arsen Avetisyan" price="350K" pos="A" nat="arm" pass="1" vel="4" head="6" tackling="1" ball="0" speed="1" finish="4" total="17" />
+	<i num="12" name="Armenak Petrosyan" price="150K" pos="G" nat="arm" />
+	<i num="13" name="Ashot Khachatryan" price="160K" pos="D" nat="arm" pass="1" vel="1" head="5" tackling="4" ball="1" speed="0" finish="0" total="12" />
+	<i num="14" name="Yervand Karbashyan" price="150K" pos="M" nat="arm" pass="4" vel="0" head="1" tackling="4" ball="1" speed="0" finish="1" total="11" />
+	<i num="15" name="Varazdat Avetisyan" price="150K" pos="M" nat="arm" pass="0" vel="3" head="4" tackling="0" ball="0" speed="1" finish="3" total="11" />
+	<i num="16" name="Hakop Ter-Petrosyan" price="180K" pos="A" nat="arm" pass="4" vel="1" head="1" tackling="6" ball="0" speed="1" finish="0" total="13" />
+	<tot price="3.94M" pass="26" vel="20" head="44" tackling="45" ball="21" speed="28" finish="21" total="205" />
+	<avg price="246K" pass="1.9" vel="1.4" head="3.1" tackling="3.2" ball="1.5" speed="2.0" finish="1.5" total="14.6" />
+</team>

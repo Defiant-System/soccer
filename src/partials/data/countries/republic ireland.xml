@@ -1,0 +1,21 @@
+
+<team type="national" name="Republic Ireland" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Alan Kelly" price="850K" pos="G" nat="Irl" />
+	<i num="2" name="Gary Kelly" price="1.6M" pos="RW" nat="Irl" pass="7" vel="3" head="2" tackling="7" ball="3" speed="7" finish="3" total="32" />
+	<i num="3" name="Denis Irwin" price="2.25M" pos="RB" nat="Irl" pass="7" vel="7" head="4" tackling="7" ball="3" speed="6" finish="2" total="36" />
+	<i num="4" name="Phil Babb" price="2.25M" pos="LB" nat="Irl" pass="2" vel="4" head="7" tackling="7" ball="4" speed="7" finish="5" total="36" />
+	<i num="5" name="Gary Breen" price="750K" pos="D" nat="Irl" pass="2" vel="2" head="6" tackling="7" ball="2" speed="2" finish="3" total="24" />
+	<i num="6" name="Roy Keane" price="3M" pos="M" nat="Irl" pass="7" vel="5" head="7" tackling="7" ball="3" speed="5" finish="4" total="38" />
+	<i num="7" name="Andy Townsend" price="1.9M" pos="M" nat="Irl" pass="7" vel="7" head="2" tackling="7" ball="3" speed="4" finish="4" total="34" />
+	<i num="8" name="Keith O'Neill" price="650K" pos="A" nat="Irl" pass="2" vel="5" head="1" tackling="2" ball="2" speed="5" finish="5" total="22" />
+	<i num="9" name="Niall Quinn" price="1.5M" pos="A" nat="Irl" pass="3" vel="7" head="7" tackling="2" ball="3" speed="3" finish="6" total="31" />
+	<i num="10" name="Jason Mcateer" price="2.25M" pos="M" nat="Irl" pass="7" vel="3" head="5" tackling="7" ball="4" speed="7" finish="3" total="36" />
+	<i num="11" name="Steve Staunton" price="1.6M" pos="LW" nat="Irl" pass="6" vel="6" head="2" tackling="6" ball="3" speed="7" finish="2" total="32" />
+	<i num="12" name="Shay Given" price="650K" pos="G" nat="Irl" />
+	<i num="13" name="Ian Harte" price="700K" pos="LB" nat="Irl" pass="4" vel="2" head="2" tackling="6" ball="2" speed="5" finish="2" total="23" />
+	<i num="14" name="Mark Kennedy" price="650K" pos="LW" nat="Irl" pass="7" vel="1" head="1" tackling="2" ball="5" speed="5" finish="1" total="22" />
+	<i num="15" name="Alan Mcloughlin" price="650K" pos="M" nat="Irl" pass="5" vel="5" head="2" tackling="5" ball="2" speed="1" finish="2" total="22" />
+	<i num="16" name="Tony Cascarino" price="800K" pos="A" nat="Irl" pass="2" vel="5" head="5" tackling="2" ball="3" speed="1" finish="7" total="25" />
+	<tot price="22.05M" pass="68" vel="62" head="53" tackling="74" ball="42" speed="65" finish="49" total="413" />
+	<avg price="1M" pass="4.9" vel="4.4" head="3.8" tackling="5.3" ball="3.0" speed="4.6" finish="3.5" total="29.5" />
+</team>

@@ -1,0 +1,21 @@
+
+<team type="national" name="Cyprus" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Nicos Panayiotou" price="350K" pos="G" nat="Cyp" />
+	<i num="2" name="Neophytos Larkou" price="300K" pos="D" nat="Cyp" pass="1" vel="1" head="4" tackling="6" ball="2" speed="1" finish="1" total="16" />
+	<i num="3" name="Charalambos Pittas" price="550K" pos="LB" nat="Cyp" pass="2" vel="1" head="7" tackling="4" ball="2" speed="2" finish="2" total="20" />
+	<i num="4" name="George Christodoulou" price="300K" pos="RB" nat="Cyp" pass="1" vel="0" head="2" tackling="7" ball="1" speed="4" finish="1" total="16" />
+	<i num="5" name="Marios Christodoulou" price="450K" pos="M" nat="Cyp" pass="6" vel="1" head="1" tackling="7" ball="2" speed="1" finish="0" total="18" />
+	<i num="6" name="Yiannos Kalotheou" price="300K" pos="D" nat="Cyp" pass="2" vel="0" head="2" tackling="4" ball="1" speed="6" finish="1" total="16" />
+	<i num="7" name="Yotis Engomitis" price="500K" pos="LW" nat="Cyp" pass="1" vel="2" head="1" tackling="2" ball="5" speed="6" finish="2" total="19" />
+	<i num="8" name="Andros Sotiriou" price="600K" pos="A" nat="Cyp" pass="1" vel="7" head="1" tackling="3" ball="2" speed="1" finish="6" total="21" />
+	<i num="9" name="Sinisa Gogic" price="550K" pos="A" nat="Cyp" pass="1" vel="4" head="6" tackling="2" ball="1" speed="1" finish="5" total="20" />
+	<i num="10" name="Costas Malekos" price="350K" pos="M" nat="Cyp" pass="5" vel="1" head="1" tackling="5" ball="2" speed="2" finish="1" total="17" />
+	<i num="11" name="Pambis Andreou" price="300K" pos="RW" nat="Cyp" pass="1" vel="2" head="0" tackling="2" ball="5" speed="4" finish="2" total="16" />
+	<i num="12" name="Andros Petrides" price="250K" pos="G" nat="Cyp" />
+	<i num="13" name="George Panayi" price="250K" pos="D" nat="Cyp" pass="2" vel="2" head="5" tackling="3" ball="1" speed="1" finish="1" total="15" />
+	<i num="14" name="Dimitris Ioannou" price="180K" pos="M" nat="Cyp" pass="4" vel="1" head="0" tackling="1" ball="1" speed="4" finish="2" total="13" />
+	<i num="15" name="Nikos Papavasiliou" price="200K" pos="M" nat="Cyp" pass="6" vel="1" head="2" tackling="4" ball="0" speed="1" finish="0" total="14" />
+	<i num="16" name="Marios Agathocleous" price="250K" pos="A" nat="Cyp" pass="0" vel="6" head="2" tackling="0" ball="1" speed="1" finish="5" total="15" />
+	<tot price="5.68M" pass="33" vel="29" head="34" tackling="50" ball="26" speed="35" finish="29" total="236" />
+	<avg price="355K" pass="2.4" vel="2.1" head="2.4" tackling="3.6" ball="1.9" speed="2.5" finish="2.1" total="16.9" />
+</team>

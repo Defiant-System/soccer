@@ -1,0 +1,21 @@
+
+<team type="national" name="Switzerland" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Marco Pascolo" price="1.5M" pos="G" nat="Sui" />
+	<i num="2" name="Marc Hottiger" price="1M" pos="RB" nat="Sui" pass="7" vel="2" head="1" tackling="7" ball="2" speed="6" finish="3" total="28" />
+	<i num="3" name="Yvan Quentin" price="800K" pos="LB" nat="Sui" pass="2" vel="3" head="2" tackling="6" ball="2" speed="7" finish="3" total="25" />
+	<i num="4" name="Stephane Henchoz" price="800K" pos="D" nat="Sui" pass="3" vel="1" head="7" tackling="7" ball="2" speed="3" finish="2" total="25" />
+	<i num="5" name="Ramon Vega" price="1.5M" pos="D" nat="Sui" pass="2" vel="4" head="7" tackling="7" ball="5" speed="3" finish="3" total="31" />
+	<i num="6" name="Murat Yakin" price="1.6M" pos="M" nat="Sui" pass="7" vel="7" head="1" tackling="6" ball="7" speed="2" finish="2" total="32" />
+	<i num="7" name="Johann Vogel" price="1.1M" pos="LW" nat="Sui" pass="6" vel="5" head="3" tackling="1" ball="7" speed="5" finish="2" total="29" />
+	<i num="8" name="Christophe Ohrel" price="950K" pos="RW" nat="Sui" pass="7" vel="2" head="3" tackling="7" ball="3" speed="3" finish="2" total="27" />
+	<i num="9" name="Kubilay Turkyilmaz" price="2M" pos="A" nat="Sui" pass="7" vel="7" head="2" tackling="2" ball="3" speed="7" finish="7" total="35" />
+	<i num="10" name="Ciriaco Sforza" price="2.25M" pos="M" nat="Sui" pass="7" vel="4" head="4" tackling="4" ball="7" speed="5" finish="5" total="36" />
+	<i num="11" name="Stephane Chapuisat" price="2.25M" pos="A" nat="Sui" pass="2" vel="7" head="3" tackling="3" ball="7" speed="7" finish="7" total="36" />
+	<i num="12" name="Pascal Zuberbuhler" price="550K" pos="G" nat="Sui" />
+	<i num="13" name="Sebastien Jeanneret" price="650K" pos="D" nat="Sui" pass="3" vel="2" head="7" tackling="5" ball="2" speed="1" finish="2" total="22" />
+	<i num="14" name="Massimo Lombardo" price="750K" pos="M" nat="Sui" pass="6" vel="2" head="2" tackling="6" ball="1" speed="5" finish="2" total="24" />
+	<i num="15" name="Christophe Bonvin" price="1.1M" pos="A" nat="Sui" pass="2" vel="6" head="2" tackling="2" ball="5" speed="5" finish="7" total="29" />
+	<i num="16" name="Adrian Knup" price="1.5M" pos="A" nat="Sui" pass="3" vel="7" head="6" tackling="2" ball="3" speed="3" finish="7" total="31" />
+	<tot price="20.3M" pass="64" vel="59" head="50" tackling="65" ball="56" speed="62" finish="54" total="410" />
+	<avg price="1M" pass="4.6" vel="4.2" head="3.6" tackling="4.6" ball="4.0" speed="4.4" finish="3.9" total="29.3" />
+</team>

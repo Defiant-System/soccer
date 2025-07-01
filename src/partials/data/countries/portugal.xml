@@ -1,0 +1,21 @@
+
+<team type="national" name="Portugal" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Vitor Baia" price="2.25M" pos="G" nat="Por" />
+	<i num="2" name="Secretario" price="1.8M" pos="RB" nat="Por" pass="4" vel="4" head="4" tackling="7" ball="4" speed="7" finish="3" total="33" />
+	<i num="3" name="Paulinho Santos" price="1.3M" pos="LB" nat="Por" pass="2" vel="3" head="7" tackling="6" ball="3" speed="7" finish="2" total="30" />
+	<i num="4" name="Helder" price="1.1M" pos="D" nat="Por" pass="3" vel="2" head="7" tackling="7" ball="3" speed="4" finish="3" total="29" />
+	<i num="5" name="Fernando Couto" price="3.5M" pos="D" nat="Por" pass="4" vel="7" head="7" tackling="7" ball="3" speed="7" finish="4" total="39" />
+	<i num="6" name="Paulo Sousa" price="3.5M" pos="M" nat="Por" pass="7" vel="5" head="4" tackling="6" ball="7" speed="6" finish="4" total="39" />
+	<i num="7" name="Figo" price="3.5M" pos="RW" nat="Por" pass="7" vel="5" head="3" tackling="5" ball="7" speed="7" finish="5" total="39" />
+	<i num="8" name="Joao Pinto" price="4.5M" pos="A" nat="Por" pass="7" vel="7" head="4" tackling="3" ball="7" speed="5" finish="7" total="40" />
+	<i num="9" name="Sa Pinto" price="2.75M" pos="A" nat="Por" pass="6" vel="6" head="3" tackling="3" ball="6" speed="7" finish="6" total="37" />
+	<i num="10" name="Rui Costa" price="6M" pos="M" nat="Por" pass="7" vel="7" head="6" tackling="7" ball="7" speed="4" finish="4" total="42" />
+	<i num="11" name="Folha" price="1.3M" pos="LW" nat="Por" pass="2" vel="3" head="5" tackling="3" ball="7" speed="7" finish="3" total="30" />
+	<i num="12" name="Rui Correia" price="750K" pos="G" nat="Por" />
+	<i num="13" name="Dimas" price="950K" pos="LB" nat="Por" pass="2" vel="3" head="7" tackling="7" ball="2" speed="3" finish="3" total="27" />
+	<i num="14" name="Oceano" price="1.5M" pos="M" nat="Por" pass="4" vel="6" head="1" tackling="5" ball="5" speed="5" finish="5" total="31" />
+	<i num="15" name="Domingos" price="2.25M" pos="A" nat="Por" pass="6" vel="6" head="3" tackling="2" ball="7" speed="6" finish="6" total="36" />
+	<i num="16" name="Paulo Alves" price="1.1M" pos="A" nat="Por" pass="2" vel="6" head="6" tackling="2" ball="2" speed="5" finish="6" total="29" />
+	<tot price="38.05M" pass="63" vel="70" head="67" tackling="70" ball="70" speed="80" finish="61" total="481" />
+	<avg price="2M" pass="4.5" vel="5.0" head="4.8" tackling="5.0" ball="5.0" speed="5.7" finish="4.4" total="34.4" />
+</team>

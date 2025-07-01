@@ -1,0 +1,21 @@
+
+<team type="national" name="Belarus" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Valery Shantalosov" price="300K" pos="G" nat="Bls" />
+	<i num="2" name="Sergei Gurenko" price="450K" pos="RB" nat="Bls" pass="0" vel="2" head="2" tackling="6" ball="1" speed="6" finish="1" total="18" />
+	<i num="3" name="Andrei Dovnar" price="450K" pos="LB" nat="Bls" pass="2" vel="1" head="2" tackling="7" ball="1" speed="5" finish="0" total="18" />
+	<i num="4" name="Pavel Rodnenok" price="300K" pos="D" nat="Bls" pass="0" vel="1" head="7" tackling="4" ball="1" speed="2" finish="1" total="16" />
+	<i num="5" name="Sergei Shtanyuk" price="800K" pos="D" nat="Bls" pass="2" vel="2" head="7" tackling="7" ball="3" speed="2" finish="2" total="25" />
+	<i num="6" name="Vasili Baranov" price="450K" pos="LW" nat="Bls" pass="2" vel="2" head="1" tackling="1" ball="6" speed="5" finish="1" total="18" />
+	<i num="7" name="Sergey Gerasimets" price="700K" pos="A" nat="Bls" pass="7" vel="2" head="2" tackling="6" ball="1" speed="3" finish="2" total="23" />
+	<i num="8" name="Vladimir Makovski" price="600K" pos="M" nat="Bls" pass="6" vel="7" head="1" tackling="4" ball="1" speed="1" finish="1" total="21" />
+	<i num="9" name="Valentin Belkevich" price="350K" pos="M" nat="Bls" pass="5" vel="1" head="1" tackling="5" ball="1" speed="2" finish="2" total="17" />
+	<i num="10" name="Alexander Metlitsky" price="650K" pos="RW" nat="Bls" pass="2" vel="1" head="3" tackling="3" ball="5" speed="6" finish="2" total="22" />
+	<i num="11" name="Petr Kachuro" price="550K" pos="A" nat="Bls" pass="0" vel="5" head="5" tackling="2" ball="1" speed="1" finish="6" total="20" />
+	<i num="12" name="Andrey Satsunkhevich" price="250K" pos="G" nat="Bls" />
+	<i num="13" name="Alexander Taikov" price="200K" pos="D" nat="Bls" pass="0" vel="0" head="4" tackling="6" ball="2" speed="0" finish="2" total="14" />
+	<i num="14" name="Yury Vergeichik" price="250K" pos="M" nat="Bls" pass="5" vel="0" head="1" tackling="7" ball="0" speed="1" finish="1" total="15" />
+	<i num="15" name="Alexander Kulchi" price="250K" pos="M" nat="Bls" pass="3" vel="2" head="2" tackling="6" ball="0" speed="1" finish="1" total="15" />
+	<i num="16" name="Yevgeny Kashentsev" price="450K" pos="A" nat="Bls" pass="1" vel="6" head="1" tackling="1" ball="1" speed="4" finish="4" total="18" />
+	<tot price="7M" pass="35" vel="32" head="39" tackling="65" ball="24" speed="39" finish="26" total="260" />
+	<avg price="438K" pass="2.5" vel="2.3" head="2.8" tackling="4.6" ball="1.7" speed="2.8" finish="1.9" total="18.6" />
+</team>

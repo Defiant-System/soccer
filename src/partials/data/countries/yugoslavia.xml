@@ -1,0 +1,21 @@
+
+<team type="national" name="Yugoslavia" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Aleksandar Kocic" price="950K" pos="G" nat="Yug" />
+	<i num="2" name="Zoran Mirkovic" price="650K" pos="RB" nat="Yug" pass="2" vel="2" head="1" tackling="7" ball="2" speed="6" finish="2" total="22" />
+	<i num="3" name="Dejan Stefanovic" price="850K" pos="LB" nat="Yug" pass="1" vel="3" head="3" tackling="7" ball="2" speed="7" finish="3" total="26" />
+	<i num="4" name="Goran Djorovic" price="1.1M" pos="D" nat="Yug" pass="2" vel="3" head="7" tackling="7" ball="4" speed="3" finish="3" total="29" />
+	<i num="5" name="Miroslav Djukic" price="1.8M" pos="D" nat="Yug" pass="7" vel="4" head="7" tackling="6" ball="3" speed="3" finish="3" total="33" />
+	<i num="6" name="Sinisa Mihajlovic" price="1.3M" pos="LW" nat="Yug" pass="6" vel="3" head="3" tackling="5" ball="6" speed="5" finish="2" total="30" />
+	<i num="7" name="Vladmir Jugovic" price="3M" pos="M" nat="Yug" pass="7" vel="7" head="3" tackling="7" ball="4" speed="7" finish="3" total="38" />
+	<i num="8" name="Predrag Mijatovic" price="7M" pos="M" nat="Yug" pass="7" vel="7" head="4" tackling="6" ball="7" speed="5" finish="7" total="43" />
+	<i num="9" name="Savo Milosevic" price="3.5M" pos="A" nat="Yug" pass="3" vel="7" head="7" tackling="3" ball="5" speed="7" finish="7" total="39" />
+	<i num="10" name="Dejan Savicevic" price="9M" pos="A" nat="Yug" pass="7" vel="7" head="6" tackling="5" ball="7" speed="7" finish="6" total="45" />
+	<i num="11" name="Dragan Stojkovic" price="1M" pos="RW" nat="Yug" pass="2" vel="3" head="2" tackling="5" ball="7" speed="7" finish="2" total="28" />
+	<i num="12" name="Zvonko Milosevic" price="750K" pos="G" nat="Yug" />
+	<i num="13" name="Goran Saula" price="750K" pos="D" nat="Yug" pass="5" vel="1" head="4" tackling="6" ball="1" speed="5" finish="2" total="24" />
+	<i num="14" name="Slavisa Jokanovic" price="1.3M" pos="LW" nat="Yug" pass="3" vel="7" head="4" tackling="3" ball="7" speed="3" finish="3" total="30" />
+	<i num="15" name="Albert Nadj" price="1.6M" pos="M" nat="Yug" pass="7" vel="4" head="4" tackling="4" ball="7" speed="4" finish="2" total="32" />
+	<i num="16" name="Darko Kovacevic" price="1.9M" pos="A" nat="Yug" pass="3" vel="7" head="6" tackling="3" ball="3" speed="6" finish="6" total="34" />
+	<tot price="36.45M" pass="62" vel="65" head="61" tackling="74" ball="65" speed="75" finish="51" total="453" />
+	<avg price="2M" pass="4.4" vel="4.6" head="4.4" tackling="5.3" ball="4.6" speed="5.4" finish="3.6" total="32.4" />
+</team>

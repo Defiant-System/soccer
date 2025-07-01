@@ -1,0 +1,21 @@
+
+<team type="national" name="Lithuania" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Gintaras Stauce" price="750K" pos="G" nat="Lit" />
+	<i num="2" name="Tomas Ziukas" price="450K" pos="RB" nat="Lit" pass="1" vel="1" head="1" tackling="4" ball="2" speed="7" finish="2" total="18" />
+	<i num="3" name="Andreius Tereskinas" price="550K" pos="LB" nat="Lit" pass="2" vel="2" head="1" tackling="6" ball="2" speed="6" finish="1" total="20" />
+	<i num="4" name="Ramunas Stonkus" price="250K" pos="D" nat="Lit" pass="2" vel="2" head="4" tackling="5" ball="1" speed="0" finish="1" total="15" />
+	<i num="5" name="Raimondas Vainoras" price="300K" pos="D" nat="Lit" pass="2" vel="0" head="4" tackling="6" ball="2" speed="0" finish="2" total="16" />
+	<i num="6" name="Arunas Suika" price="500K" pos="M" nat="Lit" pass="2" vel="1" head="1" tackling="2" ball="6" speed="6" finish="1" total="19" />
+	<i num="7" name="Darius Maciulevicius" price="300K" pos="M" nat="Lit" pass="5" vel="0" head="0" tackling="7" ball="1" speed="2" finish="1" total="16" />
+	<i num="8" name="Edgaras Jankauskas" price="800K" pos="A" nat="Lit" pass="2" vel="6" head="2" tackling="3" ball="2" speed="5" finish="5" total="25" />
+	<i num="9" name="Arminas Narbekovas" price="450K" pos="RW" nat="Lit" pass="1" vel="1" head="1" tackling="1" ball="6" speed="7" finish="1" total="18" />
+	<i num="10" name="Aurelijus Skarbalius" price="550K" pos="LW" nat="Lit" pass="7" vel="1" head="1" tackling="6" ball="1" speed="2" finish="2" total="20" />
+	<i num="11" name="Vaidotas Slekys" price="450K" pos="A" nat="Lit" pass="2" vel="3" head="4" tackling="1" ball="2" speed="0" finish="6" total="18" />
+	<i num="12" name="Marius Poskus" price="250K" pos="G" nat="Lit" />
+	<i num="13" name="Gintaras Rimkus" price="250K" pos="D" nat="Lit" pass="1" vel="2" head="4" tackling="4" ball="2" speed="1" finish="1" total="15" />
+	<i num="14" name="Raimondas Zutautas" price="200K" pos="M" nat="Lit" pass="4" vel="1" head="0" tackling="6" ball="0" speed="1" finish="2" total="14" />
+	<i num="15" name="Virginijus Baltusnikas" price="250K" pos="M" nat="Lit" pass="5" vel="2" head="0" tackling="3" ball="1" speed="2" finish="2" total="15" />
+	<i num="16" name="Rimas Zvingilis" price="250K" pos="A" nat="Lit" pass="1" vel="1" head="5" tackling="1" ball="2" speed="0" finish="5" total="15" />
+	<tot price="6.55M" pass="37" vel="23" head="28" tackling="55" ball="30" speed="39" finish="32" total="244" />
+	<avg price="409K" pass="2.6" vel="1.6" head="2.0" tackling="3.9" ball="2.1" speed="2.8" finish="2.3" total="17.4" />
+</team>

@@ -1,0 +1,21 @@
+
+<team type="national" name="Malta" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="David Cluett" price="250K" pos="G" nat="Mlt" />
+	<i num="2" name="Silvio Vella" price="180K" pos="RB" nat="Mlt" pass="0" vel="0" head="2" tackling="4" ball="2" speed="5" finish="0" total="13" />
+	<i num="3" name="Richard Buhagiar" price="300K" pos="LB" nat="Mlt" pass="0" vel="1" head="1" tackling="6" ball="1" speed="5" finish="2" total="16" />
+	<i num="4" name="Joe Brincat" price="500K" pos="M" nat="Mlt" pass="2" vel="2" head="4" tackling="7" ball="2" speed="1" finish="1" total="19" />
+	<i num="5" name="Ivan Zammit" price="250K" pos="D" nat="Mlt" pass="1" vel="2" head="5" tackling="3" ball="2" speed="1" finish="1" total="15" />
+	<i num="6" name="Darren Debono" price="250K" pos="D" nat="Mlt" pass="6" vel="0" head="1" tackling="4" ball="0" speed="2" finish="2" total="15" />
+	<i num="7" name="Carmel Busuttil" price="700K" pos="A" nat="Mlt" pass="1" vel="7" head="1" tackling="2" ball="1" speed="4" finish="7" total="23" />
+	<i num="8" name="Nicky Saliba" price="450K" pos="M" nat="Mlt" pass="4" vel="2" head="2" tackling="5" ball="3" speed="1" finish="1" total="18" />
+	<i num="9" name="Gilbert Agius" price="250K" pos="RW" nat="Mlt" pass="1" vel="0" head="2" tackling="1" ball="4" speed="5" finish="2" total="15" />
+	<i num="10" name="Noel Turner" price="300K" pos="LW" nat="Mlt" pass="1" vel="1" head="1" tackling="1" ball="6" speed="5" finish="1" total="16" />
+	<i num="11" name="David Carabott" price="500K" pos="A" nat="Mlt" pass="2" vel="4" head="6" tackling="1" ball="0" speed="1" finish="5" total="19" />
+	<i num="12" name="Reggie Cini" price="130K" pos="G" nat="Mlt" />
+	<i num="13" name="Lawrence Attard" price="160K" pos="D" nat="Mlt" pass="1" vel="1" head="6" tackling="2" ball="1" speed="0" finish="1" total="12" />
+	<i num="14" name="Antoine Zahra" price="200K" pos="M" nat="Mlt" pass="6" vel="2" head="0" tackling="5" ball="1" speed="0" finish="0" total="14" />
+	<i num="15" name="Jeffrey Chetcuti" price="180K" pos="M" nat="Mlt" pass="1" vel="4" head="2" tackling="2" ball="0" speed="1" finish="3" total="13" />
+	<i num="16" name="Joe Sant Fournier" price="130K" pos="A" nat="Mlt" pass="0" vel="5" head="0" tackling="0" ball="1" speed="1" finish="3" total="10" />
+	<tot price="4.73M" pass="26" vel="31" head="33" tackling="43" ball="24" speed="32" finish="29" total="218" />
+	<avg price="296K" pass="1.9" vel="2.2" head="2.4" tackling="3.1" ball="1.7" speed="2.3" finish="2.1" total="15.6" />
+</team>

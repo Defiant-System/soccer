@@ -1,0 +1,21 @@
+
+<team type="national" name="Norway" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+	<i num="1" name="Frode Grodas" price="600K" pos="G" nat="Nor" />
+	<i num="2" name="Alf Inge Haland" price="850K" pos="RB" nat="Nor" pass="3" vel="2" head="6" tackling="5" ball="2" speed="6" finish="2" total="26" />
+	<i num="3" name="Ronny Johnsen" price="1.5M" pos="D" nat="Nor" pass="5" vel="2" head="7" tackling="7" ball="4" speed="3" finish="3" total="31" />
+	<i num="4" name="Henning Berg" price="1.3M" pos="D" nat="Nor" pass="3" vel="3" head="7" tackling="7" ball="4" speed="3" finish="3" total="30" />
+	<i num="5" name="Stig Inge Bjornebye" price="950K" pos="LB" nat="Nor" pass="5" vel="2" head="1" tackling="7" ball="3" speed="7" finish="2" total="27" />
+	<i num="6" name="Erik Mykland" price="750K" pos="RW" nat="Nor" pass="7" vel="2" head="2" tackling="6" ball="3" speed="1" finish="3" total="24" />
+	<i num="7" name="Oyvind Leonhardsen" price="1M" pos="LW" nat="Nor" pass="6" vel="2" head="1" tackling="7" ball="2" speed="7" finish="3" total="28" />
+	<i num="8" name="Lars Bohinen" price="1.6M" pos="M" nat="Nor" pass="6" vel="3" head="3" tackling="3" ball="7" speed="3" finish="7" total="32" />
+	<i num="9" name="Ole Gunnar Solskjaer" price="1.8M" pos="A" nat="Nor" pass="3" vel="7" head="6" tackling="2" ball="7" speed="2" finish="6" total="33" />
+	<i num="10" name="Kjetil Rekdal" price="1.5M" pos="M" nat="Nor" pass="5" vel="7" head="6" tackling="5" ball="1" speed="1" finish="6" total="31" />
+	<i num="11" name="Frank Strandli" price="1M" pos="A" nat="Nor" pass="2" vel="6" head="3" tackling="2" ball="2" speed="6" finish="7" total="28" />
+	<i num="12" name="Frode Olsen" price="350K" pos="G" nat="Nor" />
+	<i num="13" name="Claus Lundekvam" price="750K" pos="D" nat="Nor" pass="2" vel="3" head="3" tackling="7" ball="2" speed="5" finish="2" total="24" />
+	<i num="14" name="Stale Solbakken" price="750K" pos="M" nat="Nor" pass="6" vel="2" head="3" tackling="2" ball="2" speed="7" finish="2" total="24" />
+	<i num="15" name="Petter Rudi" price="800K" pos="M" nat="Nor" pass="7" vel="3" head="1" tackling="6" ball="6" speed="1" finish="1" total="25" />
+	<i num="16" name="Harald Brattbakk" price="950K" pos="A" nat="Nor" pass="2" vel="6" head="5" tackling="1" ball="1" speed="6" finish="6" total="27" />
+	<tot price="16.45M" pass="62" vel="50" head="54" tackling="67" ball="46" speed="58" finish="53" total="390" />
+	<avg price="1M" pass="4.4" vel="3.6" head="3.9" tackling="4.8" ball="3.3" speed="4.1" finish="3.8" total="27.9" />
+</team>
