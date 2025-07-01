@@ -13,7 +13,7 @@ let Test = {
 			// let vec = Matter.Vector.create(320, 450);
 			// Matter.Body.setPosition(APP.stadium.arena.stadium.ball.body, vec);
 
-			APP.stadium.arena.viewport.zoom = 20;
+			APP.stadium.arena.viewport.zoom = 100;
 			APP.stadium.arena.viewport.center();
 		}, 500);
 
