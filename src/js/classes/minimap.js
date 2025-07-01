@@ -27,6 +27,7 @@ class Minimap extends Field {
 		this.ctx = ctx;
 		this.width = width;
 		this.height= height;
+		this._state = 1;
 
 		// semi-transparent box
 		ctx.save();
@@ -43,11 +44,17 @@ class Minimap extends Field {
 		ctx.restore();
 	}
 
+	turn(state) {
+		this._state = state === "on";
+	}
+
 	update(delta, time) {
 		super.update(delta, time);
 	}
 
 	render(ctx) {
+		if (!this._state) return;
+
 		// draw base field once and render that here
 		ctx.drawImage(this.cvs[0], this.oX, this.oY);
 

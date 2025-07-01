@@ -16,6 +16,11 @@ class Stadium {
 		this.config.sW = this.field.sW + this.config.margin.l + this.config.margin.r;
 		this.config.sH = this.field.sH + this.config.margin.t + this.config.margin.b;
 		this.full = Utils.createCanvas(this.config.sW, this.config.sH);
+
+		// field borders + goal
+		this.bodies = [];
+		this.bodies.push(Matter.Bodies.rectangle(300, 300, 100, 100, { isStatic: true }));
+
 		// add ball to stadium
 		this.user = new User({ parent: this });
 		this.ball = new Ball({ parent: this, asset: parent.assets.ball });

@@ -106,6 +106,12 @@ class Player {
 			hH = this.h >> 2;
 		this.position.x = this.body.position.x + wH;
 		this.position.y = this.body.position.y + hH;
+
+		if (this.selected) {
+			// console.log( this.position.distance(this.parent.ball.position) );
+			// Drag.arena.stadium.ball.body.position.y = y;
+			// Drag.arena.stadium.ball.body.position.x = x;
+		}
 	}
 
 	render(ctx) {

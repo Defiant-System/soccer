@@ -17,7 +17,7 @@ class Arena {
 
 		// dev / debug purpose
 		this.debug = {
-			mode: 1,
+			mode: 2,
 		};
 
 		// create FPS controller
@@ -197,6 +197,7 @@ class Arena {
 	setPhysicalWorld() {
 		// add items to the physical world
 		let bodies = this.stadium.entries.map(item => item.body).filter(e => !!e);
+		bodies = bodies.concat(...this.stadium.bodies);
 		// physics setup
 		Matter.Composite.add(this.engine.world, bodies);
 	}
