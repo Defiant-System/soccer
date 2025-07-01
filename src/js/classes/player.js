@@ -8,6 +8,7 @@ class Player {
 
 		this.id = `player-${Date.now()}`;
 		this.name = name;
+		this.lastName = name.slice(name.indexOf(" ")+1);
 		this.num = num;
 		this.team = team;
 		this.side = side;
@@ -67,6 +68,20 @@ class Player {
 		this.strip = this.sheet[side == "home" ? "180" : "0"];
 	}
 
+	get selected() {
+		return this._selected;
+	}
+
+	set selected(v) {
+		this._selected = v;
+	}
+
+	select() {
+		this.selected = true;
+		if (this.parent.player) this.parent.player.selected = false;
+		this.parent.player = this;
+	}
+
 	move(force) {
 		force.x = force.x * this.speed;
 		force.y = force.y * this.speed;
@@ -104,6 +119,14 @@ class Player {
 		// player
 		ctx.save();
 		ctx.translate(x-wH, y-wH);
+
+		if (this.selected) {
+			ctx.fillStyle = "#fff2";
+			ctx.beginPath();
+			ctx.ellipse(0, 5, 60, 51, 0, 0, Math.TAU);
+			ctx.fill();
+		}
+
 		ctx.drawImage(this.asset.cvs, sheet[0], sheet[1], w, h, -wH, -wH, w, h);
 		// ctx.fillStyle = "#33e";
 		// ctx.beginPath();

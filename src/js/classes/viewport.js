@@ -36,6 +36,8 @@ class Viewport {
 	set zoom(v) {
 		this._zoom = v;
 		this.scale = Math.lerp(this._scaleMin, this._scaleMax, this._zoom/100);
+		this.oX = 300;
+		this.oY = 200;
 	}
 
 	get zoom() {
@@ -52,8 +54,8 @@ class Viewport {
 
 	center() {
 		let ball = this.arena.stadium.ball,
-			centerX = ball.position.x - this.half.w + this.shake.offsetX,
-			centerY = ball.position.y - this.half.h + this.shake.offsetY;
+			centerX = ball.position.x - this.half.w - this.oX + this.shake.offsetX,
+			centerY = ball.position.y - this.half.h - this.oY + this.shake.offsetY;
 		if (centerX < this.min.x) centerX = this.min.x;
 		if (centerY < this.min.y) centerY = this.min.y;
 		if (centerX > this.max.x) centerX = this.max.x;

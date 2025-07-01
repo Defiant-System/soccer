@@ -38,7 +38,7 @@ class Stadium {
 				this.entries.push(player);
 
 				// TEMP for initial development
-				if (side === "home" && i == 9) this.player = player;
+				if (side === "home" && i == 9) player.select();
 			});
 		});
 		// build physical world
