@@ -37,7 +37,7 @@ class Player {
 
 		// physical body
 		// this.body = Matter.Bodies.circle(x, y, 17, { density: .95, frictionAir: .05 });
-		this.body = Matter.Bodies.rectangle(x, y, 38, 19, { density: 1.15, frictionAir: .05 });
+		this.body = Matter.Bodies.rectangle(x, y, 22, 19, { density: 1.15, frictionAir: .05 });
 		this.body.label = this.id;
 		// prevents rotation
 		Matter.Body.setInertia(this.body, Infinity);
@@ -108,9 +108,9 @@ class Player {
 		this.position.y = this.body.position.y + hH;
 
 		if (this.selected) {
-			// console.log( this.position.distance(this.parent.ball.position) );
-			// Drag.arena.stadium.ball.body.position.y = y;
-			// Drag.arena.stadium.ball.body.position.x = x;
+			if (this.parent.ball.following !== this && this.position.distance(this.parent.ball.position) < 60) {
+				this.parent.ball.follow(this);
+			}
 		}
 	}
 

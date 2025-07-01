@@ -30,6 +30,12 @@ class Ball {
 		};
 	}
 
+	follow(player) {
+		this.following = player;
+		
+		console.log(player.name);
+	}
+
 	update(delta, time) {
 		this.frame.last -= delta;
 		if (this.frame.last < 0) {
