@@ -11,6 +11,9 @@ class Ball {
 		this.radius = this.gR >> 1;
 		this.angle = 0;
 
+		// follow no player
+		this.following = false;
+
 		// ball position
 		let x = ((this.parent.config.width * 22) / 2),
 			y = ((this.parent.config.height * 22) / 2) * .85;
@@ -32,8 +35,17 @@ class Ball {
 
 	follow(player) {
 		this.following = player;
-		
-		console.log(player.name);
+		// console.log(player.name);
+
+		let world = this.parent.parent.engine.world,
+			bodyA = this.following.body,
+			bodyB = this.body,
+			constraint = Matter.Constraint.create({
+		        bodyA, bodyB,
+		        pointA: { x: 0, y: 0 },
+		        pointB: { x: 0, y: 0 }
+		    });;
+		Matter.Composite.add(world, [bodyA, bodyB, constraint]);
 	}
 
 	update(delta, time) {
@@ -44,9 +56,11 @@ class Ball {
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
 
-		// this.angle = this.body.angle;
-		let vel = this.body.velocity;
-		this.angle = Math.atan2(vel.y, vel.x) - (Math.PI * 1.5);
+		if (this.body.speed > .1) {
+			// ball rolling direction
+			let vel = this.body.velocity;
+			this.angle = Math.atan2(vel.y, vel.x) - (Math.PI * 1.5);
+		}
 
 		// copy physical position to "this" internal position
 		this.position.x = this.body.position.x;

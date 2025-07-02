@@ -24,18 +24,18 @@ class Stadium {
 			bW = this.field.sW,
 			bH = this.field.sH;
 		// top side
-		this.bodies.push(Matter.Bodies.rectangle(bW*.5, -thick, bW+(thick*2), thick, { isStatic: true }));
+		this.bodies.push(Matter.Bodies.rectangle(bW*.5, -thick, bW+(thick*2), thick, { isSensor: true }));
 		// bottom side
-		this.bodies.push(Matter.Bodies.rectangle(bW*.5, bH+thick, bW+(thick*2), thick, { isStatic: true }));
-		// left side
-		this.bodies.push(Matter.Bodies.rectangle(bW+thick, bH*.5, thick, bH, { isStatic: true }));
+		this.bodies.push(Matter.Bodies.rectangle(bW*.5, bH+thick, bW+(thick*2), thick, { isSensor: true }));
 		// right side
-		this.bodies.push(Matter.Bodies.rectangle(-thick, bH*.5, thick, bH, { isStatic: true }));
+		this.bodies.push(Matter.Bodies.rectangle(bW+thick, bH*.5, thick, bH+25, { isSensor: true }));
+		// left side
+		this.bodies.push(Matter.Bodies.rectangle(-thick, bH*.5, thick, bH+25, { isSensor: true }));
 
 		// top goal
-		this.bodies.push(Matter.Bodies.rectangle(bW*.5, -thick, 210, thick*2, { isStatic: true }));
+		this.bodies.push(Matter.Bodies.rectangle(bW*.5, -thick, 210, thick*2, { isSensor: true }));
 		// bottom goal
-		this.bodies.push(Matter.Bodies.rectangle(bW*.5, bH+thick, 210, thick*2, { isStatic: true }));
+		this.bodies.push(Matter.Bodies.rectangle(bW*.5, bH+thick, 210, thick*2, { isSensor: true }));
 
 
 		// add ball to stadium

@@ -64,7 +64,11 @@ class Viewport {
 	}
 
 	scroll(x, y) {
-		this.x = x;
-		this.y = y;
+		// smooth scroll
+		this.x += (x - this.x) * .1;
+		this.y += (y - this.y) * .1;
+		// hard scroll
+		// this.x = x;
+		// this.y = y;
 	}
 }

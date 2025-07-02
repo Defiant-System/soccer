@@ -33,7 +33,7 @@ class Player {
 		this.position = new Point(x, y);
 		this.w = w;
 		this.h = h;
-		this.speed = +xPlayer.getAttribute("vel") / 4;
+		this.speed = +xPlayer.getAttribute("vel") / 6;
 
 		// physical body
 		// this.body = Matter.Bodies.circle(x, y, 17, { density: .95, frictionAir: .05 });
@@ -108,7 +108,7 @@ class Player {
 		this.position.y = this.body.position.y + hH;
 
 		if (this.selected) {
-			if (this.parent.ball.following !== this && this.position.distance(this.parent.ball.position) < 60) {
+			if (this.parent.ball.following !== this && this.position.distance(this.parent.ball.position) < 20) {
 				this.parent.ball.follow(this);
 			}
 		}
