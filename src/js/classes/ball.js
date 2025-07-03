@@ -21,7 +21,7 @@ class Ball {
 		this.position = new Point(x, y);
 
 		// physics body
-		this.body = Matter.Bodies.circle(x, y, this.radius-2, { density: .0001, frictionAir: .05 });
+		this.body = Matter.Bodies.circle(x, y, this.radius-2, { density: .95, frictionAir: .05 });
 		this.body.label = "ball";
 
 		// ball animation / rotation
@@ -47,6 +47,12 @@ class Ball {
 		        pointB: { x: 0, y: 0 }
 		    });;
 		Matter.Composite.add(world, [bodyA, bodyB, constraint]);
+	}
+
+	move(force) {
+		force.x = force.x * .5;
+		force.y = force.y * .5;
+		Matter.Body.applyForce(this.body, this.body.position, force);
 	}
 
 	update(delta, time) {

@@ -31,7 +31,8 @@ class User {
 		}
 
 		if (force.x !== 0 || force.y !== 0) {
-			this.player.move(force.scale(this.speed));
+			let item = this.parent.ball.following ? this.parent.ball : this.player;
+			item.move(force.scale(this.speed));
 		}
 	}
 
