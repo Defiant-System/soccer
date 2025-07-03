@@ -13,8 +13,8 @@ class Stadium {
 			away: { players: [] },
 		};
 		this.field = new Field({ ...config, scale, parent });
-
 		this.minimap = new Minimap({ config, parent: this });
+
 		// field dimensions
 		this.config.sW = this.field.sW + this.config.margin.l + this.config.margin.r;
 		this.config.sH = this.field.sH + this.config.margin.t + this.config.margin.b;
@@ -47,7 +47,7 @@ class Stadium {
 		this.bodies.push(Matter.Bodies.rectangle(-thick, bH*.5, thick, bH+25, { isSensor: true }));
 
 		// event handler
-		Matter.Events.on(this.parent.engine, "collisionStart", this.handleCollision);
+		Matter.Events.on(this.parent.engine, "collisionStart", this.handleCollision.bind(this));
 
 		// add ball to stadium
 		this.user = new User({ parent: this });
@@ -58,7 +58,17 @@ class Stadium {
 	}
 
 	handleCollision(event) {
-		console.log( event );
+		event.pairs.map(pair => {
+			let [a1, b1] = pair.bodyA.label.split("-"),
+				[a2, b2] = pair.bodyB.label.split("-"),
+				bBody = a1 === "ball" ? pair.bodyA : (a2 === "ball" ? pair.bodyB : null),
+				pBody = a1 === "player" ? pair.bodyA : (a2 === "player" ? pair.bodyB : null);
+			// console.log( pair.bodyA, pair.bodyB );
+			if (bBody && pBody) {
+				let player = this.players.find(p => p.body == pBody);
+				this.ball.follow(player);
+			}
+		});
 	}
 
 	setTeam(teams) {

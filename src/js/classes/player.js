@@ -18,7 +18,7 @@ class Player {
 			let { x, y } = this.positions[key];
 			// scale down
 			this.positions[key].x = ((x / 5) * 22);
-			this.positions[key].y = ((y / 4) * 22) * .85;
+			this.positions[key].y = ((y / 5) * 22);
 			// mirror
 			if (side == "home") {
 				this.positions[key].x = parent.field.sW - this.positions[key].x;

@@ -34,6 +34,7 @@ class Ball {
 	}
 
 	follow(player) {
+		if (this.following == player) return;
 		this.following = player;
 		// console.log(player.name);
 
