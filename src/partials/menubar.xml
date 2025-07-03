@@ -5,6 +5,8 @@
 		<Menu name="Quit Soccer" shell="win -c"/>
 	</Menu>
 	<Menu name="Game" for="game-content">
+		<Menu name="Toggle Minimap" click="toggle-minimap"/>
+		<Menu type="divider"/>
 		<Menu name="Show&#8230;">
 			<Menu name="Manager" click="show-view" arg="manager"/>
 			<Menu name="Stadium" click="show-view" arg="stadium"/>

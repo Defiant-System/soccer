@@ -196,15 +196,14 @@ class Arena {
 
 	setPhysicalWorld() {
 		// add items to the physical world
-		let bodies = this.stadium.entries.map(item => item.body).filter(e => !!e);
-		bodies = bodies.concat(...this.stadium.bodies);
+		let bodies = this.stadium.players.map(item => item.body).filter(e => !!e);
+		bodies = bodies.concat(...this.stadium.bodies, this.stadium.ball.body);
 		// physics setup
 		Matter.Composite.add(this.engine.world, bodies);
 	}
 
 	update(delta, time) {
-		// update entries
-		this.stadium.entries.map(item => item.update(delta, time));
+		this.stadium.update(delta, time);
 		this.viewport.update(delta, time);
 		this.stadium.minimap.update(delta, time);
 	}
@@ -230,7 +229,7 @@ class Arena {
 		this.ctx.save();
 		this.ctx.scale(this.viewport.scale, this.viewport.scale);
 		this.ctx.translate(this.config.margin.l + tX, this.config.margin.t + tY);
-		this.stadium.entries.map(entry => entry.render(this.ctx));
+		this.stadium.render(this.ctx);
 		
 		if (this.debug.mode >= 2) {
 			let bodies = Matter.Composite.allBodies(this.engine.world);

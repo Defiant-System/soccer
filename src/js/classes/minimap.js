@@ -44,8 +44,12 @@ class Minimap extends Field {
 		ctx.restore();
 	}
 
+	get isActive() {
+		return this._state;
+	}
+
 	turn(state) {
-		this._state = state === "on";
+		this._state = state != "off";
 	}
 
 	update(delta, time) {
@@ -62,7 +66,7 @@ class Minimap extends Field {
 		ctx.translate(this.oX+4, this.oY+4);
 		// ctx.globalCompositeOperation = "hard-light";
 		// render player positions
-		this.parent.entries
+		this.parent.players
 			.filter(item => item.id?.startsWith("player-"))
 			.map(player => {
 				let r = 2.5,

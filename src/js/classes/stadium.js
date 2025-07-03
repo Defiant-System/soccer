@@ -7,8 +7,11 @@ class Stadium {
 		this.assets = assets;
 		this.config = config;
 
-		this.entries = [];
-		this.patterns = {};
+		this.players = [];
+		this.team = {
+			home: { players: [] },
+			away: { players: [] },
+		};
 		this.field = new Field({ ...config, scale, parent });
 
 		this.minimap = new Minimap({ config, parent: this });
@@ -20,23 +23,31 @@ class Stadium {
 		// field borders + goal
 		this.bodies = [];
 
-		let thick = 25,
+		let gW = 210,
+			thick = 25,
 			bW = this.field.sW,
 			bH = this.field.sH;
-		// top side
-		this.bodies.push(Matter.Bodies.rectangle(bW*.5, -thick, bW+(thick*2), thick, { isSensor: true }));
-		// bottom side
-		this.bodies.push(Matter.Bodies.rectangle(bW*.5, bH+thick, bW+(thick*2), thick, { isSensor: true }));
+		// top left
+		this.bodies.push(Matter.Bodies.rectangle((bW-gW-25)*.25, -thick, (bW-gW+25)*.5, thick, { isSensor: true }));
+		// top goal
+		this.bodies.push(Matter.Bodies.rectangle(bW*.5, -thick, gW, thick*2, { isSensor: true }));
+		// top right
+		this.bodies.push(Matter.Bodies.rectangle(bW-((bW-gW-25)*.25), -thick, (bW-gW+25)*.5, thick, { isSensor: true }));
+
+		// bottom left
+		this.bodies.push(Matter.Bodies.rectangle((bW-gW-25)*.25, bH+thick, (bW-gW+25)*.5, thick, { isSensor: true }));
+		// bottom goal
+		this.bodies.push(Matter.Bodies.rectangle(bW*.5, bH+thick, gW, thick*2, { isSensor: true }));
+		// bottom right
+		this.bodies.push(Matter.Bodies.rectangle(bW-((bW-gW-25)*.25), bH+thick, (bW-gW+25)*.5, thick, { isSensor: true }));
+
 		// right side
 		this.bodies.push(Matter.Bodies.rectangle(bW+thick, bH*.5, thick, bH+25, { isSensor: true }));
 		// left side
 		this.bodies.push(Matter.Bodies.rectangle(-thick, bH*.5, thick, bH+25, { isSensor: true }));
 
-		// top goal
-		this.bodies.push(Matter.Bodies.rectangle(bW*.5, -thick, 210, thick*2, { isSensor: true }));
-		// bottom goal
-		this.bodies.push(Matter.Bodies.rectangle(bW*.5, bH+thick, 210, thick*2, { isSensor: true }));
-
+		// event handler
+		Matter.Events.on(this.parent.engine, "collisionStart", this.handleCollision);
 
 		// add ball to stadium
 		this.user = new User({ parent: this });
@@ -44,10 +55,10 @@ class Stadium {
 
 		// paint full hi-res stadium
 		this.paint();
+	}
 
-		// add user & ball
-		this.entries.push(this.user);
-		this.entries.push(this.ball);
+	handleCollision(event) {
+		console.log( event );
 	}
 
 	setTeam(teams) {
@@ -57,10 +68,9 @@ class Stadium {
 				let assetId = `${side} ${opt.num == "1" ? "goalie" : "player"}`;
 				let asset = this.parent.fixtures.find(e => e.name == assetId);
 				let player = new Player({ ...opt, side, team: teams[side], parent: this, asset });
-				this.entries.push(player);
-
-				// TEMP for initial development
-				if (side === "home" && i == 9) player.select();
+				this.players.push(player);
+				// populate team players array
+				this.team[side].players.push(player);
 			});
 		});
 		// build physical world
@@ -130,10 +140,33 @@ class Stadium {
 	}
 
 	update(delta, time) {
-		
+		// update user
+		this.user.update(delta, time);
+		// update players
+		this.players.map(player => player.update(delta, time));
+
+		// makes closest player automatically active
+		let closest = { distance: Infinity, player: null };
+		this.team.home.players.map(player => {
+			let distance = player.position.distance(this.ball.position);
+			if (distance < closest.distance) {
+				closest.distance = distance;
+				closest.player = player;
+			}
+		});
+		// unselect previous selected, if any
+		if (this.team.home.selected) this.team.home.selected.active = false;
+		// select player
+		closest.player.active = true;
+		this.team.home.selected = closest.player;
+
+		// update ball
+		this.ball.update(delta, time);
 	}
 
 	render(ctx) {
-		
+		this.user.render(ctx);
+		this.players.map(player => player.render(ctx));
+		this.ball.render(ctx);
 	}
 }

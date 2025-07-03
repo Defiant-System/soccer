@@ -97,6 +97,9 @@
 			case "set-formation":
 				console.log(event);
 				break;
+			case "toggle-minimap":
+				Self.arena.stadium.minimap.turn(Self.arena.stadium.minimap.isActive ? "off" : "on");
+				break;
 			case "add-teams":
 				let teams = {
 						home: { name: "Sweden" },

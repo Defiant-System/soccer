@@ -27,7 +27,7 @@ class User {
 		}
 
 		if (!this.player) {
-			this.player = this.parent.player;
+			this.player = this.parent.team.home.selected;
 		}
 
 		if (force.x !== 0 || force.y !== 0) {
@@ -36,6 +36,18 @@ class User {
 	}
 
 	render(ctx) {
-		
+		if (this.player) {
+			let wH = this.player.w >> 1,
+				x = this.player.position.x-wH,
+				y = this.player.position.y-wH;
+			// player
+			ctx.save();
+			ctx.translate(x, y);
+			ctx.fillStyle = "#fff2";
+			ctx.beginPath();
+			ctx.ellipse(0, 5, 60, 51, 0, 0, Math.TAU);
+			ctx.fill();
+			ctx.restore();
+		}
 	}
 }

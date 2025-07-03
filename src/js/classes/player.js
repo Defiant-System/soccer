@@ -36,8 +36,8 @@ class Player {
 		this.speed = +xPlayer.getAttribute("vel") / 6;
 
 		// physical body
-		// this.body = Matter.Bodies.circle(x, y, 17, { density: .95, frictionAir: .05 });
-		this.body = Matter.Bodies.rectangle(x, y, 22, 19, { density: 1.15, frictionAir: .05 });
+		this.body = Matter.Bodies.circle(x, y, 12, { density: .95, frictionAir: .05 });
+		// this.body = Matter.Bodies.rectangle(x, y, 22, 19, { density: 1.15, frictionAir: .05 });
 		this.body.label = this.id;
 		// prevents rotation
 		Matter.Body.setInertia(this.body, Infinity);
@@ -68,18 +68,12 @@ class Player {
 		this.strip = this.sheet[side == "home" ? "180" : "0"];
 	}
 
-	get selected() {
+	get active() {
 		return this._selected;
 	}
 
-	set selected(v) {
+	set active(v) {
 		this._selected = v;
-	}
-
-	select() {
-		this.selected = true;
-		if (this.parent.player) this.parent.player.selected = false;
-		this.parent.player = this;
 	}
 
 	move(force) {
@@ -102,16 +96,16 @@ class Player {
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
 		// copy physical position to "this" internal position
-		let wH = this.w >> 1,
-			hH = this.h >> 2;
+		let wH = (this.w >> 1) - .5,
+			hH = (this.h >> 2) + 5;
 		this.position.x = this.body.position.x + wH;
 		this.position.y = this.body.position.y + hH;
 
-		if (this.selected) {
-			if (this.parent.ball.following !== this && this.position.distance(this.parent.ball.position) < 20) {
-				this.parent.ball.follow(this);
-			}
-		}
+		// if (this.selected) {
+		// 	if (this.parent.ball.following !== this && this.position.distance(this.parent.ball.position) < 20) {
+		// 		this.parent.ball.follow(this);
+		// 	}
+		// }
 	}
 
 	render(ctx) {
@@ -125,14 +119,6 @@ class Player {
 		// player
 		ctx.save();
 		ctx.translate(x-wH, y-wH);
-
-		if (this.selected) {
-			ctx.fillStyle = "#fff2";
-			ctx.beginPath();
-			ctx.ellipse(0, 5, 60, 51, 0, 0, Math.TAU);
-			ctx.fill();
-		}
-
 		ctx.drawImage(this.asset.cvs, sheet[0], sheet[1], w, h, -wH, -wH, w, h);
 		// ctx.fillStyle = "#33e";
 		// ctx.beginPath();

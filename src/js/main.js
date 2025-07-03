@@ -53,6 +53,7 @@ const soccer = {
 				karaqu.shell("fs -u '~/help/index.md'");
 				break;
 			// proxy event
+			case "toggle-minimap":
 			case "set-debug-mode":
 				return Self.stadium.dispatch(event);
 			// proxy events

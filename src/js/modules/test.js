@@ -20,6 +20,6 @@ let Test = {
 
 		// setTimeout(() => APP.stadium.dispatch({ type: "set-formation", arg: "4-2-2-2" }), 1000);
 
-		// setTimeout(() => APP.stadium.arena.fpsControl.stop(), 10000);
+		setTimeout(() => APP.stadium.arena.fpsControl.stop(), 10000);
 	}
 };
