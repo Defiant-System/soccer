@@ -180,7 +180,10 @@ class Stadium {
 
 	render(ctx) {
 		this.user.render(ctx);
-		this.players.map(player => player.render(ctx));
-		this.ball.render(ctx);
+		[...this.players, this.ball]
+			.sort((a, b) => a.position.y - b.position.y)
+			.map(item => item.render(ctx));
+		// this.players.map(player => player.render(ctx));
+		// this.ball.render(ctx);
 	}
 }
