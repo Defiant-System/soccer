@@ -21,7 +21,7 @@ class Ball {
 		this.position = new Point(x, y);
 
 		// physics body
-		this.body = Matter.Bodies.circle(x, y, this.radius-2, { density: .95, frictionAir: .05 });
+		this.body = Matter.Bodies.circle(x, y, this.radius-2, { density: .9, frictionAir: .05 });
 		this.body.label = "ball";
 
 		// ball animation / rotation

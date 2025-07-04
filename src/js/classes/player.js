@@ -88,24 +88,29 @@ class Player {
 		this.strip = this.sheet[angle];
 	}
 
-	update(delta, time) {
+	update(delta, time, sec) {
 		this.frame.last -= delta;
 		if (this.frame.last < 0) {
 			this.frame.last = (this.frame.last + this.frame.speed) % this.frame.speed;
 			this.frame.index += this.body.speed * .1;
 			if (this.frame.index > this.frame.total) this.frame.index = 0;
 		}
+		// once a sec - turn towards to the ball
+		if (sec) {
+			let target = this.parent.ball.position,
+				dir = this.position.direction(target),
+				angle = Math.round((dir * 180 / Math.PI) + 90),
+				mod = angle % 45;
+			angle += mod < 45 ? -mod : mod;
+			if (angle < 0) angle += 360;
+			// turn player towards the ball
+			this.strip = this.sheet[angle];
+		}
 		// copy physical position to "this" internal position
 		let wH = (this.w >> 1) - .5,
 			hH = (this.h >> 2) + 5;
 		this.position.x = this.body.position.x + wH;
 		this.position.y = this.body.position.y + hH;
-
-		// if (this.selected) {
-		// 	if (this.parent.ball.following !== this && this.position.distance(this.parent.ball.position) < 20) {
-		// 		this.parent.ball.follow(this);
-		// 	}
-		// }
 	}
 
 	render(ctx) {
@@ -120,10 +125,6 @@ class Player {
 		ctx.save();
 		ctx.translate(x-wH, y-wH);
 		ctx.drawImage(this.asset.cvs, sheet[0], sheet[1], w, h, -wH, -wH, w, h);
-		// ctx.fillStyle = "#33e";
-		// ctx.beginPath();
-		// ctx.arc(0, 0, 4, 0, Math.TAU);
-		// ctx.fill();
 		ctx.restore();
 	}
 }

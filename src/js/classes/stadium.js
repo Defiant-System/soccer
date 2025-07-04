@@ -152,8 +152,12 @@ class Stadium {
 	update(delta, time) {
 		// update user
 		this.user.update(delta, time);
+
 		// update players
-		this.players.map(player => player.update(delta, time));
+		let sec = (time / 1000) | 0;
+		if (sec == this._sec) sec = undefined;
+		else this._sec = sec;
+		this.players.map(player => player.update(delta, time, sec));
 
 		// makes closest player automatically active
 		let closest = { distance: Infinity, player: null };
