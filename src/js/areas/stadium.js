@@ -17,6 +17,7 @@
 		let APP = soccer,
 			Self = APP.stadium,
 			User = Self.arena.stadium ? Self.arena.stadium.user : null,
+			value,
 			el;
 		// console.log(event);
 		switch (event.type) {
@@ -98,13 +99,14 @@
 				console.log(event);
 				break;
 			case "toggle-minimap":
-				Self.arena.stadium.minimap.turn(Self.arena.stadium.minimap.isActive ? "off" : "on");
+				if (Self.arena.stadium) {
+					value = Self.arena.stadium.minimap.isActive ? "off" : "on";
+					if (event.value && Self.arena.stadium.minimap.isActive) return;
+					Self.arena.stadium.minimap.turn(value);
+				}
 				break;
 			case "add-teams":
-				let teams = {
-						home: { name: "Sweden" },
-						away: { name: "Turkiye" },
-					};
+				let teams = APP.settings.teams;
 				Object.keys(teams).map(key => {
 					let xBeginHome = window.bluePrint.selectSingleNode(`//Formations/form[@id="begin-home"]`),
 						xBeginAway = window.bluePrint.selectSingleNode(`//Formations/form[@id="begin-away"]`);

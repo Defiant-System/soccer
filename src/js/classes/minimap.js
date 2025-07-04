@@ -27,7 +27,7 @@ class Minimap extends Field {
 		this.ctx = ctx;
 		this.width = width;
 		this.height= height;
-		this._state = 1;
+		this._state = soccer.settings.minimap === "on";
 
 		// semi-transparent box
 		ctx.save();

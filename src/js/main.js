@@ -19,6 +19,18 @@
 const Matter = window.Matter;
 
 
+// default settings
+const defaultSettings = {
+	"music": "on",
+	"sound-fx": "on",
+	"minimap": "on",
+	"teams": {
+		home: { name: "Sweden" },
+		away: { name: "Italy" },
+	},
+};
+
+
 const soccer = {
 	init() {
 		// fast references
@@ -28,6 +40,9 @@ const soccer = {
 		Object.keys(this)
 			.filter(i => typeof this[i].init === "function")
 			.map(i => this[i].init(this));
+
+		// init settings
+		this.dispatch({ type: "init-settings" });
 
 		// temp active area
 		this.active = "stadium";
@@ -44,6 +59,10 @@ const soccer = {
 			// system events
 			case "window.init":
 				break;
+			case "window.close":
+				// save settings
+				// window.settings.setItem("settings", Self.settings);
+				break;
 			// custom events
 			case "show-view":
 				Self.content.data({ show: event.arg });
@@ -51,6 +70,19 @@ const soccer = {
 				break;
 			case "open-help":
 				karaqu.shell("fs -u '~/help/index.md'");
+				break;
+			case "init-settings":
+				// get settings, if any
+				Self.settings = window.settings.getItem("settings") || defaultSettings;
+				// settings
+				["music", "sound-fx", "minimap"].map(e => {
+					let value = Self.settings[e] === "on";
+					Self.dispatch({ type: `toggle-${e}`, value });
+				});
+				break;
+			case "toggle-music":
+			case "toggle-sound-fx":
+				// TODO
 				break;
 			// proxy event
 			case "toggle-minimap":

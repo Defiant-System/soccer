@@ -6,6 +6,7 @@
 	@import "data/countries/germany.xml"
 	@import "data/countries/england.xml"
 	@import "data/countries/france.xml"
+	@import "data/countries/italy.xml"
 	@import "data/countries/spain.xml"
 	@import "data/countries/portugal.xml"
 	@import "data/countries/holland.xml"

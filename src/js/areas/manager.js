@@ -24,21 +24,26 @@
 			// custom events
 			case "init-view":
 				// default pain
+				Self.dispatch({ type: "teams-info", ...APP.settings.teams });
+				Self.dispatch({ type: "render-team-list", ...APP.settings.teams });
 				Self.dispatch({ type: "draw-field" });
-				Self.dispatch({ type: "render-team-list", home: "Sweden", away: "Turkiye" });
+				break;
+			case "teams-info":
+				Self.els.el.find(`.head h3.home-team`).html(event.home.name);
+				Self.els.el.find(`.head h3.away-team`).html(event.away.name);
 				break;
 			case "render-team-list":
 				// team troop list
 				window.render({
 					template: "team-list",
-					match: `//data/team[@name="${event.home}"]`,
+					match: `//data/team[@name="${event.home.name}"]`,
 					target: Self.els.list,
 				});
 				// team formation
 				window.render({
 					template: "team-formation",
 					// match: `//data/Formations/form[@id="4-4-2"]`,
-					match: `//data/team[@name="${event.home}"]`,
+					match: `//data/team[@name="${event.home.name}"]`,
 					target: Self.els.form,
 				});
 				break;

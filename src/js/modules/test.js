@@ -2,12 +2,13 @@
 let Test = {
 	init(APP) {
 
+		// return APP.dispatch({ type: "show-view", arg: "manager" });
+
 		APP.dispatch({ type: "show-view", arg: "stadium" });
 
 		setTimeout(() => {
 			APP.stadium.dispatch({ type: "add-teams" });
 			APP.stadium.arena.fpsControl.start();
-			APP.stadium.arena.stadium.minimap.turn("off")
 		}, 400);
 
 		setTimeout(() => {

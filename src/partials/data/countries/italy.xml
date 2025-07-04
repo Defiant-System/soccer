@@ -1,5 +1,5 @@
 
-<team type="national" name="Italy" form="4-4-2" colors="[[255,0,0],[255,255,255]]">
+<team type="national" name="Italy" form="4-4-2" colors="[[72,72,196],[130,130,252]]">
 	<i num="1" name="Angelo Peruzzi" price="1.8M" pos="G" nat="Ita" />
 	<i num="2" name="Roberto Mussi" price="2.25M" pos="RB" nat="Ita" pass="5" vel="4" head="4" tackling="7" ball="5" speed="7" finish="4" total="36" />
 	<i num="3" name="Paolo Maldini" price="15M" pos="LB" nat="Ita" pass="7" vel="7" head="7" tackling="7" ball="7" speed="7" finish="7" total="49" />
