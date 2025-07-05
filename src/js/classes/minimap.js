@@ -70,8 +70,8 @@ class Minimap extends Field {
 			.filter(item => item.id?.startsWith("player-"))
 			.map(player => {
 				let r = 2.5,
-					x = ((player.position.x / 22) * 2) - r,
-					y = ((player.position.y / .85 / 22) * 2) - r,
+					x = ((player.position.home.x / 22) * 2) - r,
+					y = ((player.position.home.y / .85 / 22) * 2) - r,
 					c = player.team.colors[0];
 				ctx.fillStyle = `rgba(${c[0]}, ${c[1]}, ${c[2]}, .75)`;
 				ctx.beginPath();
@@ -80,7 +80,7 @@ class Minimap extends Field {
 			});
 		// render ball
 		let r = 3,
-			{ x, y } = this.parent.ball.position;
+			{ x, y } = this.parent.ball.position.home;
 		x = ((x / 22) * 2);
 		y = ((y / .85 / 22) * 2);
 		ctx.fillStyle = `#fff`;

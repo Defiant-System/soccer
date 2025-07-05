@@ -17,7 +17,7 @@ class Arena {
 
 		// dev / debug purpose
 		this.debug = {
-			mode: 1,
+			mode: 2,
 		};
 
 		// create FPS controller
@@ -250,8 +250,8 @@ class Arena {
 
 			/* draws ball direction
 			let ball = this.stadium.ball,
-				x = ball.position.x,
-				y = ball.position.y,
+				x = ball.position.home.x,
+				y = ball.position.home.y,
 				r = ball.radius;
 			this.ctx.save();
 			this.ctx.translate(x, y);

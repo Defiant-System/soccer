@@ -1,7 +1,7 @@
 
 @import "./classes/simplexnoise.js"
 @import "./classes/point.js"
-@import "./classes/user.js"
+@import "./classes/input.js"
 @import "./classes/arena.js"
 @import "./classes/viewport.js"
 @import "./classes/stadium.js"

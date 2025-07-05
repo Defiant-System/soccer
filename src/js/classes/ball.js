@@ -12,16 +12,18 @@ class Ball {
 		this.angle = 0;
 
 		// follow no player
-		this.following = false;
+		this.linked = false;
 
 		// ball position
 		let x = ((this.parent.config.width * 22) / 2),
 			y = ((this.parent.config.height * 22) / 2) * .85;
 		// x = 0; y = 0;
-		this.position = new Point(x, y);
+		this.position = {
+			home: new Point(x, y),
+		};
 
 		// physics body
-		this.body = Matter.Bodies.circle(x, y, this.radius-2, { density: .9, frictionAir: .05 });
+		this.body = Matter.Bodies.circle(x, y, this.radius-2, { density: 2.9, frictionAir: .05 });
 		this.body.label = "ball";
 
 		// ball animation / rotation
@@ -33,20 +35,28 @@ class Ball {
 		};
 	}
 
-	follow(player) {
-		if (this.following == player) return;
-		this.following = player;
+	unlink() {
+		let bodies = [this.linked.body, this.body];
+		Matter.Composite.add(this.composite, bodies);
+		delete this.composite;
+	}
+
+	link(player) {
+		if (this.linked == player) return;
+		else if (this.linked) return this.unlink();
+		
+		this.linked = player;
 		// console.log(player.name);
 
 		let world = this.parent.parent.engine.world,
-			bodyA = this.following.body,
+			bodyA = this.linked.body,
 			bodyB = this.body,
 			constraint = Matter.Constraint.create({
 		        bodyA, bodyB,
 		        pointA: { x: 0, y: 0 },
 		        pointB: { x: 0, y: 0 }
 		    });;
-		Matter.Composite.add(world, [bodyA, bodyB, constraint]);
+		this.composite = Matter.Composite.add(world, [bodyA, bodyB, constraint]);
 	}
 
 	move(force) {
@@ -70,16 +80,16 @@ class Ball {
 		}
 
 		// copy physical position to "this" internal position
-		this.position.x = this.body.position.x;
-		this.position.y = this.body.position.y;
+		this.position.home.x = this.body.position.x;
+		this.position.home.y = this.body.position.y;
 	}
 
 	render(ctx) {
 		let w1 = this.oR,
 			w2 = this.gR,
 			f = (this.frame.index | 0) * w1,
-			x = this.position.x,
-			y = this.position.y,
+			x = this.position.home.x,
+			y = this.position.home.y,
 			r = this.radius,
 			gradient;
 		// ball

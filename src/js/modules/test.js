@@ -19,7 +19,8 @@ let Test = {
 			APP.stadium.arena.viewport.center();
 		}, 500);
 
-		// setTimeout(() => APP.stadium.dispatch({ type: "set-formation", arg: "4-2-2-2" }), 1000);
+		setTimeout(() => APP.stadium.dispatch({ type: "set-formation", team: "away", arg: "4-4-2" }), 1000);
+
 
 		setTimeout(() => APP.stadium.arena.fpsControl.stop(), 10000);
 	}

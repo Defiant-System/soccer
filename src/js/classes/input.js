@@ -1,12 +1,12 @@
 
-class User {
+class Input {
 	constructor(cfg) {
 		let { parent } = cfg;
 
 		this.parent = parent;
 		this.speed = .5;
 
-		this.input = {
+		this.keys = {
 			up:    { pressed: false, force: { x: 0, y: -1 } },
 			left:  { pressed: false, force: { x: -1, y: 0 } },
 			down:  { pressed: false, force: { x: 0, y: 1 } },
@@ -17,9 +17,9 @@ class User {
 	update(delta, time) {
 		// USER input
 		let force = new Point(0, 0);
-		for (let key in this.input) {
-			if (this.input[key].pressed) {
-				let f = this.input[key].force;
+		for (let k in this.keys) {
+			if (this.keys[k].pressed) {
+				let f = this.keys[k].force;
 				if (!f) return;
 				if (f.x != 0) force.x = f.x;
 				if (f.y != 0) force.y = f.y;
@@ -31,8 +31,9 @@ class User {
 		}
 
 		if (force.x !== 0 || force.y !== 0) {
-			let item = this.parent.ball.following ? this.parent.ball : this.player;
-			item.move(force.scale(this.speed));
+			// let item = this.parent.ball.linked ? this.parent.ball : this.player;
+			// item.move(force.scale(this.speed));
+			this.player.move(force.scale(this.speed));
 		}
 	}
 

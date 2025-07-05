@@ -16,7 +16,8 @@
 	async dispatch(event) {
 		let APP = soccer,
 			Self = APP.stadium,
-			User = Self.arena.stadium ? Self.arena.stadium.user : null,
+			Input = Self.arena.stadium ? Self.arena.stadium.input : null,
+			teams,
 			value,
 			el;
 		// console.log(event);
@@ -25,14 +26,14 @@
 			case "window.keydown":
 				switch (event.char) {
 					case "w":
-					case "up": User.input.up.pressed = true; break;
+					case "up": Input.keys.up.pressed = true; break;
 					case "s":
-					case "down": User.input.down.pressed = true; break;
+					case "down": Input.keys.down.pressed = true; break;
 					case "a":
-					case "left": User.input.left.pressed = true; break;
+					case "left": Input.keys.left.pressed = true; break;
 					case "d":
-					case "right": User.input.right.pressed = true; break;
-					case "space": User.input.shoot.pressed = true; break;
+					case "right": Input.keys.right.pressed = true; break;
+					case "space": Input.keys.shoot.pressed = true; break;
 					case "p":
 						if (Self.arena.fpsControl._stopped) Self.arena.fpsControl.start();
 						else Self.arena.fpsControl.stop();
@@ -42,15 +43,15 @@
 			case "window.keyup":
 				switch (event.char) {
 					case "w":
-					case "up": User.input.up.pressed = false; break;
+					case "up": Input.keys.up.pressed = false; break;
 					case "s":
-					case "down": User.input.down.pressed = false; break;
+					case "down": Input.keys.down.pressed = false; break;
 					case "a":
-					case "left": User.input.left.pressed = false; break;
+					case "left": Input.keys.left.pressed = false; break;
 					case "d":
-					case "right": User.input.right.pressed = false; break;
+					case "right": Input.keys.right.pressed = false; break;
 					case "space":
-						User.input.shoot.pressed = false;
+						Input.keys.shoot.pressed = false;
 						break;
 				}
 				break;
@@ -63,10 +64,10 @@
 				let x = event.value[0],
 					y = event.value[1];
 				if (event.stick === "left") {
-					User.input.left.pressed = x < 0;
-					User.input.right.pressed = x > 0;
-					User.input.up.pressed = y < 0;
-					User.input.down.pressed = y > 0;
+					Input.keys.left.pressed = x < 0;
+					Input.keys.right.pressed = x > 0;
+					Input.keys.up.pressed = y < 0;
+					Input.keys.down.pressed = y > 0;
 				} else {
 					// set ship angle
 					let angle = Math.atan2(x, -y),
@@ -81,22 +82,19 @@
 			case "gamepad.down":
 				switch (event.button) {
 					case "b0": // x - shoot
-						User.input.shoot.pressed = true;
+						Input.keys.shoot.pressed = true;
 						break;
 				}
 				break;
 			case "gamepad.up":
 				switch (event.button) {
 					case "b0": // x - shoot
-						User.input.shoot.pressed = false;
+						Input.keys.shoot.pressed = false;
 						break;
 				}
 				break;
 			// custom events
 			case "init-view":
-				break;
-			case "set-formation":
-				console.log(event);
 				break;
 			case "toggle-minimap":
 				if (Self.arena.stadium) {
@@ -106,7 +104,7 @@
 				}
 				break;
 			case "add-teams":
-				let teams = APP.settings.teams;
+				teams = APP.settings.teams;
 				Object.keys(teams).map(key => {
 					let xBeginHome = window.bluePrint.selectSingleNode(`//Formations/form[@id="begin-home"]`),
 						xBeginAway = window.bluePrint.selectSingleNode(`//Formations/form[@id="begin-away"]`);
@@ -123,26 +121,34 @@
 								xBegin2 = xBeginAway.selectSingleNode(`./i[@num="${num}"]`),
 								xPlayer = teams[key].xTeam.selectSingleNode(`./i[@num = "${num}"]`),
 								name = xPlayer.getAttribute("name"),
-								positions = {
-									home: {
-										y: +xPos.getAttribute("y"),
-										x: +xPos.getAttribute("x"),
-									},
-									begin1: {
-										y: +xBegin1.getAttribute("y"),
-										x: +xBegin1.getAttribute("x"),
-									},
-									begin2: {
-										y: +xBegin2.getAttribute("y"),
-										x: +xBegin2.getAttribute("x"),
-									},
-								};
-							return { name, num, positions, xPlayer };
+								position = {};
+
+								if (key === "home") {
+									position.y = +xBegin1.getAttribute("y");
+									position.x = +xBegin1.getAttribute("x");
+								} else {
+									position.y = +xBegin2.getAttribute("y");
+									position.x = +xBegin2.getAttribute("x");
+								}
+
+							return { name, num, position, xPlayer };
 						});
 				});
-				this.arena.setTeamColors(teams);
-				this.arena.setStadium();
-				this.arena.setTeam(teams);
+				Self.arena.setTeamColors(teams);
+				Self.arena.setStadium();
+				Self.arena.setTeam(teams);
+				break;
+			case "set-formation":
+				// console.log(teams, event);
+				Self.arena.stadium.team[event.team].players.map(player => {
+					let xPath = `//Formations/form[@id = "${event.arg}"]/i[@num = "${player.num}"]`,
+						xPos = window.bluePrint.selectSingleNode(xPath),
+						x = +xPos.getAttribute("x"),
+						y = +xPos.getAttribute("y");
+					// set new position as target > "home"
+					player.setTarget({ x, y });
+					// console.log(event.team, player.name, { x, y });
+				});
 				break;
 			case "set-debug-mode":
 				Self.arena.setDebug(+event.arg);
@@ -168,8 +174,8 @@
 				let doc = $(document),
 					arena = Self.arena,
 					offset = {
-						y: arena.stadium.ball.position.y,
-						x: arena.stadium.ball.position.x,
+						y: arena.stadium.ball.position.home.y,
+						x: arena.stadium.ball.position.home.x,
 					},
 					click = {
 						y: event.clientY,

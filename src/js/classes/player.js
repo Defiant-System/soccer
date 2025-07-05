@@ -1,7 +1,7 @@
 
 class Player {
 	constructor(cfg) {
-		let { parent, asset, name, num, team, side, positions, xPlayer } = cfg;
+		let { parent, asset, name, num, team, side, position, xPlayer } = cfg;
 
 		this.parent = parent;
 		this.asset = asset;
@@ -12,25 +12,16 @@ class Player {
 		this.num = num;
 		this.team = team;
 		this.side = side;
-		this.positions = positions;
 
-		Object.keys(this.positions).map(key => {
-			let { x, y } = this.positions[key];
-			// scale down
-			this.positions[key].x = ((x / 5) * 22);
-			this.positions[key].y = ((y / 5) * 22);
-			// mirror
-			if (side == "home") {
-				this.positions[key].x = parent.field.sW - this.positions[key].x;
-				this.positions[key].y = parent.field.sH - this.positions[key].y;
-			}
-		});
+		let { x, y } = this.translatePosition(position);
+		this.position = {
+			home: new Point(x, y),
+			target: new Point(x, y),
+		};
 
 		let pixScale = parent.parent.pixScale,
 			w = 19 * pixScale,
-			h = 19 * pixScale,
-			{ x, y } = this.positions[side == "home" ? "begin1" : "begin2"];
-		this.position = new Point(x, y);
+			h = 19 * pixScale;
 		this.w = w;
 		this.h = h;
 		this.speed = +xPlayer.getAttribute("vel") / 6;
@@ -69,11 +60,28 @@ class Player {
 	}
 
 	get active() {
-		return this._selected;
+		return this._isPlayer;
 	}
 
 	set active(v) {
-		this._selected = v;
+		this._isPlayer = v;
+	}
+
+	translatePosition(pos) {
+		// scale down
+		let x = ((pos.x / 5) * 22);
+		let y = ((pos.y / 5) * 22);
+		// mirror
+		if (this.side == "home") {
+			x = this.parent.field.sW - x;
+			y = this.parent.field.sH - y;
+		}
+		return { x, y };
+	}
+
+	setTarget(pos) {
+		let { x, y } = this.translatePosition(pos);
+		this.position.target = new Point(x, y);
 	}
 
 	move(force) {
@@ -81,11 +89,11 @@ class Player {
 		force.y = force.y * this.speed;
 		Matter.Body.applyForce(this.body, this.body.position, force);
 		// player direction
-		let target = this.position.add(force),
-			dir = this.position.direction(target),
+		let target = this.position.home.add(force),
+			dir = this.position.home.direction(target),
 			angle = Math.round((dir * 180 / Math.PI) + 90);
 		if (angle < 0) angle += 360;
-		this.strip = this.sheet[angle];
+		// this.strip = this.sheet[angle];
 	}
 
 	update(delta, time, sec) {
@@ -97,8 +105,8 @@ class Player {
 		}
 		// once a sec - turn towards to the ball
 		if (sec) {
-			let target = this.parent.ball.position,
-				dir = this.position.direction(target),
+			let target = this.parent.ball.position.home,
+				dir = this.position.home.direction(target),
 				angle = Math.round((dir * 180 / Math.PI) + 90),
 				mod = angle % 45;
 			angle += mod < 45 ? -mod : mod;
@@ -106,11 +114,22 @@ class Player {
 			// turn player towards the ball
 			this.strip = this.sheet[angle];
 		}
-		// copy physical position to "this" internal position
-		let wH = (this.w >> 1) - .5,
-			hH = (this.h >> 2) + 5;
-		this.position.x = this.body.position.x + wH;
-		this.position.y = this.body.position.y + hH;
+
+		if (this._isPlayer) {
+			// copy physical position to "this" internal position
+			let wH = (this.w >> 1) - .5,
+				hH = (this.h >> 2) + 5;
+			this.position.home.x = this.body.position.x + wH;
+			this.position.home.y = this.body.position.y + hH;
+		} else {
+			let pos = this.position.home.clone();
+			// apply movement force
+			this.position.force = this.position.target.subtract(pos).norm().multiply(.5);
+			this.move(this.position.force.clone());
+
+			// console.log( this.position.force );
+			// Matter.Body.setPosition(this.body, this.position.home);
+		}
 	}
 
 	render(ctx) {
@@ -119,8 +138,8 @@ class Player {
 			f = (this.frame.index | 0),
 			sheet = this.strip.sheet[f],
 			wH = w >> 1,
-			x = this.position.x,
-			y = this.position.y;
+			x = this.position.home.x,
+			y = this.position.home.y;
 		// player
 		ctx.save();
 		ctx.translate(x-wH, y-wH);

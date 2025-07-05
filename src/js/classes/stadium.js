@@ -27,30 +27,25 @@ class Stadium {
 			thick = 25,
 			bW = this.field.sW,
 			bH = this.field.sH;
-		// top left
+		// top left, goal, right
 		this.bodies.push(Matter.Bodies.rectangle((bW-gW-25)*.25, -thick, (bW-gW+25)*.5, thick, { isSensor: true }));
-		// top goal
 		this.bodies.push(Matter.Bodies.rectangle(bW*.5, -thick, gW, thick*2, { isSensor: true }));
-		// top right
 		this.bodies.push(Matter.Bodies.rectangle(bW-((bW-gW-25)*.25), -thick, (bW-gW+25)*.5, thick, { isSensor: true }));
 
-		// bottom left
+		// bottom left, goal, right
 		this.bodies.push(Matter.Bodies.rectangle((bW-gW-25)*.25, bH+thick, (bW-gW+25)*.5, thick, { isSensor: true }));
-		// bottom goal
 		this.bodies.push(Matter.Bodies.rectangle(bW*.5, bH+thick, gW, thick*2, { isSensor: true }));
-		// bottom right
 		this.bodies.push(Matter.Bodies.rectangle(bW-((bW-gW-25)*.25), bH+thick, (bW-gW+25)*.5, thick, { isSensor: true }));
 
-		// right side
+		// right, left side
 		this.bodies.push(Matter.Bodies.rectangle(bW+thick, bH*.5, thick, bH+25, { isSensor: true }));
-		// left side
 		this.bodies.push(Matter.Bodies.rectangle(-thick, bH*.5, thick, bH+25, { isSensor: true }));
 
 		// event handler
 		Matter.Events.on(this.parent.engine, "collisionStart", this.handleCollision.bind(this));
 
 		// add ball to stadium
-		this.user = new User({ parent: this });
+		this.input = new Input({ parent: this });
 		this.ball = new Ball({ parent: this, asset: parent.assets.ball });
 
 		// paint full hi-res stadium
@@ -66,7 +61,7 @@ class Stadium {
 			// console.log( pair.bodyA, pair.bodyB );
 			if (bBody && pBody) {
 				let player = this.players.find(p => p.body == pBody);
-				this.ball.follow(player);
+				this.ball.link(player);
 			}
 		});
 	}
@@ -150,8 +145,8 @@ class Stadium {
 	}
 
 	update(delta, time) {
-		// update user
-		this.user.update(delta, time);
+		// update user input
+		this.input.update(delta, time);
 
 		// update players
 		let sec = (time / 1000) | 0;
@@ -162,16 +157,16 @@ class Stadium {
 		// makes closest player automatically active
 		let closest = { distance: Infinity, player: null };
 		this.team.home.players.map(player => {
-			let distance = player.position.distance(this.ball.position);
+			let distance = player.position.home.distance(this.ball.position.home);
 			if (distance < closest.distance) {
 				closest.distance = distance;
 				closest.player = player;
 			}
 		});
 		// unselect previous selected, if any
-		if (this.team.home.selected) this.team.home.selected.active = false;
+		if (this.team.home.selected) this.team.home.selected._isPlayer = false;
 		// select player
-		closest.player.active = true;
+		closest.player._isPlayer = true;
 		this.team.home.selected = closest.player;
 
 		// update ball
@@ -179,9 +174,9 @@ class Stadium {
 	}
 
 	render(ctx) {
-		this.user.render(ctx);
+		this.input.render(ctx);
 		[...this.players, this.ball]
-			.sort((a, b) => a.position.y - b.position.y)
+			.sort((a, b) => a.position.home.y - b.position.home.y)
 			.map(item => item.render(ctx));
 		// this.players.map(player => player.render(ctx));
 		// this.ball.render(ctx);
