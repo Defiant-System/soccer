@@ -80,8 +80,10 @@ class Player {
 	}
 
 	setTarget(pos) {
-		let { x, y } = this.translatePosition(pos);
-		this.position.target = new Point(x, y);
+		let { x, y } = this.translatePosition(pos),
+			target = new Point(x, y);
+		this.position.target = target;
+		// console.log( this.position.home, target );
 	}
 
 	move(force) {
@@ -116,20 +118,26 @@ class Player {
 		}
 
 		if (this._isPlayer) {
-			// copy physical position to "this" internal position
-			let wH = (this.w >> 1) - .5,
-				hH = (this.h >> 2) + 5;
-			this.position.home.x = this.body.position.x + wH;
-			this.position.home.y = this.body.position.y + hH;
+			// todo?
 		} else {
-			let pos = this.position.home.clone();
-			// apply movement force
-			this.position.force = this.position.target.subtract(pos).norm().multiply(.5);
-			this.move(this.position.force.clone());
+			let pos = this.position.home.clone(),
+				target = this.position.target,
+				distance = target.distance(pos);
+			if (distance > 10) {
+				// apply movement force
+				this.position.force = target.subtract(pos).norm().multiply(.5);
+				this.move(this.position.force.clone());
 
-			// console.log( this.position.force );
-			// Matter.Body.setPosition(this.body, this.position.home);
+				// console.log( this.position.force );
+				// Matter.Body.setPosition(this.body, this.position.home);
+			}
 		}
+
+		// copy physical position to "this" internal position
+		let wH = (this.w >> 1) - .5,
+			hH = (this.h >> 2) + 5;
+		this.position.home.x = this.body.position.x + wH;
+		this.position.home.y = this.body.position.y + hH;
 	}
 
 	render(ctx) {
