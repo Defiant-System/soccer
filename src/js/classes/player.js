@@ -86,6 +86,28 @@ class Player {
 		// console.log( this.position.home, target );
 	}
 
+	seek(target, arrival=false) {
+		let force = target.subtract(this.position.home);
+		let desiredSpeed = this.speed;
+
+		if (arrival) {
+			let slowRadius = 100;
+			let distance = force.magnitude();
+			let v = Math.invLerp(0, slowRadius, distance);
+			desiredSpeed = Math.lerp(0, this.speed, v);
+		}
+
+		force = force.setMagnitude(desiredSpeed);
+		force = force.subtract(this.body.velocity);
+		force = force.limit(.00025);
+		return force;
+	}
+
+	arrive(target) {
+		// 2nd argument true enables the arrival behavior
+		return this.seek(target, true);
+	}
+
 	move(force) {
 		force.x = force.x * this.speed;
 		force.y = force.y * this.speed;
@@ -123,13 +145,14 @@ class Player {
 			let pos = this.position.home.clone(),
 				target = this.position.target,
 				distance = target.distance(pos);
-			if (distance > 10) {
-				// apply movement force
-				this.position.force = target.subtract(pos).norm().multiply(.5);
-				this.move(this.position.force.clone());
 
-				// console.log( this.position.force );
-				// Matter.Body.setPosition(this.body, this.position.home);
+			if (distance > 10) {
+				// if (this.lastName === "Del Piero") {
+				// 	console.log( this.body.velocity );
+				// }
+
+				let steering = this.arrive(target);
+				this.move(steering);
 			}
 		}
 
@@ -152,6 +175,12 @@ class Player {
 		ctx.save();
 		ctx.translate(x-wH, y-wH);
 		ctx.drawImage(this.asset.cvs, sheet[0], sheet[1], w, h, -wH, -wH, w, h);
+		// player last name
+		ctx.fillStyle = "#fff";
+		ctx.font = "15px Arial";
+		ctx.textAlign = "center";
+		ctx.fillText(this.lastName, 0, -25);
+
 		ctx.restore();
 	}
 }
